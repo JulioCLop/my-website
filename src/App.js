@@ -1,24 +1,53 @@
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
+
+import {Routes, Route} from 'react-router-dom';
+
+import { ThemeProvider } from './context/Theme.Contexts';
+
+import LoadingPage from './pages/LoadingPage/LoadingPage';
+import HomePage from './pages/HomePage/HomePage';
+import AboutPage from './pages/AboutPage/AboutPage';
+import ProjectPage from './pages/ProjectPage/ProjectPage';
+import ContactPage from './pages/ContactPage/ContactPage';
+
+
+
 import './App.css';
 
-function App() {
+
+const App = () => {
+  
+  const [isLoading, setIsLoading] = useState(true);
+  
+
+
+  useEffect(()=> {
+    setTimeout(()=>{
+      setIsLoading(false);
+    }, 3000)
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+<div>
+    { isLoading ?
+      <LoadingPage/>
+    :
+   ( 
+     <ThemeProvider>
+     <Routes>
+      <Route path='/' element={<HomePage/>}/>
+      <Route path='/about' element={<AboutPage/>}/>
+      <Route path='/projects' element={<ProjectPage/>}/>
+      <Route path='/contact' element={<ContactPage/>}/>
+    </Routes>
+    </ThemeProvider>
+    )
+
+    }
     </div>
+    </>
+   
   );
 }
 

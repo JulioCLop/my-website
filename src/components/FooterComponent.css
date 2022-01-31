@@ -1,0 +1,23 @@
+footer{
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: rgb(189, 182, 182);
+    background-color: rgb(75, 4, 4);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.footer-inner-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 20rem;
+    margin-right: 2.5rem;
+   
+}
+.footer-inner-container p span{
+    color: gray;
+    margin-left: 0.4rem;
+}
