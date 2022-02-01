@@ -16,10 +16,10 @@ const HomePage = () => {
 
 
   return (
-<div  className="home-page">
-    <MobileNavigation  /> 
+<div className=" home-page">
       <NavbarComponent  />
-      <main>
+      <MobileNavigation  /> 
+      <main >
         <section className="section-flex">
           <DisplayContainer
             id="img-4"

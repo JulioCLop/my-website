@@ -58,7 +58,7 @@ const DisplayContainer = (props) => {
       return (
         <DisplayContentContainer
           image={image2}
-          content="these are my projects intro"
+          content="Every project has its own personality. I bring ideas to life, create experiences & tell stories that people remember."
           className={
             activeDisplay3 && "display-content-2 display-content-active"
           }
@@ -68,7 +68,7 @@ const DisplayContainer = (props) => {
       return (
         <DisplayContentContainer
           image={image3}
-          content="contact me intro intro"
+          content="Ready when you are"
           className={
             activeDisplay2 && "display-content-3 display-content-active"
           }

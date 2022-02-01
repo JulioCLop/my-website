@@ -2,19 +2,21 @@
 .mobile-background{
   position: absolute;
   top: 0;
-  z-index: 6;
-  height: 100%;
+  z-index: 2;
+  height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.596);
 }
 .mobile-nav {
   position: fixed;
-  z-index: 101;
-  top: 0;
-  left: 0;
+  z-index: 2;
+  top: 6.3rem;
+  left: 15%;
   background: rgb(129, 50, 50);
-  width: 60%;
-  height: 100vh;
+  width: 70%;
+  height: 50vh;
+  border-radius: 8px;
+  animation:  mobile-nav-open 0.5s;
 }
 .mobile-nav_items {
   list-style: none;
@@ -42,7 +44,22 @@
   
 }
 
-
+@keyframes mobile-nav-open{
+  from {
+    height: 0;
+  }
+  to{
+    height: 50vh;
+  }
+}
+@keyframes mobile-nav-close{
+  from {
+    height: 50vh;
+  }
+  to{
+    height: 0;
+  }
+}
 
 
 /* 

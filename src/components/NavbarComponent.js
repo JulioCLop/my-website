@@ -32,17 +32,17 @@ const NavbarComponent = () => {
   };
 
   const clickHandler = () => {
-    setActiveBtn(false);
-    setSideNav(true);
+    if(activeBtn){
+      setActiveBtn(false);
+      setSideNav(false);
+    }else if(!activeBtn){
+      setActiveBtn(true);
+      setSideNav(true);
+    }
+    
   };
 
-  const buttonActive = () => {
-    setActiveBtn(true);
-  };
-
-  const buttonInactive = () => {
-    setActiveBtn(false);
-  };
+  
 
   const darkModeHandler = (e) => {
     const checked = e.target.checked;
@@ -59,13 +59,11 @@ const NavbarComponent = () => {
             </Link>
           </div>
           <div className="navbar-container-2">
-            {!sideNav && !matchesMD ? (
+            {!sideNav && !matchesMD || sideNav ? (
               <div
                 onClick={clickHandler}
-                onMouseLeave={buttonInactive}
-                onMouseEnter={buttonActive}
                 className={`toggle-button  ${activeBtn && "active"} ${
-                  !activeBtn && "not-active"
+                  !activeBtn && "not-active" 
                 }`}
               >
                 <span></span>
