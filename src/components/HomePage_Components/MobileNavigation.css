@@ -1,11 +1,24 @@
 /* Mobile Navigation */
 .mobile-background{
-  position: absolute;
+  position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 1;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-color: rgba(0, 0, 0, 0.596);
+  transition: opacity 0.2s linear;
+  animation: backdrop 0.8s 1 ease-in-out;
+}
+
+@keyframes backdrop {
+  from{
+    opacity: 0;
+    display: 0;
+  }
+  to{
+   opacity: 1;
+   display: 1;
+  }
 }
 .mobile-nav {
   position: fixed;

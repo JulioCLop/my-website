@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Big+Shoulders+Stencil+Display&family=Jost:wght@100&family=Lobster+Two&family=Montserrat&display=swap');
+
+
 .display-container {
   height: 28.125rem;
   width: 37.5rem;
@@ -24,16 +27,16 @@
   height: 70%;
 }
 
-.display-container .header-name h2 {
-  color: rgb(189, 182, 182);
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 8px;
-}
-.display-container .header-name h3 {
+ .header-name h3 {
+  font-size: 3rem;
+  font-family: 'Big Shoulders Stencil Display', cursive;
   color: rgb(255, 255, 255);
   padding-bottom: 1rem;
   text-transform: uppercase;
+}
+.header-name h2 {
+  font-size: 1.5rem;
+  font-family: 'Alegreya', serif;
 }
 .display-container .header-name p {
   padding-bottom: 1rem;
@@ -90,6 +93,8 @@
   text-align: center;
 }
 .header-link p a {
+font-family: 'Jost', sans-serif;
+text-transform: uppercase;
  color:rgb(255,255,255);
  background-color:rgb(75, 4, 4) ;
  margin: 0.7rem;
@@ -104,6 +109,8 @@
 background-color:rgba(75, 4, 4, 0.527) ;
 
 }
+
+
 
 
 

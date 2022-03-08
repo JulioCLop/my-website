@@ -1,6 +1,21 @@
+
+:root{
+  --main-red: rgb(75, 4, 4);
+  --light-red: rgba(75, 4, 4, 0.842);
+  --button-font: 'Jost', sans-serif;
+  --button-box-show: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --primary-font-family: 'Big Shoulders Stencil Display', cursive;
+  --secondary-font-family: 'Alegreya', serif;
+  --primary-image-box-shadow:  rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  --small-font-detail-color: rgb(156, 34, 34);
+  --background-section-gray: rgba(128, 128, 128, 0.541);
+}
+
+
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

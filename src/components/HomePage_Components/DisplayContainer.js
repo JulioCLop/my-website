@@ -83,14 +83,13 @@ const DisplayContainer = (props) => {
         {activeDisplay1 || activeDisplay2 || activeDisplay3 ? (
           choices()
         ) : (
-          <>
-            <h3>Julio Lopez</h3>
+          <div>
             <h3>UI/UX React Developer</h3>
             <h2>
-              I'm a React developer, and I build anything from mobile to web
+              I'm a React developer, and I build anything from <br/> mobile to web
               apps.
             </h2>
-          </>
+          </div>
         )}
       </div>
 

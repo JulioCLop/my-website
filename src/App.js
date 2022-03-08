@@ -13,6 +13,7 @@ import ContactPage from './pages/ContactPage/ContactPage';
 
 
 import './App.css';
+import SeeMorePage from './pages/AboutPage/SeeMorePage/SeeMorePage';
 
 
 const App = () => {
@@ -25,7 +26,7 @@ const App = () => {
     setTimeout(()=>{
       setIsLoading(false);
     }, 3000)
-  });
+  },[]);
 
   return (
     <>
@@ -40,6 +41,7 @@ const App = () => {
       <Route path='/about' element={<AboutPage/>}/>
       <Route path='/projects' element={<ProjectPage/>}/>
       <Route path='/contact' element={<ContactPage/>}/>
+      <Route path='/see-more' element={<SeeMorePage/>}/>
     </Routes>
     </ThemeProvider>
     )

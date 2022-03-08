@@ -35,9 +35,10 @@ const MobileNavigation = () => {
 
   return (
     <>
+     
       {sideNav && matchesMD ? (
         <>
-          <div className="mobile-background" />
+       
           <nav className="mobile-nav">
             <ul className="mobile-nav_items">
               <li className="mobile-nav_item">
@@ -80,7 +81,9 @@ const MobileNavigation = () => {
                 </NavLink>
               </li>
             </ul>
+            
           </nav>
+          <div className="mobile-background" />
         </>
       ) : (
         ""
