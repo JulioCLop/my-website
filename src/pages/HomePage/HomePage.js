@@ -1,19 +1,15 @@
 import React from "react";
 
-
-
 import NavbarComponent from "../../components/NavbarComponent";
 import DisplayContainer from "../../components/HomePage_Components/DisplayContainer";
 import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
 
-
+import { ThemeContext } from "../../context/Theme.Contexts";
 
 import "./HomePage.css";
 
 
 const HomePage = () => {
-
-
 
   return (
 <div className=" home-page">

@@ -226,3 +226,16 @@ display: flex;
 .section-three_project_search input:focus{
    outline: none;
 }
+
+/* No matches */
+
+.noMatches{
+    width: 100vw;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.noMatches h1{
+   font-weight: bold;
+}

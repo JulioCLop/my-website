@@ -9,9 +9,6 @@ import HomePage from './pages/HomePage/HomePage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import ProjectPage from './pages/ProjectPage/ProjectPage';
 import ContactPage from './pages/ContactPage/ContactPage';
-
-
-
 import './App.css';
 import SeeMorePage from './pages/AboutPage/SeeMorePage/SeeMorePage';
 

@@ -7,7 +7,7 @@ const {srcImage, link} = props;
 
   return (
     <div>
-    <img src={srcImage} width='175' alt="Halen Logo"/>
+    <img src={srcImage} style={{background: 'white'}} width='175' alt="Halen Logo"/>
     <span>
     <a href={link}>VIEW COMPANY SITE</a>
     </span>

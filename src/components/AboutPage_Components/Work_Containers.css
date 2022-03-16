@@ -4,18 +4,7 @@
     height: 300px;
    
 }
-.work-main-job-containers div:nth-child(1){
-    background-color: rgb(253, 253, 253);
-  
-}
-.work-main-job-containers div:nth-child(2){
-   
-  
-}
-.work-main-job-containers div:nth-child(3){
-    
-  
-}
+
 .work-main-job-containers div span{
     margin: 0 auto;
     position: absolute;

@@ -126,7 +126,6 @@ const NavbarComponent = () => {
           </div>
           <div className="moon-icon">
           <Toggle
-          
              icons={{
                checked: <Brightness3Icon style={{fontSize: '1rem',heigth:'100%'}}/>,
                unchecked:<WbSunnyIcon style={{fontSize: '1rem',heigth:'100%'}}/>,

@@ -1,7 +1,7 @@
 .contact-page{
     min-height: calc(100vh - 7rem - 6rem);
     position: relative;
-    z-index: 3;
+    z-index: 2;
 }
 .section-contact-1{
     position: relative;
@@ -68,6 +68,7 @@ div .message-input textarea{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+   
 
 }
 .contact-btn-container{
@@ -124,8 +125,15 @@ cursor: pointer;
 }
 
 /* form validation */
-
-.invalid{
+.email-input.invalid input{
+    border: 1.5px solid rgb(75, 4, 4);
+    background-color: rgba(75, 4, 4, 0.507);
+}
+.message-input.invalid textarea{
+    border: 1.5px solid rgb(75, 4, 4);
+    background-color: rgba(75, 4, 4, 0.507);
+}
+.name-input.invalid input{
     border: 1.5px solid rgb(75, 4, 4);
     background-color: rgba(75, 4, 4, 0.507);
 }
@@ -142,6 +150,19 @@ cursor: pointer;
     font-size: inherit;
      font-weight: inherit;
       transform: translateX(0);
+}
+button.btn-invalid {
+    background-color: rgba(3, 0, 0, 0.425);
+    cursor: auto;
+}
+
+/* end */
+
+/* darkMode */
+
+.is-darkmode{
+    background-color: rgba(0, 0, 0, 0.801);
+    color: white;
 }
 input{
     font-size: 1.3rem;

@@ -1,6 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect} from "react";
 
 import { ThemeContext } from "../../context/Theme.Contexts";
+
+import projects from '../../module/project';
 
 import NavbarComponent from "../../components/NavbarComponent";
 import FooterComponent from "../../components/FooterComponent";
@@ -9,70 +11,102 @@ import MobileNavigation from "../../components/HomePage_Components/MobileNavigat
 import Laptop  from '../../assets/ProjectPage/projectLaptop.png';
 import TTT from '../../assets/ProjectPage/TicTacToe.png';
 
-import "./ProjectPage.css";
+import classes from "./ProjectPage.module.css";
+
 import ProjectsContainer from "../../components/ProjectPage_Components/Projects_Container/ProjectsContainer";
 
-const ProjectPage = () => {
-  const { darkMode, darkModeStyles } = useContext(ThemeContext);
 
+const ProjectPage = () => {
+  
+ 
+  const { darkMode, darkModeStyles } = useContext(ThemeContext);
+  const [ isfilterProjects, setFilterProjects ] = useState([]);
+  const [isSearch, setSearch ] = useState('');
+   
+
+
+    const projectFilter = isfilterProjects.filter( project => {
+     return project.projectName.toLowerCase().includes(isSearch.toLowerCase());
+     
+
+     
+    });
+  
+    const noMatches = () =>  {
+      if(projectFilter >= 0){
+       return (
+       <div className={classes.noMatches}>
+         <h1 >No Matches</h1> 
+       </div>)
+      }else{
+      return  <ProjectsContainer filter={projectFilter}/>
+      }
+
+    };
+
+  useEffect(()=>{
+    setFilterProjects(projects);
+    
+    
+  }, []);
 
   return (
     <div style={darkMode ? darkModeStyles : {}}>
       <NavbarComponent />
       <MobileNavigation />
-      <div className="project-page">
-        <section className="section-one_project">
+      <div className={classes['project-page']}>
+        <section className={classes["section-one_project"]}>
         <div className="background-design"></div>
           <h2>Projects</h2>
           <h1>Since Beginning <span>My Journey</span></h1>
-          <div className="section-one_project-grid">
-          <div className="section-one_project-content">
+          <div className={classes["section-one_project-grid"]}>
+          <div className={classes["section-one_project-content"]}>
           <p>Go ahead, check out my projects below or visit my Github Repo and check out my previous projects. Building Javascript applications has given me the ability to function independantly, and able to deliver fast, optimized, scalable apps. I'm currenly working on creating a Ecommerce website which will provide the user an exclusive experience. As I develop, my main focus will be on fast, elegant and accessible user experience.  </p>
-          <div className="section-one_project-btns">
-          <a>View Current Project</a>
-          <a>View Github Repo</a>
+          <div className={classes["section-one_project-btns"]}>
+          <a href="www.github.com">View Current Project</a>
+          <a href="www.github.com">View Github Repo</a>
           </div>
           </div>
-          <div className="section-one_project-img">
-            <img  src={Laptop} alt="project image"/>
+          <div className={classes["section-one_project-img"]}>
+            <img  src={Laptop} alt="project_image"/>
           </div>
           </div>
         </section>
-        <section className="section-two_project">
+        <section className={classes["section-two_project"]}>
         <h2>Most Recent <span>projects</span></h2>
-        <div className="section-two_project-cards">
-          <div className="section-two_project-card">
-          <img src={TTT}/>
-            <div className="section-two_project-card-content">
+        <div className={classes["section-two_project-cards"]}>
+          <div className={classes["section-two_project-card"]}>
+          <img src={TTT} alt="img"/>
+            <div className={classes["section-two_project-card-content"]}>
             <h4>Tic, Tac, Toe App</h4>
             <p>HTML, CSS, JS</p>
-            <a href="">view</a>
+            <a href="www.github.com">view</a>
             </div>
           </div>
-          <div className="section-two_project-card">
-          <img src="https://images.unsplash.com/photo-1620228885847-9eab2a1adddc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGV4cGVuc2UlMjBhcHB8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"/>
-            <div className="section-two_project-card-content">
+          <div className={classes["section-two_project-card"]}>
+          <img src="https://images.unsplash.com/photo-1620228885847-9eab2a1adddc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGV4cGVuc2UlMjBhcHB8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" alt="img"/>
+            <div className={classes["section-two_project-card-content"]}>
             <h4>Expense App</h4>
             <p>ReactJS</p>
-            <a href="">View</a>
+            <a href="www.github.com">View</a>
             </div>
           </div>
         </div>
         </section>
-        <section className="section-three_project">
-        <div className="section-three_project_header">
+        <section className={classes["section-three_project"]}>
+        <div className={classes["section-three_project_header"]}>
         <h2>Project</h2>
         </div>
       
-      <div className="section-three_project_search" >
+      <div className={classes["section-three_project_search"]} >
       <div>
         <label>Search Project</label>
-        <input/>
+        <input type="search" onChange={e => setSearch(e.target.value)}/>
       </div>
       </div>
-      <main className="section-three_project_inner_main">
-        <div className="section-three_project_cards_container" >
-        <ProjectsContainer/>
+      <main className={classes["section-three_project_inner_main"]}>
+        <div style={projectFilter >= 0 ? {gridTemplateColumns: '1fr'} : {}} className={classes["section-three_project_cards_container" ]}>
+      {noMatches()}
         </div>
       </main>
         </section>
