@@ -1,11 +1,11 @@
-.work-main-job-containers div{
+.work-job-containers{
     position: relative;
     width: 100%;
     height: 300px;
    
 }
 
-.work-main-job-containers div span{
+.work-job-containers span{
     margin: 0 auto;
     position: absolute;
     transform: translate(-50%, -50%) scale(98%);
@@ -17,11 +17,11 @@
     opacity: 0;  
 }
 
-.work-main-job-containers div:hover span{
+.work-job-containers:hover span{
     transition: all 0.3s;
     opacity: 1;
 }
-.work-main-job-containers div img{
+.work-job-containers img{
     height: 100%;
     width: 100%;
     background-position: center;
@@ -29,16 +29,16 @@
     background-repeat: no-repeat;
 }
 
-.work-main-job-containers div:hover img{
+.work-job-containers:hover img{
     transition: all 0.4s;
     transform: scale(98%);
     filter: grayscale(98%);
 }
-.work-main-job-containers img:hover span{
+.work-job-containers img:hover span{
    opacity: 0.6;
 }
 
-.work-main-job-containers a{
+.work-job-containers a{
     cursor: pointer;
    background-color: rgb(75, 4, 4) ;
    text-decoration: none;
@@ -47,7 +47,7 @@
    padding: 2rem;
    border-radius: 50px;
 }
-.work-main-job-containers a:hover{
+.work-job-containers a:hover{
     background-color: rgba(75, 4, 4, 0.98);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     color: inherit;

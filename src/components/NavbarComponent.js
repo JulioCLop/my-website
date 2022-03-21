@@ -14,7 +14,9 @@ import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
 import Toggle from "react-toggle";
 
-import "./NavbarConponent.css";
+import classes from "./NavbarConponent.module.css";
+
+import  "./toggle.css";
 
 const NavbarComponent = () => {
   const theme = useTheme();
@@ -51,19 +53,19 @@ const NavbarComponent = () => {
 
   return (
     <>
-      <header>
-        <nav id="nav-query">
-          <div className="navbar-container-1">
+      <header className={classes.header}>
+        <nav id={classes["nav-query"]}>
+          <div className={classes["navbar-container-1"]}>
             <Link to="/">
               <img src={NavbarLogo} alt="logo" />
             </Link>
           </div>
-          <div className="navbar-container-2">
+          <div className={classes["navbar-container-2"]}>
             {!sideNav && !matchesMD || sideNav ? (
               <div
                 onClick={clickHandler}
-                className={`toggle-button  ${activeBtn && "active"} ${
-                  !activeBtn && "not-active" 
+                className={`${classes["toggle-button"]}  ${activeBtn && classes.active} ${
+                  !activeBtn && classes["not-active"] 
                 }`}
               >
                 <span></span>
@@ -74,13 +76,13 @@ const NavbarComponent = () => {
               ""
             )}
             {(!sideNav && matchesMD) || (sideNav && matchesMD) ? (
-              <ul className="navbar-inner-ul">
+              <ul className={classes["navbar-inner-ul"]}>
                 <li>
                   <NavLink
                     style={({ isActive }) =>
                       isActive ? activeStyle : undefined
                     }
-                    className="nav-btn"
+                    className={classes["nav-btn"]}
                     to="/"
                   >
                     Home
@@ -88,7 +90,7 @@ const NavbarComponent = () => {
                 </li>
                 <li>
                   <NavLink
-                    className="nav-btn"
+                    className={classes["nav-btn"]}
                     style={({ isActive }) =>
                       isActive ? activeStyle : undefined
                     }
@@ -102,7 +104,7 @@ const NavbarComponent = () => {
                     style={({ isActive }) =>
                       isActive ? activeStyle : undefined
                     }
-                    className="nav-btn"
+                    className={classes["nav-btn"]}
                     to="/projects"
                   >
                     Project
@@ -110,7 +112,7 @@ const NavbarComponent = () => {
                 </li>
                 <li>
                   <NavLink
-                    className="nav-btn"
+                    className={classes["nav-btn"]}
                     style={({ isActive }) =>
                       isActive ? activeStyle : undefined
                     }
@@ -124,7 +126,7 @@ const NavbarComponent = () => {
               ""
             )}
           </div>
-          <div className="moon-icon">
+          <div className={`${classes["moon-icon"]}`}>
           <Toggle
              icons={{
                checked: <Brightness3Icon style={{fontSize: '1rem',heigth:'100%'}}/>,
@@ -135,7 +137,7 @@ const NavbarComponent = () => {
           </div>
         </nav>
       </header>
-      <div id="margin" />
+      <div id={classes.margin} />
     </>
   );
 }

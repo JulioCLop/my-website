@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import DisplayContentContainer from "./DisplayContentContainer";
 
-import "./DisplayContainer.css";
+import classes from "./DisplayContainer.module.css";
 
 const DisplayContainer = (props) => {
   const { id } = props;
@@ -48,9 +48,9 @@ const DisplayContainer = (props) => {
       return (
         <DisplayContentContainer
           image={image}
-          content="hello I am from colorado intro"
+          content="Hello, I am a Colorado native that enjoys all the typical outdoors activities and adventures."
           className={
-            activeDisplay1 && "display-content-1 display-content-active"
+            activeDisplay1 && `${classes["display-content-1"]} ${classes["display-content-active"]}`
           }
         />
       );
@@ -60,7 +60,7 @@ const DisplayContainer = (props) => {
           image={image2}
           content="Every project has its own personality. I bring ideas to life, create experiences & tell stories that people remember."
           className={
-            activeDisplay3 && "display-content-2 display-content-active"
+            activeDisplay3 && `${classes["display-content-2"]} ${classes["display-content-active"]}`
           }
         />
       );
@@ -68,9 +68,9 @@ const DisplayContainer = (props) => {
       return (
         <DisplayContentContainer
           image={image3}
-          content="Ready when you are"
+          content="Ready when you are. Go ahead skip to the contact page and send me a message. "
           className={
-            activeDisplay2 && "display-content-3 display-content-active"
+            activeDisplay2 && `${classes["display-content-3"]} ${classes["display-content-active"]}`
           }
         />
       );
@@ -78,8 +78,8 @@ const DisplayContainer = (props) => {
   };
 
   return (
-    <div id={id} className="display-container">
-      <div className="header-name">
+    <div id={id} className={classes["display-container"]}>
+      <div className={classes["header-name"]}>
         {activeDisplay1 || activeDisplay2 || activeDisplay3 ? (
           choices()
         ) : (
@@ -93,25 +93,25 @@ const DisplayContainer = (props) => {
         )}
       </div>
 
-      <div className="display-options">
+      <div className={classes["display-options"]}>
         <div
           onMouseLeave={content1ActiveRemove}
           onClick={content1Active}
-          className="display-option-1 display-option-main"
+          className={`${classes["display-option-1"]} ${classes["display-option-main"]}`}
         ></div>
         <div
           onMouseLeave={content3ActiveRemove}
           onClick={content3Active}
-          className="display-option-3 display-option-main"
+          className={`${classes["display-option-3"]} ${classes["display-option-main"]}`}
         ></div>
         <div
           onMouseLeave={content2ActiveRemove}
           onClick={content2Active}
-          className="display-option-2 display-option-main"
+          className={`${classes["display-option-2"]} ${classes["display-option-main"]}`}
         ></div>
       </div>
 
-      <div className="header-link">
+      <div className={classes["header-link"]}>
         <p>
           Feel free to start by looking at my projects!
           <Link to="/projects">Check it out</Link>

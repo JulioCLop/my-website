@@ -11,16 +11,16 @@ import NavbarComponent from "../../../components/NavbarComponent";
 import MobileNavigation from "../../../components/HomePage_Components/MobileNavigation";
 import SchoolIcon from '@mui/icons-material/School';
 
-import "./SeeMorePage.css";
+import classes from "./SeeMorePage.module.css";
 
 const SeeMorePage = () => {
   return (
     <>
       <NavbarComponent />
       <MobileNavigation />
-      <div className="see_more_container">
-        <section className="see_more_section_one">
-          <div className="see_more_inner_one">
+      <div className={classes["see_more_container"]}>
+        <section className={classes["see_more_section_one"]}>
+          <div className={classes["see_more_inner_one"]}>
             <div >
                 <h1>Technologies I've Worked With</h1>
             </div>
@@ -28,36 +28,36 @@ const SeeMorePage = () => {
             <p>I litte more about my suitable skills that I have developed to create attractive and clean interfaces.</p>
             </div>
           </div>
-          <div className="see_more_inner_two" >
-            <div className="see_inner_box_container">
+          <div className={classes["see_more_inner_two"]} >
+            <div className={classes["see_inner_box_container"]}>
               <div>
           
-            <CodeIcon className='see-more-icons'/>
+            <CodeIcon className={classes['see-more-icons']}/>
                   <h2>Programming language</h2>
                   <p>Javascript</p>
               </div>
               <div>
-              <LaptopIcon   className='see-more-icons'/>
+              <LaptopIcon   className={classes['see-more-icons']}/>
                   <h2>Technologies I've<br/> worked with</h2>
                   <p>SQL,React, Express,Redux,Hooks, Context API</p>
               </div>
               <div>
-              <SchoolIcon  className='see-more-icons'/>
+              <SchoolIcon  className={classes['see-more-icons']}/>
                   <h2>School</h2>
                   <p>University of Cincinnati</p>
                   </div>
               <div>
-              <TranslateIcon  className='see-more-icons'/>
+              <TranslateIcon  className={classes['see-more-icons']}/>
                   <h2>Personal skills</h2>
                       <p>Bilingual</p>
               </div>
             </div>
-            <div className="see_inner_img">
+            <div className={classes["see_inner_img"]}>
               <img src="https://media.istockphoto.com/photos/generic-modern-suv-car-in-concrete-garage-picture-id1307086567?b=1&k=20&m=1307086567&s=170667a&w=0&h=NjcM6LIOkmfhyqH-zrbFU7pHCPxIABvNhWaOElm_P-E=" width='500' />
             </div>
           </div>
         </section>
-        <section className='see_more_section_three'>
+        <section className={classes['see_more_section_three']}>
           <Link to='/about'>back</Link>
         </section>
       </div>

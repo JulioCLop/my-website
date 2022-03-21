@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 
-import { Link } from "react-router-dom";
+
 import { NavLink } from "react-router-dom";
 
 import { ThemeContext } from "../../context/Theme.Contexts";
@@ -8,7 +8,7 @@ import { ThemeContext } from "../../context/Theme.Contexts";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
-import "./MobileNavigation.css";
+import classes from  "./MobileNavigation.module.css";
 
 
 
@@ -39,51 +39,50 @@ const MobileNavigation = () => {
       {sideNav && matchesMD ? (
         <>
        
-          <nav className="mobile-nav">
-            <ul className="mobile-nav_items">
-              <li className="mobile-nav_item">
+          <nav className={classes["mobile-nav"]}>
+            <ul className={classes["mobile-nav_items"]}>
+              <li className={classes["mobile-nav_item"]}>
                 <NavLink
                 style={({ isActive }) =>
                       isActive ? activeStyle : undefined
                     }
-                 className="mobile-nav_link" to="/">
+                 className={classes["mobile-nav_link"]} to="/">
                   Home
                 </NavLink>
               </li>
-              <li className="mobile-nav_item">
+              <li className={classes["mobile-nav_item"]}>
                 <NavLink
                 style={({ isActive }) =>
                       isActive ? activeStyle : undefined
                     }
-                 className="mobile-nav_link" to="/about"
+                 className={classes["mobile-nav_link"]} to="/about"
                
                
                  >
                   About
                 </NavLink>
               </li>
-              <li className="mobile-nav_item">
+              <li className={classes["mobile-nav_item"]}>
                 <NavLink
                 style={({ isActive }) =>
                       isActive ? activeStyle : undefined
                     }
-                 className="mobile-nav_link" to="/projects">
+                 className={classes["mobile-nav_link"]} to="/projects">
                   Projects
                 </NavLink>
               </li>
-              <li className="mobile-nav_item">
+              <li className={classes["mobile-nav_item"]}>
                 <NavLink
                 style={({ isActive }) =>
                       isActive ? activeStyle : undefined
                     }
-                 className="mobile-nav_link" to="/contact">
+                 className={classes["mobile-nav_link"]} to="/contact">
                   Contact
                 </NavLink>
               </li>
             </ul>
-            
           </nav>
-          <div className="mobile-background" />
+          <div className={classes["mobile-background"]} />
         </>
       ) : (
         ""

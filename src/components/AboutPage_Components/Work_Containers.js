@@ -1,12 +1,12 @@
 import React from 'react';
 
-import './Work_Containers.css';
+import classes from './Work_Containers.module.css';
 
 const  WorkContainers = (props) => {
 const {srcImage, link} = props;
 
   return (
-    <div>
+    <div className={classes["work-job-containers"]}>
     <img src={srcImage} style={{background: 'white'}} width='175' alt="Halen Logo"/>
     <span>
     <a href={link}>VIEW COMPANY SITE</a>
