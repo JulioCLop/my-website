@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -20,12 +20,9 @@ import  "./toggle.css";
 
 const NavbarComponent = () => {
   const theme = useTheme();
-
   const { sideNav, setSideNav } = useContext(ThemeContext);
-  const [activeBtn, setActiveBtn] = useState(false);
   const { setDarkMode} = useContext(ThemeContext);
- 
-
+  const [activeBtn, setActiveBtn] = useState(false);
   const matchesMD = useMediaQuery(theme.breakpoints.up("md"));
 
   let activeStyle = {
@@ -34,30 +31,22 @@ const NavbarComponent = () => {
   };
 
   const clickHandler = () => {
-    if(activeBtn){
-      setActiveBtn(false);
-      setSideNav(false);
-    }else if(!activeBtn){
-      setActiveBtn(true);
-      setSideNav(true);
-    }
-    
+    setActiveBtn( prevActiveBtn => !prevActiveBtn)
+    setSideNav(prevSideNav => !prevSideNav)
   };
-
-  
 
   const darkModeHandler = (e) => {
     const checked = e.target.checked;
     setDarkMode(checked);
+    return checked;
   };
 
-  const toggleActiveBtnView = (
-    activeBtn ? `${classes.active}` : `${classes['not-active']}`
-  )
-
-     
+  useEffect(()=> {
+    setDarkMode(prevMode => prevMode);
+  },[])
   
 
+ 
   return (
     <>
       <header className={classes.header}>
@@ -71,9 +60,7 @@ const NavbarComponent = () => {
             {!sideNav && !matchesMD || sideNav ? (
               <div
                 onClick={clickHandler}
-                className={`${classes["toggle-button"]} ${activeBtn && classes.active} ${
-                  !activeBtn && classes["not-active"] 
-                } ${toggleActiveBtnView}`}
+                className={`${classes["toggle-button"]} ${activeBtn ? classes.active : classes["not-active"] } `}
               >
                 <span></span>
                 <span></span>

@@ -14,19 +14,12 @@ import classes from  "./MobileNavigation.module.css";
 
 const MobileNavigation = () => {
   const { sideNav, setSideNav } = useContext(ThemeContext);
-  const {disabled,setDisabled} = useState(false);
-
   const theme = useTheme();
-
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   let activeStyle = {
     color: "gray",
     textDecoration: "line-through",
-  };
-
-  const closeHanlder = () => {
-    setSideNav(false);
   };
 
   if (!matchesMD) {
