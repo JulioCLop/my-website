@@ -84,7 +84,7 @@ const DisplayContainer = (props) => {
           choices()
         ) : (
           <div>
-            <h3>UI/UX React Developer</h3>
+            <h3>React Developer</h3>
             <h2>
               I'm a React developer, and I build anything from <br/> mobile to web
               apps.

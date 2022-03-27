@@ -28,23 +28,19 @@ const  AboutPage = () => {
 
 
   return (
-  <>
+  <React.Fragment>
+  <MobileNavigation />
    <NavbarComponent />
-    <div  className={classes["about-Page" ]}style={darkMode ? darkModeStyles : {}}>
-    <MobileNavigation />
+    <div  className={classes["about-Page" ]} >
       <section className={classes["section-one-about"]}>
         <div
           className={classes["section-main-img"]}
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1520531158340-44015069e78e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8ODJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60')",
-          }}
+          style={darkMode ? {filter: 'grayscale(100%)',opacity: '0.3', backgroundImage:"url('https://images.unsplash.com/photo-1520531158340-44015069e78e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8ODJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60')"} : { backgroundImage:"url('https://images.unsplash.com/photo-1520531158340-44015069e78e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8ODJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60')"}} 
+        
         />
         <div
           className={
-            matchesMD
-              ? classes["section-one-containers"]
-              :` ${classes["section-one-containers"]} ${classes["section-one-flex-helper"]}`
+            ` ${classes["section-one-containers"]} ${classes["section-one-flex-helper"]}`
           }
         >
           <div className={classes["section-one-div1"]}>
@@ -63,20 +59,20 @@ const  AboutPage = () => {
           </div>
         </div>
       </section>
-      <section className={classes["section-two-react-intro"]}>
+      <section style={darkMode ? darkModeStyles : {}} className={classes["section-two-react-intro"]}>
         <div className={classes["react-header"]}>
-          <h2>UI/UX REACT<br/><span className={classes["title-developer"]}>DEVELOPER</span></h2>
+          <h2>UI/UX REACT<br/><span  className={classes["title-developer"]}>DEVELOPER</span></h2>
         </div>
         <div className={classes["developer-intro"]}>
           <p>
-            <span className={classes["about-name"]}>Hello, I'm Julio Lopez.</span> <br/> I am a <span className={classes.spanWhite}>React Developer</span>. But,
+            <span className={classes["about-name"]}>Hello, I'm Julio Lopez.</span> <br/> I am a <span  className={classes.spanWhite}>React Developer</span>. But,
             still exploring other technologies that spike my interest. I work on
             builds and maintenance for a variety of client requests. Attentive
             to UI/UX details and high quality and maintainable code. 
           </p>
         </div>
       </section>
-   <section className={`${classes["F-AC"]} ${classes["about-section-3"]}`}>
+   <section style={darkMode ? darkModeStyles : {}} className={`${classes["F-AC"]} ${classes["about-section-3"]}`}>
      <div className={classes["about-section-3-img-container"]}>
           <img src="https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
      </div>
@@ -92,7 +88,8 @@ const  AboutPage = () => {
             <Link to="/see-more">see more</Link>
           </div>
 
-        <div className={`${classes["F-AC"]}  ${classes["content-inner-skill-view"]}`}>
+        <div className={`${classes["content-inner-skill-view"]}`}>
+        <div style={{width: '80%',justifyContent:'space-evenly'}} className={classes["F-AC"]}>
           <div className={`${classes["FC-AC"]} ${classes["inner-skill-view"]}`}>
             <span>9/10</span>
             <h4>Front-end</h4>
@@ -105,13 +102,14 @@ const  AboutPage = () => {
           <span>9/10</span>
             <h4>ReactJS</h4>
           </div>
+          </div>
         </div>
      </div>
    </section>
    
-   <section className={classes["work-section"]}>
+   <section style={!darkMode ? {backgroundColor:'rgba(128, 128, 128, 0.422)'}: {}} className={classes["work-section"]}>
      <div className={classes["work-header"]}>
-       <h1>Where I've <span style={{color: 'white'}}>worked</span></h1>
+       <h1>Where I've <span style={darkMode ? {color: 'gray'} : {color: 'rgba(128, 128, 128, 0.822)'}}>worked</span></h1>
      </div>
      <div className={classes["work-main-job-containers"]}>
       <WorkContainers srcImage='https://gethalen.com/images/logo.png' link='https://gethalen.com/'/>
@@ -119,7 +117,7 @@ const  AboutPage = () => {
       <WorkContainers srcImage='https://couponseeker.com/storage/CCS-SUPPLY-STORE.jpg' link='https://gethalen.com/'/>
      </div>
    </section>
-   <section className={classes["CV_Section"]}>
+   <section style={darkMode ? darkModeStyles : {}} className={classes["CV_Section"]}>
    <h1>Learn More <span style={{color:'white'}}>About Me...</span></h1>
     <div className={classes["cv-show-contianer"]} onMouseEnter={()=> setShow(true)} onMouseLeave={()=> setShow(false)}>
     {
@@ -138,7 +136,7 @@ const  AboutPage = () => {
    </section>
     </div>
     <FooterComponent />
-    </>
+    </React.Fragment>
   );
 }
 

@@ -51,6 +51,13 @@ const NavbarComponent = () => {
     setDarkMode(checked);
   };
 
+  const toggleActiveBtnView = (
+    activeBtn ? `${classes.active}` : `${classes['not-active']}`
+  )
+
+     
+  
+
   return (
     <>
       <header className={classes.header}>
@@ -64,9 +71,9 @@ const NavbarComponent = () => {
             {!sideNav && !matchesMD || sideNav ? (
               <div
                 onClick={clickHandler}
-                className={`${classes["toggle-button"]}  ${activeBtn && classes.active} ${
+                className={`${classes["toggle-button"]} ${activeBtn && classes.active} ${
                   !activeBtn && classes["not-active"] 
-                }`}
+                } ${toggleActiveBtnView}`}
               >
                 <span></span>
                 <span></span>

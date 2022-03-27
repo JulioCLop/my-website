@@ -1,5 +1,6 @@
 .modal{
     position: fixed;
+    color: black;
     bottom: 40vh;
     left: calc(50% - 25rem);
     width: 50%;

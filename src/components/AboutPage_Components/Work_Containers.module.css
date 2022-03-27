@@ -1,7 +1,10 @@
 .work-job-containers{
     position: relative;
-    width: 100%;
+    max-width: 450px;
+    min-width: 300px;
     height: 300px;
+  
+   
    
 }
 
@@ -27,6 +30,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 8px;
 }
 
 .work-job-containers:hover img{

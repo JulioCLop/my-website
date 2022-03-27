@@ -8,7 +8,9 @@ export const ThemeProvider = (props) =>{
     const [darkMode, setDarkMode] = useState(false);
 
     const darkModeStyles = {
-        backgroundColor: 'rgba(0, 0, 0, 0.943)',
+        backgroundColor: 'rgba(0, 0, 0, 0.843)',
+        color: 'rgb(189, 182, 182)'
+    
     }
 
 

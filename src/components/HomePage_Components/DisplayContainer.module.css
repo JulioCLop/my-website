@@ -156,7 +156,7 @@ background-color:rgba(75, 4, 4, 0.527) ;
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
-  /* CSS */
+ 
   
 }
 
@@ -166,6 +166,7 @@ background-color:rgba(75, 4, 4, 0.527) ;
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+
   .header-link  {
     margin: 1rem 0;
     height: 130px;
@@ -182,15 +183,14 @@ background-color:rgba(75, 4, 4, 0.527) ;
     font-size: 1.2rem;
    }
    .display-container{
-     max-width: 625px;
-     margin:5px;
-     min-width: 439px;
+    width: 100vw;
      
    }
    .display-container .header-name h2{
      font-size: 1.3rem;
    }
   
+
 }
 
 /* 
@@ -198,7 +198,7 @@ background-color:rgba(75, 4, 4, 0.527) ;
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 220px) and (max-width: 480px) {
   .header-link  {
     margin: 1rem 0;
     height: 130px;
@@ -209,19 +209,19 @@ background-color:rgba(75, 4, 4, 0.527) ;
   .header-link p a {
     display: flex;
     justify-content: center;
-    width: 70%;
+    width: 40%;
     align-items: center;
     margin: 1.4rem auto;
     font-size: 1.2rem;
    }
    .display-container{
-     width: 100%;
-     margin: 5px;
+    width: 100%;
+     
    }
    .display-container .header-name h2{
      font-size: 1.3rem;
    }
-   
+  
   
 }
  

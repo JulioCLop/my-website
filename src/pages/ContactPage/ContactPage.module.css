@@ -19,8 +19,7 @@
 }
 .section-contact-2{
   padding: 2rem 0;
-   
-    
+    min-height: 550px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -100,14 +99,19 @@ div .message-input-2 ul{
 padding-top: 2rem;
 }
 .icons{
-    color: var(--main-red);
+    color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.801);
     
+}
+.icons:hover{
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.685);
 }
 div .message-input-2 ul li a .icons{
     font-size: 3rem;
 }
 .contact-btn-container{
-    background-color: rgba(128, 128, 128, 0.541);
+    background-color: rgba(117, 112, 112, 0.089);
 }
 .contact-btn-container button{
 text-decoration: none;
@@ -122,26 +126,27 @@ background-color: var(--main-red);
 box-shadow: var(--button-box-show);
 padding: 0.8rem 7rem;
 cursor: pointer;
+border: none;
 }
 
 /* form validation */
 .email-input.invalid input{
     border: 1.5px solid rgb(75, 4, 4);
-    background-color: rgba(75, 4, 4, 0.507);
+    background-color: rgba(75, 4, 4, 0.137);
 }
 .message-input.invalid textarea{
     border: 1.5px solid rgb(75, 4, 4);
-    background-color: rgba(75, 4, 4, 0.507);
+    background-color: rgba(75, 4, 4, 0.137);
 }
 .name-input.invalid input{
     border: 1.5px solid rgb(75, 4, 4);
-    background-color: rgba(75, 4, 4, 0.507);
+    background-color: rgba(75, 4, 4, 0.137);
 }
 .invalid-label{
     color: rgb(75, 4, 4);
     font-size: 1.2rem;
      font-weight: 700;
-      transform: translateX(45%);
+      transform: translateX(35%);
       transition: all 1s ease-in-out;
 }
 .valid-label{
@@ -166,9 +171,123 @@ button.btn-invalid {
 }
 input{
     font-size: 1.3rem;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    
 }
 
 textarea{
-
+    border-radius: 8px;
     font-size: 1.3rem;
+    border: none;
+    min-height: 66px;
 }
+label{
+    padding-bottom: 12px;
+}
+
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+   
+
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 918px) and (max-width: 1280px) {
+    
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 766px) and (max-width: 917px) {
+    
+   
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 766px) and (max-width: 900px) and (orientation: landscape) {
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    .section-contact-2 div{
+        grid-template-columns: 1fr;
+    }
+    
+    .section-contact-2 h2{
+        margin-top: 20px;
+    }
+    .section-contact-2 p{
+       width: 100%;
+       text-align: center;
+    }
+
+    .contact-btn-container button{
+        transform: scale(80%);
+    }
+    .section-contact-2 div{
+        width: 100%;
+    }
+    
+       
+
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  /* @media (min-width: 320px) and (max-width: 480px) {
+   
+  } */
+
+  @media (max-width: 480px){
+    .section-contact-2 div{
+        grid-template-columns: 1fr;
+    }
+    
+    .section-contact-2 h2{
+        margin-top: 20px;
+    }
+    .section-contact-2 p{
+       width: 100%;
+       text-align: center;
+    }
+
+    .contact-btn-container button{
+        transform: scale(80%);
+    }
+    .section-contact-2 div{
+        width: 100%;
+    }
+    
+    
+   
+  }

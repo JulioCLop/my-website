@@ -7,13 +7,14 @@ import projects from '../../module/project';
 import NavbarComponent from "../../components/NavbarComponent";
 import FooterComponent from "../../components/FooterComponent";
 import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
+import ProjectsContainer from "../../components/ProjectPage_Components/Projects_Container/ProjectsContainer";
 
 import Laptop  from '../../assets/ProjectPage/projectLaptop.png';
 import TTT from '../../assets/ProjectPage/TicTacToe.png';
 
 import classes from "./ProjectPage.module.css";
 
-import ProjectsContainer from "../../components/ProjectPage_Components/Projects_Container/ProjectsContainer";
+
 
 
 const ProjectPage = () => {
@@ -56,7 +57,6 @@ const ProjectPage = () => {
       <MobileNavigation />
       <div className={classes['project-page']}>
         <section className={classes["section-one_project"]}>
-        <div className="background-design"></div>
           <h2>Projects</h2>
           <h1>Since Beginning <span>My Journey</span></h1>
           <div className={classes["section-one_project-grid"]}>

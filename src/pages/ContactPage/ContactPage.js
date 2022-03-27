@@ -9,10 +9,13 @@ import ConfirmModal from "./ConfirmModal";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 import { ThemeContext } from "../../context/Theme.Contexts";
 
 import classes from  "./ContactPage.module.css";
+
 
 
 const ContactPage = () => {
@@ -26,6 +29,9 @@ const ContactPage = () => {
   const [enteredMessage, setEnteredMessage] = useState('');
   const [isMessageValid, setIsMessageValid] = useState();
   const [confirm, setConfirm] = useState(undefined);
+  const theme = useTheme();
+  const matchesXS = useMediaQuery(theme.breakpoints.up('xs'));
+
 
 
   useEffect(()=> {
@@ -77,7 +83,12 @@ setIsNameValid(enteredName.trim().length > 0)
     }else{
       setConfirm({
         title: 'Message Sent!!',
-        message: 'Great!!Let\'s work together'
+        message: `Great!!Thank you for leaving me a message 
+        ${enteredName.
+          slice(0,1).
+          toUpperCase() + 
+          enteredName.slice(1,enteredName.length
+            )}. I'm excited to work together! I will get back to you as soon as possible.`
       })
     }
       setEnteredMessage(e.target.value ='');
@@ -93,6 +104,7 @@ setIsNameValid(enteredName.trim().length > 0)
    
   }
 
+ 
   
 
   return (
@@ -100,37 +112,40 @@ setIsNameValid(enteredName.trim().length > 0)
       <NavbarComponent />
       <MobileNavigation />
       {error && <ErrorModal onConfirm={onConfirm} title={error.title} message={error.message}/> }
-      {confirm && <ConfirmModal onConfirm={onConfirm} title={confirm.title} message={confirm.message}/>}
+      {confirm && <ConfirmModal name={enteredName} onConfirm={onConfirm} title={confirm.title} message={confirm.message}/>}
       <div className={classes["contact-page"]}>
         <section className={classes["section-contact-1"]}>
           <div className={classes["contact-page-main-background"]}></div>
           <h1>get in touch!</h1>
         </section>
-        <form onSubmit={formSubmitHandler}>
+        <form className={classes.form} onSubmit={formSubmitHandler}>
           <section className={classes["section-contact-2"]}>
             <div>
               <div className={`${classes["name-input"]} ${isNameValid === false ? classes.invalid : ""}`}>
                 <label
                   htmlFor="name"
-                  className={`${isNameValid === false ? classes['invalid-label']: classes['valid-label']}`}
+                  className={`${isNameValid === false ? classes['invalid-label'] : classes['valid-label']}`}
 
                 >
-                  Name
+                   Name
                 </label>
                 <input
-                  type='text'
-                  id="name"
-                  value={enteredName}
+                   type='text'
+                   id="name"
+                   value={enteredName}
                    onChange={nameHandler}
                    onBlur={validateNameHandler}
+                  
                 />
+             
               </div>
               <div className={`${classes["email-input"]} ${isEmailValid === false ? classes.invalid : ''}`}>
-                <label  className={`${isEmailValid === false ? classes['invalid-label']: classes['valid-label']}`} htmlFor="email" >Email</label>
+                <label  className={`${isEmailValid === false ? classes['invalid-label']: classes['valid-label']}`} htmlFor="email" >
+                Email
+                </label>
                 <input
                   type='email'
                   id="email"
-                 
                   value={enteredEmail}
                  onChange={emailHandler}
                  onBlur={validateEmailHandler}
@@ -151,46 +166,47 @@ setIsNameValid(enteredName.trim().length > 0)
                 ></textarea>
               </div>
               <div className={classes["message-input-2"]}>
-                <h2>Contact Me!</h2>
-                <p>
-                  Have any questions? Send me message,and let's get talking!
-                </p>
-                <ul>
-                  <li>
-                    <a
-                      rel="noreferrer"
-                      href="https://www.facebook.com/julioclopezDev/"
-                      target="_blank"
-                    >
-                      <FacebookIcon className={classes.icons} />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      rel="noreferrer"
-                      href="https://www.linkedin.com/in/juliolopezdev/"
-                      target="_blank"
-                    >
-                      <LinkedInIcon className={classes.icons}/>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      rel="noreferrer"
-                      href="mailto: joeyclopez88@gmail.com"
-                      target="_blank"
-                    >
-                      <EmailIcon className={classes.icons}/>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+    <h2>Contact Me!</h2>
+    <p>
+      Have any questions? Send me message,and let's get talking!
+    </p>
+    <ul>
+      <li>
+        <a
+          rel="noreferrer"
+          href="https://www.facebook.com/julioclopezDev/"
+          target="_blank"
+        >
+          <FacebookIcon className={classes.icons} />
+        </a>
+      </li>
+      <li>
+        <a
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/juliolopezdev/"
+          target="_blank"
+        >
+          <LinkedInIcon className={classes.icons}/>
+        </a>
+      </li>
+      <li>
+        <a
+          rel="noreferrer"
+          href="mailto: joeyclopez88@gmail.com"
+          target="_blank"
+        >
+          <EmailIcon className={classes.icons}/>
+        </a>
+      </li>
+    </ul>
+  </div>
             </div>
           </section>
           <div className={classes["contact-btn-container"]}>
             <button type="submit" className={`${!isFormValid ? classes['btn-invalid'] : ""}`} disabled={!isFormValid} >Submit</button>
           </div>
         </form>
+        
       </div>
       <FooterComponent />
     </div>
