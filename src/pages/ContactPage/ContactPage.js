@@ -4,6 +4,7 @@ import NavbarComponent from "../../components/NavbarComponent";
 import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
 import FooterComponent from "../../components/FooterComponent";
 import Input from "../../components/UI/Input/Input";
+import Button from "../../components/UI/Button/Button";
 import ConfirmModal from "./ConfirmModal";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -195,7 +196,7 @@ setIsNameValid(enteredName.trim().length > 0)
             </div>
           </section>
           <div className={classes["contact-btn-container"]}>
-            <button type="submit" className={`${!isFormValid ? classes['btn-invalid'] : ""}`} disabled={!isFormValid} >Submit</button>
+            <Button type="submit" className={`${classes.button} ${!isFormValid && classes["inactive-cursor"]} ${!isFormValid ? classes['btn-invalid'] : ""} `} disabled={!isFormValid} >Submit</Button>
           </div>
         </form>
         
