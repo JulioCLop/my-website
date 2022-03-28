@@ -13,10 +13,11 @@ import Brightness3Icon from '@mui/icons-material/Brightness3';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
 import Toggle from "react-toggle";
-
 import classes from "./NavbarConponent.module.css";
-
 import  "./toggle.css";
+
+
+
 
 const NavbarComponent = () => {
   const theme = useTheme();
@@ -33,6 +34,7 @@ const NavbarComponent = () => {
   const clickHandler = () => {
     setActiveBtn( prevActiveBtn => !prevActiveBtn)
     setSideNav(prevSideNav => !prevSideNav)
+   
   };
 
   const darkModeHandler = (e) => {
@@ -60,7 +62,7 @@ const NavbarComponent = () => {
             {!sideNav && !matchesMD || sideNav ? (
               <div
                 onClick={clickHandler}
-                className={`${classes["toggle-button"]} ${activeBtn ? classes.active : classes["not-active"] } `}
+                className={`${classes["toggle-button"]}  ${activeBtn ? classes.active : classes["not-active"] } `}
               >
                 <span></span>
                 <span></span>

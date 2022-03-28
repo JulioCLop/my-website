@@ -169,13 +169,7 @@ button.btn-invalid {
     background-color: rgba(0, 0, 0, 0.801);
     color: white;
 }
-input{
-    font-size: 1.3rem;
-    border-radius: 8px;
-    outline: none;
-    border: none;
-    
-}
+
 
 textarea{
     border-radius: 8px;

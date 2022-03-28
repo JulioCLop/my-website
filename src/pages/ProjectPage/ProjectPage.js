@@ -9,10 +9,15 @@ import FooterComponent from "../../components/FooterComponent";
 import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
 import ProjectsContainer from "../../components/ProjectPage_Components/Projects_Container/ProjectsContainer";
 
+import LinkButton from "../../components/UI/Button/Link-Button";
+import Input from "../../components/UI/Input/Input";
+
 import Laptop  from '../../assets/ProjectPage/projectLaptop.png';
 import TTT from '../../assets/ProjectPage/TicTacToe.png';
 
 import classes from "./ProjectPage.module.css";
+import Card from "../../components/UI/Card/Card";
+
 
 
 
@@ -47,8 +52,6 @@ const ProjectPage = () => {
 
   useEffect(()=>{
     setFilterProjects(projects);
-    
-    
   }, []);
 
   return (
@@ -63,8 +66,8 @@ const ProjectPage = () => {
           <div className={classes["section-one_project-content"]}>
           <p>Go ahead, check out my projects below or visit my Github Repo and check out my previous projects. Building Javascript applications has given me the ability to function independantly, and able to deliver fast, optimized, scalable apps. I'm currenly working on creating a Ecommerce website which will provide the user an exclusive experience. As I develop, my main focus will be on fast, elegant and accessible user experience.  </p>
           <div className={classes["section-one_project-btns"]}>
-          <a href="www.github.com">View Current Project</a>
-          <a href="www.github.com">View Github Repo</a>
+          <LinkButton href="www.github.com">View Current Project</LinkButton>
+          <LinkButton href="www.github.com">View Github Repo</LinkButton>
           </div>
           </div>
           <div className={classes["section-one_project-img"]}>
@@ -75,22 +78,22 @@ const ProjectPage = () => {
         <section className={classes["section-two_project"]}>
         <h2>Most Recent <span>projects</span></h2>
         <div className={classes["section-two_project-cards"]}>
-          <div className={classes["section-two_project-card"]}>
+          <Card className={classes["section-two_project-card"]}>
           <img src={TTT} alt="img"/>
             <div className={classes["section-two_project-card-content"]}>
             <h4>Tic, Tac, Toe App</h4>
             <p>HTML, CSS, JS</p>
-            <a href="www.github.com">view</a>
+            <LinkButton className={classes["a-2"]} href="www.github.com">view</LinkButton>
             </div>
-          </div>
-          <div className={classes["section-two_project-card"]}>
+          </Card>
+          <Card className={classes["section-two_project-card"]}>
           <img src="https://images.unsplash.com/photo-1620228885847-9eab2a1adddc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGV4cGVuc2UlMjBhcHB8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" alt="img"/>
             <div className={classes["section-two_project-card-content"]}>
             <h4>Expense App</h4>
             <p>ReactJS</p>
-            <a href="www.github.com">View</a>
+            <LinkButton className={classes["a-2"]} href="www.github.com">View</LinkButton>
             </div>
-          </div>
+          </Card>
         </div>
         </section>
         <section className={classes["section-three_project"]}>
@@ -101,7 +104,7 @@ const ProjectPage = () => {
       <div className={classes["section-three_project_search"]} >
       <div>
         <label>Search Project</label>
-        <input type="search" onChange={e => setSearch(e.target.value)}/>
+        <Input type="search" onChange={e => setSearch(e.target.value)}/>
       </div>
       </div>
       <main className={classes["section-three_project_inner_main"]}>

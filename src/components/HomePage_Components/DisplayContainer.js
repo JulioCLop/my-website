@@ -6,6 +6,9 @@ import DisplayContentContainer from "./DisplayContentContainer";
 
 import classes from "./DisplayContainer.module.css";
 
+
+
+
 const DisplayContainer = (props) => {
   const { id } = props;
 

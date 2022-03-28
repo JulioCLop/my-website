@@ -1,0 +1,21 @@
+ .a-link {
+    font-family: var(--button-font);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 15px 30px;
+    border-radius: 80px;
+    background-color: var(--main-red);
+    border: none;
+    box-shadow: var(--button-box-show);
+    
+}
+
+ .a-link:hover {
+    background-color: var(--light-red);
+    cursor: pointer;
+    box-shadow: none;
+    color: inherit;
+}

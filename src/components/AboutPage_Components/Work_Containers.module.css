@@ -42,7 +42,7 @@
    opacity: 0.6;
 }
 
-.work-job-containers a{
+ .a-1{
     cursor: pointer;
    background-color: rgb(75, 4, 4) ;
    text-decoration: none;
@@ -51,7 +51,7 @@
    padding: 2rem;
    border-radius: 50px;
 }
-.work-job-containers a:hover{
+.a-1:hover{
     background-color: rgba(75, 4, 4, 0.98);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     color: inherit;

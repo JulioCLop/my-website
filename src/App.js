@@ -18,14 +18,17 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   
   useEffect(()=> {
-    setTimeout(()=>{
+   const timerId =  setTimeout(()=>{
       setIsLoading(false);
     }, 3000)
+    return ()=>{
+      clearTimeout(timerId)
+    }
+
   },[]);
 
   return (
     <>
-<div>
     { isLoading ?
       <LoadingPage/>
     :
@@ -42,7 +45,6 @@ const App = () => {
     )
 
     }
-    </div>
     </>
    
   );

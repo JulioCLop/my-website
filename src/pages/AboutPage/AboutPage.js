@@ -112,9 +112,9 @@ const  AboutPage = () => {
        <h1>Where I've <span style={darkMode ? {color: 'gray'} : {color: 'rgba(128, 128, 128, 0.822)'}}>worked</span></h1>
      </div>
      <div className={classes["work-main-job-containers"]}>
-      <WorkContainers srcImage='https://gethalen.com/images/logo.png' link='https://gethalen.com/'/>
-      <WorkContainers srcImage='https://orlandospencer.com/media/cache/73/04/73042ae0f959b479bc9fbf6dd7bfb3ee.jpg' link='https://gethalen.com/'/>
-      <WorkContainers srcImage='https://couponseeker.com/storage/CCS-SUPPLY-STORE.jpg' link='https://gethalen.com/'/>
+      <WorkContainers srcImage='https://gethalen.com/images/logo.png' link='https://gethalen.com/' alt="halen"/>
+      <WorkContainers srcImage='https://orlandospencer.com/media/cache/73/04/73042ae0f959b479bc9fbf6dd7bfb3ee.jpg' link='https://orlandospencer.com/' alt='orlando spencer'/>
+      <WorkContainers srcImage='https://couponseeker.com/storage/CCS-SUPPLY-STORE.jpg' link='https://ccssupplystore.com/' alt="ccs supply store"/>
      </div>
    </section>
    <section style={darkMode ? darkModeStyles : {}} className={classes["CV_Section"]}>

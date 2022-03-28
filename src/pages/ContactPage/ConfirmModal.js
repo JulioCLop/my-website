@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import Button from '../../components/UI/Button/Button';
 
 import classes from './ConfirmModal.module.css';
 
@@ -17,7 +18,7 @@ const ConfirmOverlay = props => {
     </div>
     <div className={classes.content}>{props.message}</div>
     <footer className={classes.footer}>
-        <button className={classes.btn} onClick={props.onConfirm}>Exit</button>
+        <Button className={classes.btn} onSubmit={props.onConfirm}>X</Button>
     </footer>
   </div>
   )

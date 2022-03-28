@@ -31,22 +31,3 @@ z-index: -4;
     justify-content: space-between;
 }
 
-.project-card_flex_container a{
-    color: whitesmoke;
-    font-family: var(--button-font);
-    letter-spacing: 1px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 5px 20px;
-    border-radius: 4px;
-    border: none;
-    
-   
-}
-.project-card_flex_container a:hover{
-    transition: all 0.4s;
-    color: white;
-    background-color: var(--main-red);
-}

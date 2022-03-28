@@ -36,7 +36,7 @@
     border-radius: 8px;
 }
 .btn:hover{
-    background-color: rgba(167, 148, 148, 0.432);
+    
 }
 @media (min-width: 768px) {
     .modal {

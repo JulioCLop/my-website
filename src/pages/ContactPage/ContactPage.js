@@ -3,7 +3,7 @@ import React, { useState , useEffect, useContext } from "react";
 import NavbarComponent from "../../components/NavbarComponent";
 import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
 import FooterComponent from "../../components/FooterComponent";
-import ErrorModal from "./ErrorModal";
+import Input from "../../components/UI/Input/Input";
 import ConfirmModal from "./ConfirmModal";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -21,7 +21,6 @@ import classes from  "./ContactPage.module.css";
 const ContactPage = () => {
   const {darkMode} = useContext(ThemeContext);
   const [isFormValid, setFormIsValid] = useState(false);
-  const [error , setError] = useState(undefined);
   const [enteredEmail, setEnteredEmail] = useState('');
   const [isEmailValid, setIsEmailValid] = useState();
   const [enteredName, setEnteredName] = useState('');
@@ -75,10 +74,6 @@ setIsNameValid(enteredName.trim().length > 0)
       enteredEmail.trim().length === 0 ||
       enteredMessage.trim().length === 0
     ) {
-      setError({
-        title: 'Enter Valid information',
-        message: 'Please enter a valid name, email, and message.'
-      })
       return;
     }else{
       setConfirm({
@@ -99,7 +94,6 @@ setIsNameValid(enteredName.trim().length > 0)
   };
 
   const onConfirm = () => {
-    setError(null)
     setConfirm(false)
    
   }
@@ -111,7 +105,6 @@ setIsNameValid(enteredName.trim().length > 0)
     <div className={`${darkMode && classes['is-darkmode']}`}>
       <NavbarComponent />
       <MobileNavigation />
-      {error && <ErrorModal onConfirm={onConfirm} title={error.title} message={error.message}/> }
       {confirm && <ConfirmModal name={enteredName} onConfirm={onConfirm} title={confirm.title} message={confirm.message}/>}
       <div className={classes["contact-page"]}>
         <section className={classes["section-contact-1"]}>
@@ -129,13 +122,12 @@ setIsNameValid(enteredName.trim().length > 0)
                 >
                    Name
                 </label>
-                <input
+                <Input
                    type='text'
                    id="name"
                    value={enteredName}
                    onChange={nameHandler}
                    onBlur={validateNameHandler}
-                  
                 />
              
               </div>
@@ -143,12 +135,12 @@ setIsNameValid(enteredName.trim().length > 0)
                 <label  className={`${isEmailValid === false ? classes['invalid-label']: classes['valid-label']}`} htmlFor="email" >
                 Email
                 </label>
-                <input
+                <Input
                   type='email'
                   id="email"
                   value={enteredEmail}
-                 onChange={emailHandler}
-                 onBlur={validateEmailHandler}
+                  onChange={emailHandler}
+                  onBlur={validateEmailHandler}
                 />
               </div>
               <div className={`${classes["message-input"]} ${isMessageValid === false ? classes.invalid : ''}`}>
