@@ -47,8 +47,6 @@ const NavbarComponent = () => {
     setDarkMode(prevMode => prevMode);
   },[])
   
-
- 
   return (
     <>
       <header className={classes.header}>

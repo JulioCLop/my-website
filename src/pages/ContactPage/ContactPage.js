@@ -1,4 +1,4 @@
-import React, { useState , useEffect, useContext } from "react";
+import React, { useState , useEffect, useContext, useMemo } from "react";
 
 import NavbarComponent from "../../components/NavbarComponent";
 import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
@@ -10,8 +10,6 @@ import ConfirmModal from "./ConfirmModal";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
 
 import { ThemeContext } from "../../context/Theme.Contexts";
 
@@ -29,14 +27,9 @@ const ContactPage = () => {
   const [enteredMessage, setEnteredMessage] = useState('');
   const [isMessageValid, setIsMessageValid] = useState();
   const [confirm, setConfirm] = useState(undefined);
-  const theme = useTheme();
-  const matchesXS = useMediaQuery(theme.breakpoints.up('xs'));
-
-
-
   
 
-  
+
   const emailHandler = (e) => {
     setEnteredEmail(e.target.value);
   };
@@ -56,8 +49,10 @@ const validateMessageHandler = () => {
 setIsMessageValid(enteredMessage.trim().length > 25)
 }
 const validateNameHandler = () => {
-setIsNameValid(enteredName.trim().length > 0)
+  setIsNameValid(enteredName.trim().length > 0);
+  
 }
+
 
 
   const formSubmitHandler = (e) => {
@@ -83,16 +78,16 @@ setIsNameValid(enteredName.trim().length > 0)
       setEnteredName(e.target.value = '');
       setEnteredEmail(e.target.value = '');
   
-    console.log(enteredEmail,enteredName,enteredMessage)
   };
 
   const onConfirm = () => {
     setConfirm(false)
   }
 
+
   useEffect(()=> {
     const identifier = setTimeout(() => {
-       setFormIsValid(enteredMessage.trim().length > 25 && enteredEmail.includes('@'));
+        setFormIsValid(enteredMessage.trim().length > 25 && enteredEmail.includes('@'));
      },500);
      return () => {
        clearTimeout(identifier);
@@ -116,10 +111,10 @@ setIsNameValid(enteredName.trim().length > 0)
               <div className={`${classes["name-input"]} ${isNameValid === false ? classes.invalid : ""}`}>
                 <label
                   htmlFor="name"
-                  className={`${isNameValid === false ? classes['invalid-label'] : classes['valid-label']}`}
+                  className={`${isNameValid === false ? classes['invalid-label'] : classes['valid-label']} ${!isNameValid && classes.NameTranHelp}`}
 
                 >
-                   Name
+                 { isNameValid === false ?  "Enter valid name." : "Name" }
                 </label>
                 <Input
                    type='text'
@@ -131,8 +126,8 @@ setIsNameValid(enteredName.trim().length > 0)
              
               </div>
               <div className={`${classes["email-input"]} ${isEmailValid === false ? classes.invalid : ''}`}>
-                <label  className={`${isEmailValid === false ? classes['invalid-label']: classes['valid-label']}`} htmlFor="email" >
-                Email
+                <label  className={`${isEmailValid === false ? classes['invalid-label']: classes['valid-label']} ${!isEmailValid && classes.NameTranHelp}`} htmlFor="email" >
+                { isEmailValid === false ?  "Enter valid Email." : "Email" }
                 </label>
                 <Input
                   type='email'
@@ -144,10 +139,11 @@ setIsNameValid(enteredName.trim().length > 0)
               </div>
               <div className={`${classes["message-input"]} ${isMessageValid === false ? classes.invalid : ''}`}>
                 <label
+                style={isMessageValid === false ? {transform:"translateX(25%)"} : {}}
                   htmlFor="message"
-                  className={`${isMessageValid === false ? classes['invalid-label']: classes['valid-label']}`}
+                  className={`${isMessageValid === false ? classes['invalid-label']: classes['valid-label']} `}
                 >
-                  Message
+                { isMessageValid === false ?  "Must enter 25 charactors." : "Message"}
                 </label>
                 <textarea
                   id="message"

@@ -133,6 +133,7 @@ div .message-input-2 ul li a .icons{
     }
 
 /* form validation */
+
 .email-input.invalid input,
 .name-input.invalid input
 {
@@ -149,15 +150,21 @@ div .message-input-2 ul li a .icons{
     color: rgb(109, 6, 6);
     font-size: 1.2rem;
      font-weight: 700;
-      transform: translateX(35%);
+     width: 100%;
+     text-align: center;
+     transform: translateX(35%); 
       transition: all 1s ease-in-out;
+}
+.NameTranHelp{
+    transform: translateX(35%);
 }
 .valid-label{
     transition: all 1s ease-in-out;
     color: inherit;
     font-size: inherit;
-     font-weight: inherit;
-      transform: translateX(0);
+    font-weight: inherit;
+    transform: translateX(0);
+    
 }
 button.btn-invalid {
     background-color: rgba(3, 0, 0, 0.425);
