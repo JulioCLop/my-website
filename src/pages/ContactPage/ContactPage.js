@@ -143,7 +143,7 @@ const validateNameHandler = () => {
                   htmlFor="message"
                   className={`${isMessageValid === false ? classes['invalid-label']: classes['valid-label']} `}
                 >
-                { isMessageValid === false ?  "Must enter 25 charactors." : "Message"}
+                { isMessageValid === false ?  "Must enter 25 characters." : "Message"}
                 </label>
                 <textarea
                   id="message"
