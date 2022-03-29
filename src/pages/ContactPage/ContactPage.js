@@ -34,15 +34,7 @@ const ContactPage = () => {
 
 
 
-  useEffect(()=> {
-   const identifier = setTimeout(() => {
-      setFormIsValid(enteredMessage.trim().length > 25 && enteredEmail.includes('@'));
-    },500);
-
-    return () => {
-      clearTimeout(identifier);
-    }
-  }, [enteredMessage, enteredEmail]);
+  
 
   
   const emailHandler = (e) => {
@@ -96,12 +88,18 @@ setIsNameValid(enteredName.trim().length > 0)
 
   const onConfirm = () => {
     setConfirm(false)
-   
   }
 
+  useEffect(()=> {
+    const identifier = setTimeout(() => {
+       setFormIsValid(enteredMessage.trim().length > 25 && enteredEmail.includes('@'));
+     },500);
+     return () => {
+       clearTimeout(identifier);
+     }
+   }, [enteredMessage, enteredEmail]);
  
   
-
   return (
     <div className={`${darkMode && classes['is-darkmode']}`}>
       <NavbarComponent />

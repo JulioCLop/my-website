@@ -9,6 +9,7 @@ const  WorkContainers = (props) => {
 const {srcImage, link} = props;
 
   return (
+   
     <Card className={classes["work-job-containers"]}>
     <img src={srcImage} style={{background: 'white'}} width='175' alt={props.alt}/>
     <span>
