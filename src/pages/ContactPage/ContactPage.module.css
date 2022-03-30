@@ -148,11 +148,11 @@ div .message-input-2 ul li a .icons{
 }
 .invalid-label{
     color: rgb(109, 6, 6);
-    font-size: 1.2rem;
+    font-size: 1rem;
      font-weight: 700;
      width: 100%;
      text-align: center;
-     transform: translateX(35%); 
+     transform: translateX(25%); 
       transition: all 1s ease-in-out;
 }
 .NameTranHelp{

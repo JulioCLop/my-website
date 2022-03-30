@@ -149,7 +149,7 @@ console.log(enteredEmailIsValid);
               </div>
               <div className={`${classes["message-input"]} ${messageInputHasError? classes.invalid : ''}`}>
                 <label
-                style={messageInputHasError ? {transform:"translateX(25%)"} : {}}
+                style={messageInputHasError ? {transform:"translateX(17%)"} : {}}
                   htmlFor="message"
                   className={`${messageInputHasError ? classes['invalid-label']: classes['valid-label']} `}
                 >
