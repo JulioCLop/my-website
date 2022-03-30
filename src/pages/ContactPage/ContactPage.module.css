@@ -156,7 +156,7 @@ div .message-input-2 ul li a .icons{
       transition: all 1s ease-in-out;
 }
 .NameTranHelp{
-    transform: translateX(35%);
+    transform: translateX(30%);
 }
 .valid-label{
     transition: all 1s ease-in-out;
@@ -166,10 +166,16 @@ div .message-input-2 ul li a .icons{
     transform: translateX(0);
     
 }
+/* .button:disabled,
+.button:disabled:active{
+background-color: #ccc;
+color: #292929;
+cursor: not-allowed;
+}
 button.btn-invalid {
     background-color: rgba(3, 0, 0, 0.425);
-    cursor: auto;
-}
+  
+} */
 
 /* end */
 
@@ -186,6 +192,10 @@ textarea{
     font-size: 1.3rem;
     border: none;
     min-height: 66px;
+    resize: none;
+}
+textarea:focus{
+    outline: none;
 }
 label{
     padding-bottom: 12px;

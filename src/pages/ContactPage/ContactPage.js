@@ -1,4 +1,6 @@
-import React, { useState , useEffect, useContext, useMemo } from "react";
+import React, { useState , useContext, useCallback } from "react";
+
+import useInput from '../../hooks/use_input';
 
 import NavbarComponent from "../../components/NavbarComponent";
 import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
@@ -18,52 +20,59 @@ import classes from  "./ContactPage.module.css";
 
 
 const ContactPage = () => {
+
   const {darkMode} = useContext(ThemeContext);
-  const [isFormValid, setFormIsValid] = useState(false);
-  const [enteredEmail, setEnteredEmail] = useState('');
-  const [isEmailValid, setIsEmailValid] = useState();
-  const [enteredName, setEnteredName] = useState('');
-  const [isNameValid, setIsNameValid] = useState();
-  const [enteredMessage, setEnteredMessage] = useState('');
-  const [isMessageValid, setIsMessageValid] = useState();
-  const [confirm, setConfirm] = useState(undefined);
+
+  const [confirm, setConfirm] = useState(null);
+  const [formIsValid, setFormIsValid] = useState(false);
+
+
+  const {
+      value: enteredName, 
+      isValid: enteredNameIsValid,
+      hasError: nameInputHasError,
+      valueChangeHandler: nameChangeHandler,
+      inputBlurHandler: nameBlurHanlder,
+      reset: resetNameInput
+    } = useInput(value => value.trim() !== '');
   
-
-
-  const emailHandler = (e) => {
-    setEnteredEmail(e.target.value);
-  };
-  const nameHandler = (e) => {
-    setEnteredName(e.target.value);
+  
    
-  };
+const {
+    value: enteredEmail,
+    isValid: enteredEmailIsValid,
+    hasError: emailInputHasError,
+    valueChangeHandler: emailChangeHandler,
+    inputBlurHandler: emailBlurHandler,
+    reset: emailReset 
+    } = useInput(value => value.trim().includes('@'));
 
-  const messageHandler = (e) => {
-    setEnteredMessage(e.target.value);
-  };
+   
+   
+    const {
+      value: enteredMessage,
+      isValid: enteredMessageIsValid,
+      hasError: messageInputHasError,
+      valueChangeHandler: messageChangeHandler,
+      inputBlurHandler: messageBlurHandler,
+      reset: messageReset
 
-const validateEmailHandler = () => {
-  setIsEmailValid(enteredEmail.includes('@'));
-}
-const validateMessageHandler = () => {
-setIsMessageValid(enteredMessage.trim().length > 25)
-}
-const validateNameHandler = () => {
-  setIsNameValid(enteredName.trim().length > 0);
+    } = useInput(value => value.trim().length > 25);
   
-}
-
-
+   
+   
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
-    if (
-      enteredName.trim().length === 0 ||
-      enteredEmail.trim().length === 0 ||
-      enteredMessage.trim().length === 0
+    
+    if(
+     !enteredEmailIsValid &&
+     !enteredNameIsValid &&
+     !enteredMessageIsValid
     ) {
       return;
     }else{
+      setFormIsValid(true);
       setConfirm({
         title: 'Message Sent!!',
         message: `Great!!Thank you for leaving me a message 
@@ -74,27 +83,20 @@ const validateNameHandler = () => {
             )}. I'm excited to work together! I will get back to you as soon as possible.`
       })
     }
-      setEnteredMessage(e.target.value ='');
-      setEnteredName(e.target.value = '');
-      setEnteredEmail(e.target.value = '');
+       messageReset();
+       resetNameInput();
+       emailReset();
+
   
   };
-
+console.log("this is a valid form: " + formIsValid);
   const onConfirm = () => {
     setConfirm(false)
+    setFormIsValid(false)
   }
-
-
-  useEffect(()=> {
-    const identifier = setTimeout(() => {
-        setFormIsValid(enteredMessage.trim().length > 25 && enteredEmail.includes('@'));
-     },500);
-     return () => {
-       clearTimeout(identifier);
-     }
-   }, [enteredMessage, enteredEmail]);
- 
   
+  
+
   return (
     <div className={`${darkMode && classes['is-darkmode']}`}>
       <NavbarComponent />
@@ -108,48 +110,48 @@ const validateNameHandler = () => {
         <form className={classes.form} onSubmit={formSubmitHandler}>
           <section className={classes["section-contact-2"]}>
             <div>
-              <div className={`${classes["name-input"]} ${isNameValid === false ? classes.invalid : ""}`}>
+              <div className={`${classes["name-input"]} ${nameInputHasError  ? classes.invalid : ""}`}>
                 <label
                   htmlFor="name"
-                  className={`${isNameValid === false ? classes['invalid-label'] : classes['valid-label']} ${!isNameValid && classes.NameTranHelp}`}
+                  className={`${nameInputHasError ? classes['invalid-label'] : classes['valid-label']} ${nameInputHasError  && classes.NameTranHelp}`}
 
                 >
-                 { isNameValid === false ?  "Enter valid name." : "Name" }
+                 { nameInputHasError ?  "Enter valid name." : "Name" }
                 </label>
                 <Input
                    type='text'
                    id="name"
                    value={enteredName}
-                   onChange={nameHandler}
-                   onBlur={validateNameHandler}
+                   onChange={nameChangeHandler}
+                   onBlur={nameBlurHanlder}
                 />
              
               </div>
-              <div className={`${classes["email-input"]} ${isEmailValid === false ? classes.invalid : ''}`}>
-                <label  className={`${isEmailValid === false ? classes['invalid-label']: classes['valid-label']} ${!isEmailValid && classes.NameTranHelp}`} htmlFor="email" >
-                { isEmailValid === false ?  "Enter valid Email." : "Email" }
+              <div className={`${classes["email-input"]} ${emailInputHasError ? classes.invalid : ''}`}>
+                <label htmlFor="email" className={`${ emailInputHasError ? classes['invalid-label']: classes['valid-label']} ${emailInputHasError && classes.NameTranHelp}`} >
+                { emailInputHasError ?  "Enter valid Email." : "Email" }
                 </label>
                 <Input
                   type='email'
                   id="email"
                   value={enteredEmail}
-                  onChange={emailHandler}
-                  onBlur={validateEmailHandler}
+                  onChange={emailChangeHandler}
+                  onBlur={emailBlurHandler}
                 />
               </div>
-              <div className={`${classes["message-input"]} ${isMessageValid === false ? classes.invalid : ''}`}>
+              <div className={`${classes["message-input"]} ${messageInputHasError? classes.invalid : ''}`}>
                 <label
-                style={isMessageValid === false ? {transform:"translateX(25%)"} : {}}
+                style={messageInputHasError ? {transform:"translateX(25%)"} : {}}
                   htmlFor="message"
-                  className={`${isMessageValid === false ? classes['invalid-label']: classes['valid-label']} `}
+                  className={`${messageInputHasError ? classes['invalid-label']: classes['valid-label']} `}
                 >
-                { isMessageValid === false ?  "Must enter 25 characters." : "Message"}
+                { messageInputHasError ?  "Enter at least 25 characters." : "Message"}
                 </label>
                 <textarea
                   id="message"
-                  onChange={messageHandler}
+                  onChange={messageChangeHandler}
                   value={enteredMessage}
-                  onBlur={validateMessageHandler}
+                  onBlur={ messageBlurHandler}
                 ></textarea>
               </div>
               <div className={classes["message-input-2"]}>
@@ -190,7 +192,7 @@ const validateNameHandler = () => {
             </div>
           </section>
           <div className={classes["contact-btn-container"]}>
-            <Button type="submit" className={`${classes.button} ${!isFormValid && classes["inactive-cursor"]} ${!isFormValid ? classes['btn-invalid'] : ""} `} disabled={!isFormValid} >Submit</Button>
+            <Button type="submit" className={`${classes.button } `} disabled={formIsValid}>Submit</Button>
           </div>
         </form>
         
