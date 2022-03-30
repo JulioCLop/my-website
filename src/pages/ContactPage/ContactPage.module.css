@@ -166,7 +166,7 @@ div .message-input-2 ul li a .icons{
     transform: translateX(0);
     
 }
-/* .button:disabled,
+.button:disabled,
 .button:disabled:active{
 background-color: #ccc;
 color: #292929;
@@ -175,7 +175,7 @@ cursor: not-allowed;
 button.btn-invalid {
     background-color: rgba(3, 0, 0, 0.425);
   
-} */
+}
 
 /* end */
 

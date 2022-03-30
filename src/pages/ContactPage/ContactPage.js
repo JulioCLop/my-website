@@ -24,9 +24,10 @@ const ContactPage = () => {
   const {darkMode} = useContext(ThemeContext);
 
   const [confirm, setConfirm] = useState(null);
-  const [formIsValid, setFormIsValid] = useState(false);
+  
+  
 
-
+  
   const {
       value: enteredName, 
       isValid: enteredNameIsValid,
@@ -36,8 +37,7 @@ const ContactPage = () => {
       reset: resetNameInput
     } = useInput(value => value.trim() !== '');
   
-  
-   
+ 
 const {
     value: enteredEmail,
     isValid: enteredEmailIsValid,
@@ -45,9 +45,9 @@ const {
     valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
     reset: emailReset 
-    } = useInput(value => value.trim().includes('@'));
+    } = useInput(value => value.includes('@'));
 
-   
+   console.log(enteredEmail);
    
     const {
       value: enteredMessage,
@@ -58,13 +58,21 @@ const {
       reset: messageReset
 
     } = useInput(value => value.trim().length > 25);
-  
-   
-   
 
-  const formSubmitHandler = (e) => {
+
+    let formIsValid = false;
+
+    if( enteredEmailIsValid &&
+      enteredNameIsValid &&
+      enteredMessageIsValid){
+         formIsValid = true;
+      }
+   
+   
+console.log(enteredEmailIsValid);
+  
+  const formSubmitHandler = useCallback((e) => {
     e.preventDefault();
-    
     if(
      !enteredEmailIsValid &&
      !enteredNameIsValid &&
@@ -72,7 +80,7 @@ const {
     ) {
       return;
     }else{
-      setFormIsValid(true);
+    
       setConfirm({
         title: 'Message Sent!!',
         message: `Great!!Thank you for leaving me a message 
@@ -86,17 +94,17 @@ const {
        messageReset();
        resetNameInput();
        emailReset();
+       
 
   
-  };
-console.log("this is a valid form: " + formIsValid);
+  }, [enteredName,enteredEmailIsValid,enteredNameIsValid,enteredMessageIsValid]);
+
   const onConfirm = () => {
-    setConfirm(false)
-    setFormIsValid(false)
+    setConfirm(false);
   }
   
   
-
+  console.log("this is a valid form: " + formIsValid);
   return (
     <div className={`${darkMode && classes['is-darkmode']}`}>
       <NavbarComponent />
@@ -192,7 +200,7 @@ console.log("this is a valid form: " + formIsValid);
             </div>
           </section>
           <div className={classes["contact-btn-container"]}>
-            <Button type="submit" className={`${classes.button } `} disabled={formIsValid}>Submit</Button>
+            <Button type="submit" className={`${classes.button } `} disabled={!formIsValid}>Submit</Button>
           </div>
         </form>
         
