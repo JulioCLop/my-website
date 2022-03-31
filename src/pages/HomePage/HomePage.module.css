@@ -19,7 +19,55 @@
   
 }
 
+.cardContainer{
+  width: 700px;
+  height: 500px;
+  background-color: rgba(7, 6, 6, 0.966) ;
+  border-radius: 8px;
+}
+.cardContainerSections{
+  width: 100%;
+  height: 50%;
+}
+.cardContainerSections div{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 
+}
+.cardContainerSections div h1{
+ font-family:var(--primary-font-family);
+ font-size: 3rem;
+}
+.cardContainerSections div p,
+.cardContainerSections div small
+{
+  font-family: var(--secondary-font-family);
+  font-size: 1.2rem;
+}
+
+.cardContainerSections div a{
+  font-family: var(--button-font);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 15px 30px;
+  border-radius: 80px;
+  background-color: var(--main-red);
+  border: none;
+  box-shadow: var(--button-box-show);
+}
+
+.cardContainerSections div a:hover{
+  background-color: var(--light-red);
+  cursor: pointer;
+  box-shadow: none;
+  color: inherit;
+}
 
 /* 
   ##Device = Desktops

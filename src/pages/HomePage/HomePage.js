@@ -1,12 +1,14 @@
 import React from "react";
 
-import NavbarComponent from "../../components/NavbarComponent";
-import DisplayContainer from "../../components/HomePage_Components/DisplayContainer";
-import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
+import { Link } from "react-router-dom";
 
+import NavbarComponent from "../../components/NavbarComponent";
+import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
+import Card from '../../components/UI/Card/Card'
 
 
 import classes from "./HomePage.module.css";
+
 
 
 const HomePage = () => {
@@ -17,11 +19,21 @@ const HomePage = () => {
       <MobileNavigation  /> 
       <main >
         <section className={classes["section-flex"]}>
-          <DisplayContainer
-            id="img-4"
-            src="https://images.unsplash.com/photo-1641752084778-3e4f55a083e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-            alt=""
-          />
+        <Card className={classes.cardContainer}>
+        <div className={classes.cardContainerSections}>
+        <div>
+        <h1>React Developer</h1>
+        <p>I'm a React developer, and I build anything from mobile to web apps.</p>
+        </div>
+        </div>
+      
+       <div className={classes.cardContainerSections}>
+         <div>
+         <small>Feel free to start by looking at my projects!</small>
+         <Link  to="/projects">Check it out!</Link>
+         </div>
+       </div>
+        </Card>
         </section>
       </main>
     </div>
