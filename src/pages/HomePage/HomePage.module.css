@@ -10,11 +10,21 @@
   height: 100vh;
 }
 
-
+.react-image{
+  height: 140px;
+  width: 140px;
+  position: absolute;
+  left: 278px;
+  bottom: 179px;
+ ;
+  
+}
 .section-flex {
   padding-top: 6rem;
   display: flex;
   justify-content: space-around;
+  position: relative;
+
   
   
 }

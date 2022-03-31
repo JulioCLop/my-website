@@ -1,5 +1,7 @@
 import React from "react";
 
+import reactImage  from "../../assets/HomePage/react.png";
+
 import { Link } from "react-router-dom";
 
 import NavbarComponent from "../../components/NavbarComponent";
@@ -17,7 +19,7 @@ const HomePage = () => {
 <div className={classes["home-page"]}>
       <NavbarComponent  />
       <MobileNavigation  /> 
-      <main >
+      <main>
         <section className={classes["section-flex"]}>
         <Card className={classes.cardContainer}>
         <div className={classes.cardContainerSections}>
@@ -26,7 +28,7 @@ const HomePage = () => {
         <p>I'm a React developer, and I build anything from mobile to web apps.</p>
         </div>
         </div>
-      
+        <img src={`${reactImage}`} className={classes["react-image"]}/>
        <div className={classes.cardContainerSections}>
          <div>
          <small>Feel free to start by looking at my projects!</small>
