@@ -98,7 +98,7 @@ const ProjectPage = () => {
         </section>
         <section className={classes["section-three_project"]}>
         <div className={classes["section-three_project_header"]}>
-        <h2>Project</h2>
+        <h2>Projects</h2>
         </div>
       
       <div className={classes["section-three_project_search"]} >
