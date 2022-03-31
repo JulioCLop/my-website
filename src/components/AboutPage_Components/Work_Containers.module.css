@@ -41,8 +41,9 @@
    opacity: 0.6;
 }
 
- .a-1{
-    cursor: pointer;
+ .a-1,
+ .linkBtn
+ {
    background-color: rgb(75, 4, 4) ;
    text-decoration: none;
    font-size: 1rem;
@@ -50,10 +51,12 @@
    padding: 1rem;
    border-radius: 50px;
 }
-.a-1:hover{
+.a-1,
+.linkBtn:hover{
     background-color: rgba(75, 4, 4, 0.98);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     color: inherit;
+    cursor: pointer;
 }
 
 

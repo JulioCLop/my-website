@@ -1,5 +1,4 @@
 .contact-page{
-    min-height: calc(100vh - 7rem - 6rem);
     position: relative;
     z-index: 2;
 }

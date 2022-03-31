@@ -4,6 +4,8 @@ import NavbarComponent from "../../components/NavbarComponent";
 import DisplayContainer from "../../components/HomePage_Components/DisplayContainer";
 import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
 
+
+
 import classes from "./HomePage.module.css";
 
 

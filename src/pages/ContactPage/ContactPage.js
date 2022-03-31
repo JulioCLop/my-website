@@ -83,7 +83,7 @@ const ContactPage = () => {
       enteredMessageIsValid,
     ]
   );
-
+console.log(enteredName);
   const onConfirm = () => {
     setConfirm(false);
   };

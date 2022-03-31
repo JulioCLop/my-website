@@ -5,7 +5,8 @@ import Card from '../UI/Card/Card';
 
 import classes from './Work_Containers.module.css';
 
-const  WorkContainers = (props) => {
+const  WorkContainers = props => {
+  
 const {srcImage, link} = props;
 
   return (
