@@ -35,7 +35,7 @@ const  AboutPage = () => {
       <section className={classes["section-one-about"]}>
         <div
           className={classes["section-main-img"]}
-          style={darkMode ? {filter: 'grayscale(100%)',opacity: '0.3', backgroundImage:"url('https://images.unsplash.com/photo-1520531158340-44015069e78e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8ODJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60')"} : { backgroundImage:"url('https://images.unsplash.com/photo-1520531158340-44015069e78e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8ODJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60')"}} 
+          style={darkMode ? { backgroundImage:"url('https://images.unsplash.com/photo-1468906824284-242b500c38b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80')"} : { backgroundImage:"url('https://images.unsplash.com/photo-1526289034009-0240ddb68ce3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80')"}} 
         
         />
         <div
@@ -74,7 +74,7 @@ const  AboutPage = () => {
       </section>
    <section style={darkMode ? darkModeStyles : {}} className={`${classes["F-AC"]} ${classes["about-section-3"]}`}>
      <div className={classes["about-section-3-img-container"]}>
-          <img src="https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
+          <img src="https://images.unsplash.com/photo-1637044527986-1727785b1fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
      </div>
      <div className={`${classes["FC-AC"]} ${classes["about-section-content-container"]}`}>
           <div className={classes["content-inner-container-1"]}>
