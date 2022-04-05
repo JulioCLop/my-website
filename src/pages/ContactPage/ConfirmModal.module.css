@@ -3,13 +3,13 @@
     color: black;
     bottom: 40vh;
     left: calc(50% - 25rem);
-    width: 50%;
+    width: 30%;
     z-index: 100;
     overflow: hidden;
-    background-color: gray;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     box-shadow: 0 2px 8px rgba(0,0,0,0.26);
     border-radius: 10px;
+    color: white;
 }
 .backdrop{
     position: fixed;
@@ -19,6 +19,16 @@
     height: 100vh;
     z-index: 15;
     background: rgba(0, 0, 0, 0.75);
+   
+}
+.redBar{
+    height: 30px;
+    width: 100%;
+    background-color: rgba(75, 4, 4, 0.842);
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+
 }
 .header{
     padding: 1rem;
@@ -37,6 +47,22 @@
 }
 .btn:hover{
     
+}
+
+.errorImg{
+    background-image: url('https://www.mysecuritysign.com/img/lg/S/nothing-is-really-lost-sign-s-9802.png');
+    background-position: center;
+    background-size: cover;
+    padding: 25px;
+    height: 120px;
+    width: 180px;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    border-radius: 8px;
+    z-index: -1;
+   
+   
 }
 @media (min-width: 768px) {
     .modal {

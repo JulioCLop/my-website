@@ -1,8 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React,{useContext} from 'react';
+import { ThemeContext } from './context/Theme.Contexts';
 
 import {Routes, Route} from 'react-router-dom';
 
-import { ThemeProvider } from './context/Theme.Contexts';
+
+
 
 import LoadingPage from './pages/LoadingPage/LoadingPage';
 import HomePage from './pages/HomePage/HomePage';
@@ -14,26 +16,14 @@ import SeeMorePage from './pages/AboutPage/SeeMorePage/SeeMorePage';
 
 
 const App = () => {
+  const { isLoading } = useContext(ThemeContext);
   
-  const [isLoading, setIsLoading] = useState(true);
-  
-  useEffect(()=> {
-   const timerId =  setTimeout(()=>{
-      setIsLoading(false);
-    }, 3000)
-    return ()=>{
-      clearTimeout(timerId)
-    }
-
-  },[]);
-
   return (
     <>
     { isLoading ?
       <LoadingPage/>
     :
    ( 
-     <ThemeProvider>
      <Routes>
       <Route path='/' element={<HomePage/>}/>
       <Route path='/about' element={<AboutPage/>}/>
@@ -41,7 +31,6 @@ const App = () => {
       <Route path='/contact' element={<ContactPage/>}/>
       <Route path='/see-more' element={<SeeMorePage/>}/>
     </Routes>
-    </ThemeProvider>
     )
 
     }

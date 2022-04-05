@@ -1,4 +1,4 @@
-import React, { useState, useContext, useCallback } from "react";
+import React, { useState, useContext } from "react";
 
 import useInput from "../../hooks/use_input";
 
@@ -17,10 +17,12 @@ import { ThemeContext } from "../../context/Theme.Contexts";
 
 import classes from "./ContactPage.module.css";
 
+
 const ContactPage = () => {
   const { darkMode } = useContext(ThemeContext);
-
   const [confirm, setConfirm] = useState(null);
+  const [error, setError] = useState(false);
+ 
 
   const {
     value: enteredName,
@@ -53,16 +55,36 @@ const ContactPage = () => {
     formIsValid = true;
   }
 
-  const formSubmitHandler = useCallback(
-    (e) => {
-      e.preventDefault();
-      if (
-        !enteredEmailIsValid &&
-        !enteredNameIsValid &&
-        !enteredMessageIsValid
-      ) {
-        return;
-      } else {
+
+
+
+  const formSubmitHandler =  async(e) => {
+
+       e.preventDefault();
+      const response = await fetch('https://portfolio-email-81da0-default-rtdb.firebaseio.com/message.json', {
+            method: 'POST',
+            body: JSON.stringify({
+            name: enteredName,
+            email: enteredEmail,
+            message: enteredMessage
+          }),
+          header: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        if(!response.ok){
+          setError(true);
+          setConfirm({
+            title: `I'm sorry, we can't seem to find the page! ${response.status}`,
+            message: "I leave you with this...",
+            btnContent: 'Try again'
+           });
+          messageReset();
+          resetNameInput();
+          emailReset();
+        };
+
         setConfirm({
           title: "Message Sent!!",
           message: `Great!!Thank you for leaving me a message 
@@ -70,21 +92,18 @@ const ContactPage = () => {
           enteredName.slice(0, 1).toUpperCase() +
           enteredName.slice(1, enteredName.length)
         }. I'm excited to work together! I will get back to you as soon as possible.`,
-        });
-      }
+           btnContent: 'Great!'
+         });
+    
+        
+      
       messageReset();
       resetNameInput();
       emailReset();
-    },
-    [
-      enteredName,
-      enteredEmailIsValid,
-      enteredNameIsValid,
-      enteredMessageIsValid,
-    ]
-  );
-console.log(enteredName);
+      };
+
   const onConfirm = () => {
+    setError(false);
     setConfirm(false);
   };
 
@@ -92,12 +111,15 @@ console.log(enteredName);
     <div className={`${darkMode && classes["is-darkmode"]}`}>
       <NavbarComponent />
       <MobileNavigation />
-      {confirm && (
+
+      { confirm &&  (
         <ConfirmModal
+          error={error}
           name={enteredName}
           onConfirm={onConfirm}
           title={confirm.title}
           message={confirm.message}
+          btnTexts={confirm.btnContent}
         />
       )}
       <div className={classes["contact-page"]}>

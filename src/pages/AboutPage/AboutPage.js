@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 
 import { ThemeContext } from "../../context/Theme.Contexts";
 
-import { useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
-
 import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
 import NavbarComponent from "../../components/NavbarComponent";
 import FooterComponent from "../../components/FooterComponent";
@@ -16,11 +13,7 @@ import classes from  "./AboutPage.module.css";
 
 
 const  AboutPage = () => {
-  const theme = useTheme();
   const { darkMode, darkModeStyles } = useContext(ThemeContext);
-  const { sideNav } = useContext(ThemeContext);
-  const matchesMD = useMediaQuery(theme.breakpoints.up("md"));
-
   const [cvShow, setShow] = useState(false);
 
 
@@ -74,7 +67,7 @@ const  AboutPage = () => {
       </section>
    <section style={darkMode ? darkModeStyles : {}} className={`${classes["F-AC"]} ${classes["about-section-3"]}`}>
      <div className={classes["about-section-3-img-container"]}>
-          <img src="https://images.unsplash.com/photo-1637044527986-1727785b1fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
+          <img src="https://images.unsplash.com/photo-1637044527986-1727785b1fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt='office' />
      </div>
      <div className={`${classes["FC-AC"]} ${classes["about-section-content-container"]}`}>
           <div className={classes["content-inner-container-1"]}>
@@ -124,7 +117,7 @@ const  AboutPage = () => {
       cvShow ? 
     <div className={cvShow ? classes.viewCV : classes.viewCVAlt1}>
        <p>Check out my CV</p>
-       <a>Download</a>
+       <a href="www.google.com">Download</a>
      </div>
        : 
       <div className={cvShow ? classes.viewCV1 : classes.viewCVAlt}>

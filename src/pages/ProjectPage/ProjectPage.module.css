@@ -159,12 +159,24 @@ padding: 30px;
 }
 .section-three_project_header{
 display: flex;
+align-items: baseline;
+justify-content: space-between;
+}
+.section-three_project_header div{
+    padding: 12px;
+    background-color: var(--main-red);
+    border-radius: 8px;
+}
+.section-three_project_header div:hover{
+    cursor: pointer;
+    background-color: var(--light-red);
 }
 .section-three_project h2{
     padding: 1rem;
     font-family: var(--primary-font-family);
     font-size: 3rem;
     text-transform: uppercase;
+   
 }
 
 .section-three_project_cards_container{

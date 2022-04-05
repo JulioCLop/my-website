@@ -1,4 +1,4 @@
-import  React, {createContext, useState} from 'react';
+import  React, {createContext, useState, useEffect} from 'react';
 
 
 export const ThemeContext = createContext();
@@ -6,6 +6,20 @@ export const ThemeContext = createContext();
 export const ThemeProvider = (props) =>{
     const [sideNav, setSideNav] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+  
+    useEffect(()=> {
+     const timerId =  setTimeout(()=>{
+        setIsLoading(false);
+      }, 3000)
+      return ()=>{
+        clearTimeout(timerId)
+      }
+  
+    },[]);
+  
+
+
 
     const darkModeStyles = {
         backgroundColor: 'rgba(0, 0, 0, 0.843)',
@@ -20,7 +34,9 @@ export const ThemeProvider = (props) =>{
             sideNav,
             setSideNav,
             darkMode,
-            setDarkMode
+            setDarkMode,
+            isLoading,
+            setIsLoading
             }}>
         {props.children}
         </ThemeContext.Provider>

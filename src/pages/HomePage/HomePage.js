@@ -28,7 +28,7 @@ const HomePage = () => {
         <p>I'm a React developer, and I build anything from mobile to web apps.</p>
         </div>
         </div>
-        <img src={`${reactImage}`} className={classes["react-image"]}/>
+        <img src={`${reactImage}`} className={classes["react-image"]} alt='react logo'/>
        <div className={classes.cardContainerSections}>
          <div>
          <small>Feel free to start by looking at my projects!</small>

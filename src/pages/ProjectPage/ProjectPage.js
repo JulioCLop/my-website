@@ -24,36 +24,76 @@ import Card from "../../components/UI/Card/Card";
 
 const ProjectPage = () => {
   
- 
   const { darkMode, darkModeStyles } = useContext(ThemeContext);
-  const [ isfilterProjects, setFilterProjects ] = useState([]);
+  const [ isProjects, setProjects ] = useState([]);
   const [isSearch, setSearch ] = useState('');
-   
-
-
-    const projectFilter = isfilterProjects.filter( project => {
-     return project.projectName.toLowerCase().includes(isSearch.toLowerCase());
-     
-
-     
-    });
+  const [sorted, setSorted] = useState(false);
   
+ 
+  const  filteredProjects = [...isProjects].filter((project)=> {
+    return project.projectName.toLowerCase().includes(isSearch.toLowerCase())
+   });
+
+  
+const sortHandler = () => {
+  setSorted(prevSort => !prevSort);
+  if(sorted){
+    const newSort =  filteredProjects.sort((a,b)=> {
+      let fa =  a.projectName.toLowerCase(), 
+           fb = b.projectName.toLowerCase();
+
+           if(fa < fb){
+             return -1
+           }
+           if(fa > fb){
+             return 1
+           }
+           return 0
+    });
+    setProjects(newSort)
+  }
+  if(!sorted){
+    const newSort =  filteredProjects.sort((a,b)=> {
+      let fa =  a.projectName.toLowerCase(), 
+           fb = b.projectName.toLowerCase();
+
+           if(fa > fb){
+             return -1
+           }
+           if(fa < fb){
+             return 1
+           }
+           return 0
+    });
+    setProjects(newSort)
+  }
+ 
+  return;
+  
+   
+}
+
+const onChangeInputHandler = (e) => {
+  setSearch(e.target.value);
+}
+
     const noMatches = () =>  {
-      if(projectFilter >= 0){
+      if(filteredProjects >= 0){
        return (
        <div className={classes.noMatches}>
          <h1 >No Matches</h1> 
        </div>)
       }else{
-      return  <ProjectsContainer filter={projectFilter}/>
+      return  <ProjectsContainer  projects={filteredProjects} />;
       }
 
     };
 
-  useEffect(()=>{
-    setFilterProjects(projects);
-  }, []);
-
+    useEffect(()=>{
+      setProjects(projects);
+     
+    },[]);
+  
   return (
     <div style={darkMode ? darkModeStyles : {}}>
       <NavbarComponent />
@@ -99,16 +139,17 @@ const ProjectPage = () => {
         <section className={classes["section-three_project"]}>
         <div className={classes["section-three_project_header"]}>
         <h2>Projects</h2>
+        <div onClick={sortHandler}>Sort</div>
         </div>
       
       <div className={classes["section-three_project_search"]} >
       <div>
         <label>Search Project</label>
-        <Input type="search" onChange={e => setSearch(e.target.value)}/>
+        <Input type="search" onChange={onChangeInputHandler }/>
       </div>
       </div>
       <main className={classes["section-three_project_inner_main"]}>
-        <div style={projectFilter >= 0 ? {gridTemplateColumns: '1fr'} : {}} className={classes["section-three_project_cards_container" ]}>
+        <div style={filteredProjects >= 0 ? {gridTemplateColumns: '1fr'} : {}} className={classes["section-three_project_cards_container" ]}>
       {noMatches()}
         </div>
       </main>
