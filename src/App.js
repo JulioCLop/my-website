@@ -1,18 +1,21 @@
-import React,{useContext} from 'react';
+import React,{useContext, Suspense} from 'react';
+
 import { ThemeContext } from './context/Theme.Contexts';
 
 import {Routes, Route} from 'react-router-dom';
 
-
-
-
 import LoadingPage from './pages/LoadingPage/LoadingPage';
-import HomePage from './pages/HomePage/HomePage';
-import AboutPage from './pages/AboutPage/AboutPage';
-import ProjectPage from './pages/ProjectPage/ProjectPage';
-import ContactPage from './pages/ContactPage/ContactPage';
 import './App.css';
-import SeeMorePage from './pages/AboutPage/SeeMorePage/SeeMorePage';
+
+
+
+
+const SeeMorePage = React.lazy(()=> import('./pages/AboutPage/SeeMorePage/SeeMorePage'))
+const ProjectPage = React.lazy(()=> import('./pages/ProjectPage/ProjectPage'))
+const AboutPage = React.lazy(()=> import('./pages/AboutPage/AboutPage'))
+const HomePage = React.lazy(() => import('./pages/HomePage/HomePage'));
+const ContactPage = React.lazy(()=> import('./pages/ContactPage/ContactPage'));
+
 
 
 const App = () => {
@@ -20,6 +23,7 @@ const App = () => {
   
   return (
     <>
+    <Suspense fallback={<LoadingPage/>}>
     { isLoading ?
       <LoadingPage/>
     :
@@ -34,6 +38,7 @@ const App = () => {
     )
 
     }
+    </Suspense>
     </>
    
   );
