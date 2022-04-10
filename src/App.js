@@ -4,16 +4,17 @@ import { ThemeContext } from './context/Theme.Contexts';
 
 import {Routes, Route} from 'react-router-dom';
 
+
+
 import LoadingPage from './pages/LoadingPage/LoadingPage';
+import HomePage from './pages/HomePage/HomePage';
+
 import './App.css';
-
-
-
 
 const SeeMorePage = React.lazy(()=> import('./pages/AboutPage/SeeMorePage/SeeMorePage'))
 const ProjectPage = React.lazy(()=> import('./pages/ProjectPage/ProjectPage'))
 const AboutPage = React.lazy(()=> import('./pages/AboutPage/AboutPage'))
-const HomePage = React.lazy(() => import('./pages/HomePage/HomePage'));
+// const HomePage = React.lazy(() => import('./pages/HomePage/HomePage'));
 const ContactPage = React.lazy(()=> import('./pages/ContactPage/ContactPage'));
 
 

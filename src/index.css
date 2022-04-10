@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Big+Shoulders+Stencil+Display&family=Jost:wght@100&family=Lobster+Two&family=Montserrat&display=swap');
 
 :root{
   --main-red: rgb(75, 4, 4);
   --light-red: rgba(75, 4, 4, 0.842);
   --button-font: 'Jost', sans-serif;
   --button-box-show: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  --primary-font-family: 'Big Shoulders Stencil Display', cursive;
+  --primary-font-family: 'Big Shoulders Stencil Display', 'Montserrat';
   --secondary-font-family: 'Alegreya', serif;
   --primary-image-box-shadow:  rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   --small-font-detail-color: rgb(156, 34, 34);
@@ -21,7 +22,4 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
