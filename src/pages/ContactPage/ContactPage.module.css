@@ -1,5 +1,6 @@
 .contact-page{
     position: relative;
+    height: 100vh;
     z-index: 2;
 }
 .section-contact-1{
