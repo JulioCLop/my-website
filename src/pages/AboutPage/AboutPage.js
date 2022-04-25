@@ -1,4 +1,5 @@
-import React, { useContext, useState} from "react";
+import React, { useContext, useState, useRef} from "react";
+
 
 import { Link } from "react-router-dom";
 
@@ -8,24 +9,72 @@ import MobileNavigation from "../../components/HomePage_Components/MobileNavigat
 import NavbarComponent from "../../components/NavbarComponent";
 import FooterComponent from "../../components/FooterComponent";
 import WorkContainers from "../../components/AboutPage_Components/Work_Containers";
+import Bar from "../../components/UI/Bar/Bar";
+import ScrollBtn from "../../components/UI/Button/ScrollBtn";
 
 import classes from  "./AboutPage.module.css";
+
+const skillsBarContent = [
+  {
+    key:'skill1',
+    id: 'skill1',
+    title: 'Front-end',
+    fraction: "8"
+  },
+  {
+    key:'skill2',
+    id: 'skill2',
+    title: 'Back-end',
+    fraction: "5"
+  },
+  {
+    key:'skill3',
+    id: 'skill3',
+    title: 'React',
+    fraction: "9"
+  }
+];
 
 
 const  AboutPage = () => {
   const { darkMode, darkModeStyles } = useContext(ThemeContext);
   const [cvShow, setShow] = useState(false);
+  const [isContent, setContent] = useState(skillsBarContent);
+
+  const elementTitle = useRef();
+  const elementWork = useRef();
+ 
+
+  const barElements = isContent.map(bar => (
+    <Bar
+    title={bar.title}
+    fraction={bar.fraction}
+    key={bar.key}
+    />
+  ));
 
 
+  const handleBackClick = () => {
+    elementTitle.current.scrollIntoView({behavior: 'smooth'});
+
+  };
+
+  const forwardWorkHandler = () => {
+    elementWork.current.scrollIntoView({behavior: 'smooth'})
+
+  };
+
+
+ 
   
-
-
   return (
   <React.Fragment>
   <MobileNavigation />
    <NavbarComponent />
-    <div  className={classes["about-Page" ]} >
+   
+    <div className={classes["about-Page" ]} >
       <section className={classes["section-one-about"]}>
+      <ScrollBtn  onClick={handleBackClick}></ScrollBtn>
         <div
           className={classes["section-main-img"]}
           style={darkMode ? { backgroundImage:"url('https://images.unsplash.com/photo-1468906824284-242b500c38b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80')"} : { backgroundImage:"url('https://images.unsplash.com/photo-1526289034009-0240ddb68ce3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80')"}} 
@@ -52,7 +101,8 @@ const  AboutPage = () => {
           </div>
         </div>
       </section>
-      <section style={darkMode ? darkModeStyles : {}} className={classes["section-two-react-intro"]}>
+      <div style={{height: '50px'}} ref={elementTitle} />
+      <section  style={darkMode ? darkModeStyles : {}} className={classes["section-two-react-intro"]}>
         <div className={classes["react-header"]}>
           <h2>UI/UX REACT<br/><span  className={classes["title-developer"]}>DEVELOPER</span></h2>
         </div>
@@ -65,7 +115,7 @@ const  AboutPage = () => {
           </p>
         </div>
       </section>
-   <section style={darkMode ? darkModeStyles : {}} className={`${classes["F-AC"]} ${classes["about-section-3"]}`}>
+   <section   style={darkMode ? darkModeStyles : {}} className={`${classes["F-AC"]} ${classes["about-section-3"]}`}>
      <div className={classes["about-section-3-img-container"]}>
           <img src="https://images.unsplash.com/photo-1637044527986-1727785b1fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt='office' />
      </div>
@@ -80,27 +130,16 @@ const  AboutPage = () => {
           <div className={`${classes["F-AC"]} ${classes["content-inner-button-container"]}`}>
             <Link to="/see-more">see more</Link>
           </div>
-
         <div className={`${classes["content-inner-skill-view"]}`}>
-        <div style={{width: '80%',justifyContent:'space-evenly'}} className={classes["F-AC"]}>
-          <div className={`${classes["FC-AC"]} ${classes["inner-skill-view"]}`}>
-            <span>9/10</span>
-            <h4>Front-end</h4>
-          </div>
-          <div className={`${classes["FC-AC"]} ${classes["inner-skill-view"]}`}>
-          <span>6/10</span>
-            <h4>Back-end</h4>
-          </div>
-          <div className={`${classes["FC-AC"]} ${classes["inner-skill-view"]}`}>
-          <span>9/10</span>
-            <h4>ReactJS</h4>
+          <div className={`${classes["inner-skill-view"]}`}>
+                  {barElements}
           </div>
           </div>
-        </div>
      </div>
+     <ScrollBtn  onClick={forwardWorkHandler}></ScrollBtn>
    </section>
-   
-   <section style={!darkMode ? {backgroundColor:'rgba(128, 128, 128, 0.422)'}: {}} className={classes["work-section"]}>
+   <div style={{paddingBottom: '10px'}} ref={elementWork}/>
+   <section  style={!darkMode ? {backgroundColor:'rgba(128, 128, 128, 0.422)'}: {}} className={classes["work-section"]}>
      <div className={classes["work-header"]}>
        <h1>Where I've <span style={darkMode ? {color: 'gray'} : {color: 'rgba(128, 128, 128, 0.822)'}}>worked</span></h1>
      </div>

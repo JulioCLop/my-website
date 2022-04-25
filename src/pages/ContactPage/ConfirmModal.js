@@ -5,12 +5,18 @@ import Button from '../../components/UI/Button/Button';
 import classes from './ConfirmModal.module.css';
 
 const ConfirmBackdrop = props => {
+
+
+
     return <div onClick={props.onConfirm} className={classes.backdrop}/>
 }
 
 const ConfirmOverlay = props => {
+  
+  
+
   return (
-    <div className={`${classes.modal} `}>
+    <div className={`${ classes.modal }`}>
     <div className={`${props.error && classes.errorImg}`}/> 
     <div className={classes.redBar} />
     <div className={classes.header}>
@@ -18,9 +24,10 @@ const ConfirmOverlay = props => {
     </div>
     <div className={classes.content}>{props.error ? props.errorMessage : props.message}</div>
     <footer className={classes.footer}>
-        <Button className={classes.btn} onSubmit={props.onConfirm}>{props.btnText}</Button>
+        <Button className={`${classes.btn} `}  onSubmit={props.onConfirm} >{props.btnText}</Button>
     </footer>
   </div>
+
   )
 }
 
@@ -36,6 +43,7 @@ const ConfirmModal = (props) => {
             errorMessage={props.message}
             btnText={props.btnTexts}
             error={props.error}
+            modalAnimation={props.modalAnimation}
 
             />, document.getElementById('confirm_Overlay-root'))}
         </React.Fragment>

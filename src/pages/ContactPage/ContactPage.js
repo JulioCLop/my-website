@@ -22,6 +22,7 @@ const ContactPage = () => {
   const { darkMode } = useContext(ThemeContext);
   const [confirm, setConfirm] = useState(null);
   const [error, setError] = useState(false);
+  const [modalAnimation, setModalAnimation] = useState(false);
  
 
   const {
@@ -94,9 +95,9 @@ const ContactPage = () => {
         }. I'm excited to work together! I will get back to you as soon as possible.`,
            btnContent: 'Great!'
          });
-    
-        
-      
+         setModalAnimation(true);
+
+         
       messageReset();
       resetNameInput();
       emailReset();
@@ -105,8 +106,10 @@ const ContactPage = () => {
   const onConfirm = () => {
     setError(false);
     setConfirm(false);
+    setModalAnimation(true);
   };
 
+ 
   return (
     <div className={`${darkMode && classes["is-darkmode"]}`}>
       <NavbarComponent />
@@ -114,6 +117,7 @@ const ContactPage = () => {
 
       { confirm &&  (
         <ConfirmModal
+          modalAnimation={modalAnimation}
           error={error}
           name={enteredName}
           onConfirm={onConfirm}
@@ -245,6 +249,7 @@ const ContactPage = () => {
               type="submit"
               className={`${classes.button} `}
               disabled={!formIsValid}
+            
             >
               Submit
             </Button>

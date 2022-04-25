@@ -10,7 +10,16 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.26);
     border-radius: 10px;
     color: white;
+    transform: translateY(0) ;
+    transition: 1s all;
+    animation: openModal .6s ease-in-out forwards;
+   
 }
+.remove-modal{
+    animation: closeModal  1s ease-out forwards;
+}
+
+
 .backdrop{
     position: fixed;
     top: 0;
@@ -45,9 +54,6 @@
     padding: 0.5rem 2rem;
     border-radius: 8px;
 }
-.btn:hover{
-    
-}
 
 .errorImg{
     background-image: url('https://www.mysecuritysign.com/img/lg/S/nothing-is-really-lost-sign-s-9802.png');
@@ -63,6 +69,35 @@
     z-index: -1;
    
    
+}
+
+@keyframes closeModal {
+    100%{
+    opacity: 1 ;
+    transform: translateY(0);
+    }
+    50%{
+        opacity: 0.8 ;
+       transform: translateY(60%);
+    }
+    0%{
+      opacity: 0;
+      transform: translateY(-100%)
+    }
+}
+@keyframes openModal {
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    50%{
+         opacity: 1;
+         transform: translateY(20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 @media (min-width: 768px) {
     .modal {
