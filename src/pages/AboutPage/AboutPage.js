@@ -13,6 +13,7 @@ import Bar from "../../components/UI/Bar/Bar";
 import ScrollBtn from "../../components/UI/Button/ScrollBtn";
 
 import classes from  "./AboutPage.module.css";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const skillsBarContent = [
   {
@@ -40,9 +41,11 @@ const  AboutPage = () => {
   const { darkMode, darkModeStyles } = useContext(ThemeContext);
   const [cvShow, setShow] = useState(false);
   const [isContent, setContent] = useState(skillsBarContent);
+  
 
   const elementTitle = useRef();
   const elementWork = useRef();
+  const topElement = useRef();
  
 
   const barElements = isContent.map(bar => (
@@ -53,6 +56,9 @@ const  AboutPage = () => {
     />
   ));
 
+const handleTopClick = () => {
+  topElement.current.scrollIntoView({behavior: 'smooth'})
+};
 
   const handleBackClick = () => {
     elementTitle.current.scrollIntoView({behavior: 'smooth'});
@@ -72,9 +78,11 @@ const  AboutPage = () => {
   <MobileNavigation />
    <NavbarComponent />
    
-    <div className={classes["about-Page" ]} >
+    <div ref={topElement} className={classes["about-Page" ]} >
       <section className={classes["section-one-about"]}>
-      <ScrollBtn  onClick={handleBackClick}></ScrollBtn>
+      <ScrollBtn  onClick={handleBackClick}>
+      <span id='arrow-down' className={classes.span}>{ <KeyboardArrowDownIcon fontSize='large' sx={{color: "white"}} />}</span>
+      </ScrollBtn>
         <div
           className={classes["section-main-img"]}
           style={darkMode ? { backgroundImage:"url('https://images.unsplash.com/photo-1468906824284-242b500c38b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80')"} : { backgroundImage:"url('https://images.unsplash.com/photo-1526289034009-0240ddb68ce3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80')"}} 
@@ -136,7 +144,9 @@ const  AboutPage = () => {
           </div>
           </div>
      </div>
-     <ScrollBtn  onClick={forwardWorkHandler}></ScrollBtn>
+     <ScrollBtn  onClick={forwardWorkHandler}>
+     <span id='arrow-down' className={classes.span}>{ <KeyboardArrowDownIcon fontSize='large' sx={{color: "white"}} />}</span>
+     </ScrollBtn>
    </section>
    <div style={{paddingBottom: '10px'}} ref={elementWork}/>
    <section  style={!darkMode ? {backgroundColor:'rgba(128, 128, 128, 0.422)'}: {}} className={classes["work-section"]}>
@@ -165,6 +175,9 @@ const  AboutPage = () => {
     }
       
      </div>
+     <ScrollBtn  onClick={handleTopClick}>
+       <p>Top</p>
+     </ScrollBtn>
    </section>
     </div>
     <FooterComponent />
