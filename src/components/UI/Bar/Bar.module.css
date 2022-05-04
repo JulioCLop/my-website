@@ -2,7 +2,7 @@
 .bar{
     width: 48px;
     height: 200px;
-    background-color: #928e8e;
+    background-color: #928e8e9a;
     display: flex;
     position: relative;
     align-items: flex-end;
@@ -18,7 +18,7 @@
     position: absolute;
     bottom: -auto;
     left: -90px;
-    color: white;
+    color: var(--main-red);
     white-space: nowrap; 
     width: 120px; 
     overflow: hidden;
@@ -29,6 +29,7 @@
 .bar div span {
     font-size: 18px;
     margin-bottom: 5px;
+    color: white;
     
 }
 

@@ -4,9 +4,9 @@ import reactImage  from "../../assets/HomePage/react.png";
 
 import { Link } from "react-router-dom";
 
+import Card from '../../components/UI/Card/Card';
 import NavbarComponent from "../../components/NavbarComponent";
 import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
-import Card from '../../components/UI/Card/Card'
 
 
 import classes from "./HomePage.module.css";
@@ -16,9 +16,10 @@ import classes from "./HomePage.module.css";
 const HomePage = () => {
 
   return (
-<div className={classes["home-page"]}>
-      <NavbarComponent  />
+    <React.Fragment> 
+     <NavbarComponent  />
       <MobileNavigation  /> 
+      <div className={classes["home-page"]}>
       <main>
         <section className={classes["section-flex"]}>
         <Card className={classes.cardContainer}>
@@ -39,6 +40,7 @@ const HomePage = () => {
         </section>
       </main>
     </div>
+    </React.Fragment>
   );
 }
 

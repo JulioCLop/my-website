@@ -7,19 +7,18 @@ const ScrollBtn = (props) => {
   const ScrollBtn = styled.button`
     display: flex;
     background-color: rgb(75, 4, 4);
-    opacity: 0.8;
     border: none;
     color: white;
-    box-shadow: 0px 0.5px 1px 2px rgba(0, 0, 0, 0.5);
-    width: 50px;
+    transform: rotate(0deg);
+    width:50px;
     height: 50px;
+    border-radius: 8px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 50px;
     position: absolute;
-    bottom: -23px;
-    right: 1%;
+    bottom: 3px;
+    right: 3px;
     cursor: pointer;
   `;
 

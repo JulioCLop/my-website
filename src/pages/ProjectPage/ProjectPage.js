@@ -4,19 +4,19 @@ import { ThemeContext } from "../../context/Theme.Contexts";
 
 import projects from '../../module/project';
 
-import NavbarComponent from "../../components/NavbarComponent";
-import FooterComponent from "../../components/FooterComponent";
-import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
 import ProjectsContainer from "../../components/ProjectPage_Components/Projects_Container/ProjectsContainer";
 
 import LinkButton from "../../components/UI/Button/Link-Button";
 import Input from "../../components/UI/Input/Input";
+import SortByAlphaIcon from '@mui/icons-material/SortByAlpha';
 
 import Laptop  from '../../assets/ProjectPage/projectLaptop.png';
 import TTT from '../../assets/ProjectPage/TicTacToe.png';
 
 import classes from "./ProjectPage.module.css";
 import Card from "../../components/UI/Card/Card";
+import MainHomePage from "../HomePage/MainHomePage";
+import BorderLine from "../../components/UI/Border_Line/Border-Line";
 
 
 
@@ -95,9 +95,8 @@ const onChangeInputHandler = (e) => {
     },[]);
   
   return (
+    <MainHomePage>
     <div style={darkMode ? darkModeStyles : {}}>
-      <NavbarComponent />
-      <MobileNavigation />
       <div className={classes['project-page']}>
         <section className={classes["section-one_project"]}>
           <h2>Projects</h2>
@@ -115,6 +114,7 @@ const onChangeInputHandler = (e) => {
           </div>
           </div>
         </section>
+        <BorderLine/>
         <section className={classes["section-two_project"]}>
         <h2>Most Recent <span>projects</span></h2>
         <div className={classes["section-two_project-cards"]}>
@@ -139,7 +139,7 @@ const onChangeInputHandler = (e) => {
         <section className={classes["section-three_project"]}>
         <div className={classes["section-three_project_header"]}>
         <h2>Projects</h2>
-        <div onClick={sortHandler}>Sort</div>
+        <div className={classes.sort} onClick={sortHandler}><SortByAlphaIcon/></div>
         </div>
       
       <div className={classes["section-three_project_search"]} >
@@ -155,8 +155,9 @@ const onChangeInputHandler = (e) => {
       </main>
         </section>
       </div>
-      <FooterComponent />
+    
     </div>
+    </MainHomePage>
   );
 };
 

@@ -48,7 +48,7 @@ const NavbarComponent = () => {
   },[])
   
   return (
-    <>
+    <React.Fragment>
       <header className={classes.header}>
         <nav id={classes["nav-query"]}>
           <div className={classes["navbar-container-1"]}>
@@ -132,7 +132,7 @@ const NavbarComponent = () => {
         </nav>
       </header>
       <div id={classes.margin} />
-    </>
+    </React.Fragment>
   );
 }
 

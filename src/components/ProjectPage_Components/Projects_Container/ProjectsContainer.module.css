@@ -1,18 +1,24 @@
 .project-card{
-    color: aliceblue;
+    color: white;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     background-color: rgba(0, 0, 0, 0.322);
-    box-shadow: var(--primary-image-box-shadow);
-    height: 20rem;
+    border-radius: 19px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 17rem;
+    overflow: hidden;
 }
 .project-card img{
 position: absolute;
+
 height: 100%;
 width: 100%;
 z-index: -4;
+}
+.btn-container{
+    margin-bottom:15px;
 }
 .project-card h1{
     padding-bottom: 1rem;

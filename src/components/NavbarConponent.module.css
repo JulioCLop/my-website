@@ -5,10 +5,10 @@
     z-index: 5;
     top: 0;
     width: 100%;
-    height: 7rem;
+    height: 8rem;
 }
 #margin{
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 nav{
 position: relative;
@@ -26,30 +26,37 @@ justify-content: space-between;
     
 }
 .navbar-container-2{
-margin-right: 2.5rem;
+margin-right: 6.5rem;
 }
 
 .nav-btn{
-    color: rgb(189, 182, 182);
-    border-radius: 8px;
-    padding: 0.8rem;
+    font-size: 15.5px;
+    color: white;
+    padding: 0.6rem;
+    font-weight: 900;
     letter-spacing: 2px;
     text-decoration: none;
-    margin-left: 1rem;
+    border-radius: 30px;
+    margin-right: 0.6rem;
     text-transform: uppercase;
-    transition: all 0.3s ease-in-out;
+   
+  
 }
 
 .nav-btn:hover{
-    
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    background-color: rgba(58, 57, 57, 0.473);
-    transition: all 0.3s ease-in-out;
+    border: 1px solid whitesmoke;
+    color: rgba(255, 255, 255, 0.79);
+    transition: all 0.1s ease;
+  
+}
+.nav-btn:active{
+  background-color: rgba(253, 250, 250, 0.116);
 }
 
 .navbar-inner-ul{
     display: flex;
     list-style: none;
+   
 }
 /* dark mode toggle */
 

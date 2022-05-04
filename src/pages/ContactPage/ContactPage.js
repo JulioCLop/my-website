@@ -2,8 +2,6 @@ import React, { useState, useContext } from "react";
 
 import useInput from "../../hooks/use_input";
 
-import NavbarComponent from "../../components/NavbarComponent";
-import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
 import FooterComponent from "../../components/FooterComponent";
 import Input from "../../components/UI/Input/Input";
 import Button from "../../components/UI/Button/Button";
@@ -16,6 +14,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import { ThemeContext } from "../../context/Theme.Contexts";
 
 import classes from "./ContactPage.module.css";
+import MainHomePage from "../HomePage/MainHomePage";
 
 
 const ContactPage = () => {
@@ -111,10 +110,8 @@ const ContactPage = () => {
 
  
   return (
+    <MainHomePage>
     <div className={`${darkMode && classes["is-darkmode"]}`}>
-      <NavbarComponent />
-      <MobileNavigation />
-
       { confirm &&  (
         <ConfirmModal
           modalAnimation={modalAnimation}
@@ -256,8 +253,8 @@ const ContactPage = () => {
           </div>
         </form>
       </div>
-      <FooterComponent />
     </div>
+    </MainHomePage>
   );
 };
 

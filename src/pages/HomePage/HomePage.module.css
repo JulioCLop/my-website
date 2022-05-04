@@ -7,33 +7,24 @@
   justify-content: center;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: calc(100vh - 80px);
+  color: white;
 }
-
 .react-image{
-  height: 140px;
-  width: 140px;
+  height: 80px;
+  width: 80px;
   position: absolute;
-  left: 278px;
-  bottom: 179px;
- ;
-  
+  left: 265px;
+  bottom: 162px;
 }
 .section-flex {
-  padding-top: 6rem;
   display: flex;
   justify-content: space-around;
   position: relative;
-
-  
-  
 }
-
 .cardContainer{
-  width: 700px;
-  height: 500px;
-  background-color: rgba(7, 6, 6, 0.966) ;
-  border-radius: 8px;
+  width: 600px;
+  height: 400px;
 }
 .cardContainerSections{
   width: 100%;
@@ -57,7 +48,6 @@
   font-family: var(--secondary-font-family);
   font-size: 1.2rem;
 }
-
 .cardContainerSections div a{
   font-family: var(--button-font);
   color: rgb(255, 255, 255);
@@ -71,12 +61,11 @@
   border: none;
   box-shadow: var(--button-box-show);
 }
-
 .cardContainerSections div a:hover{
   background-color: var(--light-red);
   cursor: pointer;
   box-shadow: none;
-  color: inherit;
+  color: whitesmoke;
 }
 
 /* 

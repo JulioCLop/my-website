@@ -103,13 +103,12 @@ div .message-input-2 ul{
 padding-top: 2rem;
 }
 .icons{
-    color: white;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.801);
-    
+    color: gray;
+   
 }
 .icons:hover{
     box-shadow: none;
-    color: rgba(255, 255, 255, 0.685);
+    color: rgba(128, 128, 128, 0.751);
 }
 div .message-input-2 ul li a .icons{
     font-size: 3rem;

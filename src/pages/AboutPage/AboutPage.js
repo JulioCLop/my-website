@@ -5,15 +5,14 @@ import { Link } from "react-router-dom";
 
 import { ThemeContext } from "../../context/Theme.Contexts";
 
-import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
-import NavbarComponent from "../../components/NavbarComponent";
-import FooterComponent from "../../components/FooterComponent";
 import WorkContainers from "../../components/AboutPage_Components/Work_Containers";
 import Bar from "../../components/UI/Bar/Bar";
 import ScrollBtn from "../../components/UI/Button/ScrollBtn";
 
 import classes from  "./AboutPage.module.css";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import MainHomePage from "../HomePage/MainHomePage";
+import BorderLine from "../../components/UI/Border_Line/Border-Line";
 
 const skillsBarContent = [
   {
@@ -75,9 +74,7 @@ const handleTopClick = () => {
   
   return (
   <React.Fragment>
-  <MobileNavigation />
-   <NavbarComponent />
-   
+  <MainHomePage>
     <div ref={topElement} className={classes["about-Page" ]} >
       <section className={classes["section-one-about"]}>
       <ScrollBtn  onClick={handleBackClick}>
@@ -110,7 +107,7 @@ const handleTopClick = () => {
         </div>
       </section>
       <div style={{height: '50px'}} ref={elementTitle} />
-      <section  style={darkMode ? darkModeStyles : {}} className={classes["section-two-react-intro"]}>
+      <section  className={classes["section-two-react-intro"]}>
         <div className={classes["react-header"]}>
           <h2>UI/UX REACT<br/><span  className={classes["title-developer"]}>DEVELOPER</span></h2>
         </div>
@@ -123,7 +120,7 @@ const handleTopClick = () => {
           </p>
         </div>
       </section>
-   <section   style={darkMode ? darkModeStyles : {}} className={`${classes["F-AC"]} ${classes["about-section-3"]}`}>
+   <section  className={`${classes["F-AC"]} ${classes["about-section-3"]}`}>
      <div className={classes["about-section-3-img-container"]}>
           <img src="https://images.unsplash.com/photo-1637044527986-1727785b1fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt='office' />
      </div>
@@ -149,7 +146,8 @@ const handleTopClick = () => {
      </ScrollBtn>
    </section>
    <div style={{paddingBottom: '10px'}} ref={elementWork}/>
-   <section  style={!darkMode ? {backgroundColor:'rgba(128, 128, 128, 0.422)'}: {}} className={classes["work-section"]}>
+   <section   className={classes["work-section"]}>
+   <BorderLine/>
      <div className={classes["work-header"]}>
        <h1>Where I've <span style={darkMode ? {color: 'gray'} : {color: 'rgba(128, 128, 128, 0.822)'}}>worked</span></h1>
      </div>
@@ -159,8 +157,8 @@ const handleTopClick = () => {
       <WorkContainers srcImage='https://couponseeker.com/storage/CCS-SUPPLY-STORE.jpg' link='https://ccssupplystore.com/' alt="ccs supply store"/>
      </div>
    </section>
-   <section style={darkMode ? darkModeStyles : {}} className={classes["CV_Section"]}>
-   <h1>Learn More <span style={{color:'white'}}>About Me...</span></h1>
+   <section className={classes["CV_Section"]}>
+   <h1>Learn More <span style={{color:'gray'}}>About Me...</span></h1>
     <div className={classes["cv-show-contianer"]} onMouseEnter={()=> setShow(true)} onMouseLeave={()=> setShow(false)}>
     {
       cvShow ? 
@@ -180,7 +178,7 @@ const handleTopClick = () => {
      </ScrollBtn>
    </section>
     </div>
-    <FooterComponent />
+    </MainHomePage>
     </React.Fragment>
   );
 }
