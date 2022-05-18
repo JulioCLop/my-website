@@ -46,7 +46,7 @@ const NavbarComponent = () => {
   useEffect(()=> {
     setDarkMode(prevMode => prevMode);
 
-    return ()=>{
+    return ()=> {
       setDarkMode(prevMode => prevMode)
     }
   },[])
