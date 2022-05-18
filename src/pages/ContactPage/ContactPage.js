@@ -39,7 +39,7 @@ const ContactPage = () => {
     valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
     reset: emailReset,
-  } = useInput((value) => value.includes("@"));
+  } = useInput((value) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value));
   const {
     value: enteredMessage,
     isValid: enteredMessageIsValid,

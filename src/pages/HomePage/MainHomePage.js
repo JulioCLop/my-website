@@ -19,7 +19,7 @@ const {darkMode, darkModeStyles} = useContext(ThemeContext);
   <React.Fragment>
      <NavbarComponent  />
       <MobileNavigation  /> 
-      <MainView darkMode={darkMode && `${classes["main-view"]} `} style={darkMode ? darkModeStyles : {}} >
+      <MainView className={classes["main-view"]} darkMode={darkMode && `${classes["main-view"]} `} style={darkMode ? darkModeStyles : {}} >
       {props.children}
       </MainView>
       <FooterComponent />

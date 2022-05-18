@@ -458,10 +458,10 @@ to{
   
   @media (min-width: 481px) and (max-width: 767px) {
       .react-header{
-          padding-top: 70px;
+          padding: 0;
       }
-    .section-one-div1{
-        min-width: 450px;
+      .section-one-div1{
+        min-width: 100%;
         object-fit: contain;
         
     }
@@ -506,23 +506,17 @@ to{
   
   /* @media (min-width: 320px) and (max-width: 480px) {
     .section-one-div1{
-        min-width: 450px;
-        object-fit: contain;
+        min-width: 100%;
+       margin: 0;
         
     }
-    .work-main-job-containers{
-        grid-template-columns: 1fr;
-    }
-    .about-section-3-img-container{
-        opacity: 0;
-        height: 0;
-  }
-  .section-one-div2{
-      width: 100%;
-  }
   } */
 
   @media (max-width: 480px){
+    .react-header{
+        padding: 0;
+    }
+   
     .section-two-react-intro{
         margin-top: 100px;
     }
@@ -539,7 +533,7 @@ to{
     
     }
     .section-one-div1{
-        min-width: 450px;
+        min-width: 100%;
         object-fit: contain;
         
     }
