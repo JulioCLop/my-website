@@ -16,7 +16,7 @@ to {height: ${fraction}0%;}
 
 `;
 
-console.log(increaseHeight)
+
 const Div1 = styled.div`
     background-color: rgb(75, 4, 4);
     width: 100%;
