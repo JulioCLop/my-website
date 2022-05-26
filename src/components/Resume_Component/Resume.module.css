@@ -15,6 +15,54 @@
     border: none;
 
 }
-::-webkit-scrollbar{
-    display: inherit;
-}
+
+
+@media (min-width: 1281px) {
+    .resume{
+        position: absolute;
+ bottom : -8%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+      }
+    
+    
+  }
+  
+  
+  
+  @media (min-width: 918px) and (max-width: 1280px) {
+    .resume{
+        position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+      }
+
+  }
+  
+
+  
+  @media (min-width: 768px) and (max-width: 917px) {
+
+  }
+  
+  
+  @media (min-width: 768px) and (max-width: 900px) and (orientation: landscape) {
+    
+
+  }
+  
+  
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+
+   
+  }
+  
+
+
+  @media (max-width: 480px){
+  
+  }
