@@ -73,7 +73,7 @@ const projects = [
         projectName: 'Tic,Tac,Toe',
         projectText: 'Who is feeling lucky, let\'s play!',
         projectLink: 'https://github.com/JulioCLop/Tic-Tac-Toe-Game',
-        projectLanguage: "HTML, CSS, JS",
+        projectLanguage: "JavaScript",
   
        
     },
@@ -81,14 +81,14 @@ const projects = [
         projectName: 'Expense App',
         projectText: 'keeping Track of your money!',
         projectLink: 'https://github.com/JulioCLop/expense-app',
-        projectLanguage: "HTML, CSS, React.js",
+        projectLanguage: "React.js",
      
        
     },{
         projectName: 'Image Recoginition',
         projectText: 'Let\'s find your face on the picture!',
         projectLink: 'https://github.com/JulioCLop/image--recognition',
-        projectLanguage: "HTML, CSS,JS, React.js",
+        projectLanguage: "React.js",
      
        
     
@@ -96,30 +96,30 @@ const projects = [
         projectName: 'Travel Agency',
         projectText: 'Let\'s travel the world',
         projectLink: 'https://github.com/JulioCLop/travel-agency',
-        projectLanguage: "HTML, CSS, JS",
+        projectLanguage: "JavaScript",
     
     },{
         projectName: 'Web Food page',
         projectText: 'Go ahead...place an order!',
         projectLink: 'https://github.com/JulioCLop/webfood-responsiveness',
-        projectLanguage: "HTML, CSS, JS",
+        projectLanguage: "JavaScript",
        
     },{
         projectName: 'Chat Lingual',
         projectText: 'Go ahead...place an order!',
         projectLink: 'https://github.com/JulioCLop/webfood-responsiveness',
-        projectLanguage: "HTML, CSS, JS, React.js",
+        projectLanguage: "React.js",
        
     },{
         projectName: 'Monster Rolodex',
         projectText: 'Check out all these monsters!',
         projectLink: 'https://github.com/JulioCLop/Mosters-rolodex',
-        projectLanguage: "HTML, CSS, JS, React.js",
+        projectLanguage: "React.js",
     },{
         projectName: 'Hangman',
         projectText: 'Who is up for a game?',
         projectLink: 'https://github.com/JulioCLop/hangman-app',
-        projectLanguage: "HTML, CSS, JS, React.js",
+        projectLanguage: "React.js",
     }
     
 ]
