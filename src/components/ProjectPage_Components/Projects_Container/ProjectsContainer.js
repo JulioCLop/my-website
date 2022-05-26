@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useContext} from "react";
+import { ThemeContext } from "../../../context/Theme.Contexts";
 
 import LinkButton from '../../UI/Button/Link-Button';
 import Card from "../../UI/Card/Card";
@@ -7,6 +8,7 @@ import Card from "../../UI/Card/Card";
 import classes from "./ProjectsContainer.module.css";
 
 const ProjectsContainer = (props) => {
+  const {darkMode, darkModeStyles} = useContext(ThemeContext)
   const [active, setActive] = useState(false);
   const [errorImage, setErrorImage ] = useState(false);
 
@@ -40,7 +42,7 @@ useEffect(()=> {
 
         <Card  key={`${Math.random()* 100}`} className={classes["project-card"]}>
              {errorImage && errorImageContent}
-        <img  src={active} alt="img"/>
+        <img style={darkMode ? {filter: 'grayscale(75%)'}: {}}  src={active} alt="img"/>
           <h1>{project.projectName}</h1>
           <p>{project.projectText}</p>
           <div className={classes["project-card_flex_container"]}>

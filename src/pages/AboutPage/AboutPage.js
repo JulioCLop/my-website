@@ -13,6 +13,7 @@ import classes from  "./AboutPage.module.css";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MainHomePage from "../HomePage/MainHomePage";
 import BorderLine from "../../components/UI/Border_Line/Border-Line";
+import Resume from "../../components/Resume_Component/Resume";
 
 const skillsBarContent = [
   {
@@ -37,10 +38,10 @@ const skillsBarContent = [
 
 
 const  AboutPage = () => {
-  const { darkMode, darkModeStyles } = useContext(ThemeContext);
+  const { darkMode} = useContext(ThemeContext);
   const [cvShow, setShow] = useState(false);
   const [isContent, setContent] = useState(skillsBarContent);
-  
+  const [viewPDF, setViewPDF] = useState(false)
 
   const elementTitle = useRef();
   const elementWork = useRef();
@@ -68,6 +69,11 @@ const handleTopClick = () => {
     elementWork.current.scrollIntoView({behavior: 'smooth'})
 
   };
+
+  const viewPdfHandler = () => {
+    setViewPDF(true);
+    
+  }
 
 
  
@@ -162,22 +168,27 @@ const handleTopClick = () => {
     <div className={classes["cv-show-contianer"]} onMouseEnter={()=> setShow(true)} onMouseLeave={()=> setShow(false)}>
     {
       cvShow ? 
-    <div className={cvShow ? classes.viewCV : classes.viewCVAlt1}>
+    <div onClick={viewPdfHandler} className={cvShow ? classes.viewCV : classes.viewCVAlt1}>
        <p>Check out my CV</p>
-       <a href="www.google.com">Download</a>
      </div>
        : 
+      
       <div className={cvShow ? classes.viewCV1 : classes.viewCVAlt}>
       <h1 >CV</h1>
       </div>
-    }
       
+     
+    }
+    
      </div>
      <ScrollBtn  onClick={handleTopClick}>
        <p>Top</p>
      </ScrollBtn>
+    
    </section>
+   {viewPDF && <Resume viewPDF={viewPDF} onMouseLeave={()=> setViewPDF(false)}/>}
     </div>
+
     </MainHomePage>
     </React.Fragment>
   );

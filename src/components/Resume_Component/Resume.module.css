@@ -1,0 +1,20 @@
+.resume{
+    position: absolute;
+    bottom: 10px;
+    left: 322px;
+    z-index: 50;
+    height: 500px;
+    width: 500px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+    
+}
+.resume embed{
+    width: 500px;
+    height: 500px;
+    border: none;
+
+}
+::-webkit-scrollbar{
+    display: inherit;
+}

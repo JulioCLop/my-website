@@ -9,10 +9,10 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     height: 17rem;
     overflow: hidden;
+    z-index: 5;
 }
 .project-card img{
 position: absolute;
-
 height: 100%;
 width: 100%;
 z-index: -4;
