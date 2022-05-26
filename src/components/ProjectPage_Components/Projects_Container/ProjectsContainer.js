@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import LinkButton from '../../UI/Button/Link-Button';
 import Card from "../../UI/Card/Card";
@@ -7,9 +7,31 @@ import Card from "../../UI/Card/Card";
 import classes from "./ProjectsContainer.module.css";
 
 const ProjectsContainer = (props) => {
-  const [active, setActive] =useState(false);
+  const [active, setActive] = useState(false);
+  const [errorImage, setErrorImage ] = useState(false);
 
   const { projects } = props;
+
+  const errorImageContent = (
+    <div className={classes['error-images']}><h1>No Image Provided</h1></div>
+  )
+  
+
+useEffect(()=> {
+  const random = Math.floor(Math.random() * 2)+ 1;
+  fetch('https://api.unsplash.com/photos/?client_id=LCFbGcyg3SjhCVRZl-9zxfL9glRT2PMEmgPM_u6kbMQ')
+  .then(resp => {
+    if(resp.status === 200){
+      console.log(resp.status)
+      return  resp.json();
+    }
+    setErrorImage(true)
+  })
+  .then(data => setActive(data[random].urls.thumb))
+  return ()=>{
+      setErrorImage(false)
+  }
+},[]);
 
 
   return (
@@ -17,7 +39,8 @@ const ProjectsContainer = (props) => {
       {projects.map( project => (
 
         <Card  key={`${Math.random()* 100}`} className={classes["project-card"]}>
-        <img src="https://images.unsplash.com/photo-1645318588650-f0fb322cd740?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="img"/>
+             {errorImage && errorImageContent}
+        <img  src={active} alt="img"/>
           <h1>{project.projectName}</h1>
           <p>{project.projectText}</p>
           <div className={classes["project-card_flex_container"]}>
