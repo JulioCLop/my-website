@@ -48,7 +48,7 @@ useEffect(()=> {
               <small>{project.projectLanguage}</small>
             </div>
             <div className={classes['btn-container']}>
-              <LinkButton href="www.github.com">Github</LinkButton>
+              <LinkButton href={project.projectLink}>Github</LinkButton>
             </div>
           </div>
         </Card>

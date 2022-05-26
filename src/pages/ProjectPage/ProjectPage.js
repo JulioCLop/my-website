@@ -105,8 +105,8 @@ const onChangeInputHandler = (e) => {
           <div className={classes["section-one_project-content"]}>
           <p>Go ahead, check out my projects below or visit my Github Repo and check out my previous projects. Building Javascript applications has given me the ability to function independantly, and able to deliver fast, optimized, scalable apps. I'm currenly working on creating a Ecommerce website which will provide the user an exclusive experience. As I develop, my main focus will be on fast, elegant and accessible user experience.  </p>
           <div className={classes["section-one_project-btns"]}>
-          <LinkButton href="www.github.com">View Current Project</LinkButton>
-          <LinkButton href="www.github.com">View Github Repo</LinkButton>
+          <LinkButton href="https://github.com/JulioCLop/ecommerce">View Current Project</LinkButton>
+          <LinkButton href="https://github.com/JulioCLop">View Github Repo</LinkButton>
           </div>
           </div>
           <div className={classes["section-one_project-img"]}>
