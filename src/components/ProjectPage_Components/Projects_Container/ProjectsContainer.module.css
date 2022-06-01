@@ -11,6 +11,9 @@
     overflow: hidden;
     z-index: 5;
 }
+.project-card:hover{
+    transform: scale(105%);
+}
 .project-card img{
 position: absolute;
 height: 100%;

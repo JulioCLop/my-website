@@ -44,12 +44,12 @@ const NavbarComponent = () => {
   };
 
   useEffect(()=> {
-    setDarkMode(prevMode => prevMode);
+    setDarkMode(prevMode => !prevMode);
 
     return ()=> {
       setDarkMode(prevMode => prevMode)
     }
-  },[])
+  },[setDarkMode])
   
   return (
     <React.Fragment>

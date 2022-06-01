@@ -22,7 +22,6 @@ const ContactPage = () => {
   const [confirm, setConfirm] = useState(null);
   const [error, setError] = useState(false);
   const [modalAnimation, setModalAnimation] = useState(false);
- 
 
   const {
     value: enteredName,
@@ -54,8 +53,6 @@ const ContactPage = () => {
   if (enteredEmailIsValid && enteredNameIsValid && enteredMessageIsValid) {
     formIsValid = true;
   }
-
-
 
 
   const formSubmitHandler =  async(e) => {
