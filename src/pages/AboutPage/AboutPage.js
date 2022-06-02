@@ -12,7 +12,6 @@ import ScrollBtn from "../../components/UI/Button/ScrollBtn";
 import classes from  "./AboutPage.module.css";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MainHomePage from "../HomePage/MainHomePage";
-import BorderLine from "../../components/UI/Border_Line/Border-Line";
 import Resume from "../../components/Resume_Component/Resume";
 
 const skillsBarContent = [
@@ -153,7 +152,7 @@ const handleTopClick = () => {
    </section>
    <div style={{paddingBottom: '10px'}} ref={elementWork}/>
    <section   className={classes["work-section"]}>
-   <BorderLine/>
+  
      <div className={classes["work-header"]}>
        <h1>Where I've <span style={darkMode ? {color: 'gray'} : {color: 'rgba(128, 128, 128, 0.822)'}}>worked</span></h1>
      </div>

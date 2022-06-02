@@ -15,7 +15,7 @@ import HomePage from './pages/HomePage/HomePage';
 
 
 import './App.css';
-import MainHomePage from './pages/HomePage/MainHomePage';
+
 
 const SeeMorePage = React.lazy(()=> import('./pages/AboutPage/SeeMorePage/SeeMorePage'));
 const ProjectPage = React.lazy(()=> import('./pages/ProjectPage/ProjectPage'));

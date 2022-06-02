@@ -1,5 +1,6 @@
 .project-card{
     color: white;
+    font-weight: 900;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -9,9 +10,12 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     height: 17rem;
     overflow: hidden;
+    transition: 0.5s all;
     z-index: 5;
+
 }
 .project-card:hover{
+    transition: 0.6s all;
     transform: scale(105%);
 }
 .project-card img{
@@ -38,6 +42,19 @@ z-index: -4;
     display: flex;
     padding: 1rem;
     justify-content: space-between;
+}
+
+.updatedLinkBtn{
+  background-color: transparent;
+  box-shadow: none;
+
+}
+ a .icon {
+    color: white;
+    font-size: 2.5rem;
+}
+a .icon:hover{
+    color: rgb(220, 215, 215);
 }
 
 /* error images */

@@ -16,7 +16,7 @@ import TTT from '../../assets/ProjectPage/TicTacToe.png';
 import classes from "./ProjectPage.module.css";
 import Card from "../../components/UI/Card/Card";
 import MainHomePage from "../HomePage/MainHomePage";
-import BorderLine from "../../components/UI/Border_Line/Border-Line";
+
 
 
 
@@ -98,7 +98,8 @@ const onChangeInputHandler = (e) => {
     <MainHomePage>
     <div style={darkMode ? darkModeStyles : {}}>
       <div className={classes['project-page']}>
-        <section className={classes["section-one_project"]}>
+      <div className={classes.outterdiv} >
+    <section className={classes["section-one_project"]}>
           <h2>Projects</h2>
           <h1>Since Beginning <span>My Journey</span></h1>
           <div className={classes["section-one_project-grid"]}>
@@ -114,7 +115,7 @@ const onChangeInputHandler = (e) => {
           </div>
           </div>
         </section>
-        <BorderLine/>
+    </div>
         <section className={classes["section-two_project"]}>
         <h2>Most Recent <span>projects</span></h2>
         <div className={classes["section-two_project-cards"]}>

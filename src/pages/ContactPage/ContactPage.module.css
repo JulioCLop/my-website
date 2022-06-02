@@ -1,12 +1,14 @@
 .contact-page{
     position: relative;
     z-index: 2;
+    background: url('https://www.canva.com/design/DAFCZd0WPnA/cfOzZ5e3BTHTKrSTsMJ9HQ/watch?utm_content=DAFCZd0WPnA&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel');
+
 }
 .section-contact-1{
     position: relative;
     height: 50vh;
     width: 100%;
-}
+ }
 .section-contact-1 h1{
     color: white;
     text-transform: uppercase;

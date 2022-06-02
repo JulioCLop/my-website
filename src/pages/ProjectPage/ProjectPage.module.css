@@ -1,11 +1,25 @@
 
 /* section one */
-
+.outterdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #5D0000;
+  
+}
 .section-one_project {
     position: relative;
     padding: 30px;
     overflow: hidden;
     height: 650px;
+    background: url('../../assets/ProjectPage/project-main-background.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(107, 102, 102);
+    max-width: 1400px;
+   
 }
 
 
