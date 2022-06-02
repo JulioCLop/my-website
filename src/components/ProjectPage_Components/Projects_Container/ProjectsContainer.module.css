@@ -12,6 +12,8 @@
     overflow: hidden;
     transition: 0.5s all;
     z-index: 5;
+ 
+    
 
 }
 .project-card:hover{
@@ -37,10 +39,28 @@ z-index: -4;
     padding: 1rem;
     height:  90px ;
     text-align: center;
+    font-size: 15px;
+}
+.project-card small{
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 8px;
+
+    background-color: rgb(73, 73, 73);
+}
+
+.project-card div{
+    transition: 0.6s all;
+    opacity: 0;
+}
+.project-card:hover div{
+    transition: 0.6s all;
+    opacity: 1;
 }
 .project-card_flex_container{
     display: flex;
     padding: 1rem;
+    align-items: baseline;
     justify-content: space-between;
 }
 

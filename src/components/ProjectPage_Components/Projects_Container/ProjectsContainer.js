@@ -34,6 +34,7 @@ const ProjectsContainer = ({projects} ) => {
         <Card  key={`${Math.random()* 100}`} className={classes["project-card"]}>
              {errorImage && errorImageContent}
         <img style={darkMode ? {filter: 'grayscale(45%)'}: {}} src={images(project.projectId)}  alt={project.projectName}/>
+        <div>
           <h1>{project.projectName}</h1>
           <p>{project.projectText}</p>
           <div className={classes["project-card_flex_container"]}>
@@ -44,8 +45,8 @@ const ProjectsContainer = ({projects} ) => {
             <a className={`${classes.updatedLinkBtn}`} href={project.projectLink}><GitHubIcon className={classes.icon}/></a>
             </div>
           </div>
+          </div>
         </Card>
-       
       ))}
      
     </React.Fragment>
