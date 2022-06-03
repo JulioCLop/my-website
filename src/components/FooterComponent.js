@@ -14,4 +14,4 @@ import  classes from './FooterComponent.module.css';
   );
 }
 
-export default FooterComponent;
+export default React.memo(FooterComponent);

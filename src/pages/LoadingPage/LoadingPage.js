@@ -22,4 +22,4 @@ const LoadingPage = ()=> {
   );
 }
 
-export default LoadingPage;
+export default React.memo(LoadingPage);

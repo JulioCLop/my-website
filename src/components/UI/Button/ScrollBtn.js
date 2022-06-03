@@ -29,4 +29,4 @@ const ScrollBtn = (props) => {
   );
 };
 
-export default ScrollBtn;
+export default React.memo(ScrollBtn);

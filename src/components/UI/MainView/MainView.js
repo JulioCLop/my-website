@@ -16,4 +16,4 @@ const  MainView = (props) => {
 };
 
 
-export default MainView;
+export default React.memo(MainView);

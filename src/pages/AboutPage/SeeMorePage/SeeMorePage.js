@@ -65,4 +65,4 @@ const SeeMorePage = () => {
     </>
   );
 };
-export default SeeMorePage;
+export default React.memo(SeeMorePage);

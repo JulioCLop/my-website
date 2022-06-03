@@ -21,4 +21,4 @@ const {srcImage, link} = props;
   );
 };
 
-export default WorkContainers;
+export default React.memo(WorkContainers);

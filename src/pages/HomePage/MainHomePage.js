@@ -27,4 +27,4 @@ const {darkMode, darkModeStyles} = useContext(ThemeContext);
   )
 }
 
-export default MainHomePage;
+export default React.memo(MainHomePage);

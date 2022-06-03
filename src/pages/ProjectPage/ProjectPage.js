@@ -162,4 +162,4 @@ const onChangeInputHandler = (e) => {
   );
 };
 
-export default ProjectPage;
+export default React.memo(ProjectPage);

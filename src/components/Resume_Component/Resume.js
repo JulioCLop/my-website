@@ -19,4 +19,4 @@ const Resume = ({onMouseLeave, viewPdf}) => {
     </div>
   )
 }
-export default Resume;
+export default React.memo(Resume);

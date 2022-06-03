@@ -42,4 +42,4 @@ const Div1 = styled.div`
   );
 };
 
-export default Bar;
+export default React.memo(Bar);

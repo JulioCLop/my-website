@@ -2,22 +2,52 @@
     color: white;
     font-weight: 900;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     background-color: rgba(0, 0, 0, 0.322);
-    border-radius: 19px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 14px;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 7px 15px;
     height: 17rem;
     overflow: hidden;
     transition: 0.5s all;
     z-index: 5;
- 
-    
+    max-width: 375px;
+}
 
+.project-card .MainContent{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.project-card:hover .MainContent{
+    background-color: rgba(0, 0, 0, 0.682);
+    padding: 15px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.project-card .MainContent1{
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.project-card .MainContent2{
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+   
 }
 .project-card:hover{
-    transition: 0.6s all;
+    transition: 0.5s all;
     transform: scale(105%);
 }
 .project-card img{
@@ -26,56 +56,8 @@ height: 100%;
 width: 100%;
 z-index: -4;
 }
-.btn-container{
-    margin-bottom:15px;
-}
-.project-card h1{
-    padding-bottom: 1rem;
-    padding: 1rem;
-    text-align: center;
-}
-.project-card p{
-    padding-bottom: 1rem;
-    padding: 1rem;
-    height:  90px ;
-    text-align: center;
-    font-size: 15px;
-}
-.project-card small{
-    font-size: 14px;
-    padding: 8px;
-    border-radius: 8px;
 
-    background-color: rgb(73, 73, 73);
-}
 
-.project-card div{
-    transition: 0.6s all;
-    opacity: 0;
-}
-.project-card:hover div{
-    transition: 0.6s all;
-    opacity: 1;
-}
-.project-card_flex_container{
-    display: flex;
-    padding: 1rem;
-    align-items: baseline;
-    justify-content: space-between;
-}
-
-.updatedLinkBtn{
-  background-color: transparent;
-  box-shadow: none;
-
-}
- a .icon {
-    color: white;
-    font-size: 2.5rem;
-}
-a .icon:hover{
-    color: rgb(220, 215, 215);
-}
 
 /* error images */
 

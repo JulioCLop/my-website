@@ -45,10 +45,10 @@ const NavbarComponent = () => {
 
   useEffect(()=> {
     setDarkMode(prevMode => !prevMode);
-
     return ()=> {
       setDarkMode(prevMode => prevMode)
     }
+    
   },[setDarkMode])
   
   return (
@@ -140,4 +140,4 @@ const NavbarComponent = () => {
   );
 }
 
-export default NavbarComponent;
+export default React.memo(NavbarComponent);
