@@ -114,7 +114,7 @@ const handleTopClick = () => {
       <div style={{height: '50px'}} ref={elementTitle} />
       <section  className={classes["section-two-react-intro"]}>
         <div className={classes["react-header"]}>
-          <h2>UI/UX REACT<br/><span  className={classes["title-developer"]}>DEVELOPER</span></h2>
+          <h2>Front End React<br/><span  className={classes["title-developer"]}>DEVELOPER</span></h2>
         </div>
         <div className={classes["developer-intro"]}>
           <p>
