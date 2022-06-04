@@ -38,6 +38,22 @@
     flex-direction: column;
     align-items: center;
 }
+
+.MainContent1 h1,p{
+    padding-top: 20px;
+}
+
+.MainContent2 a {
+    color: white;
+    
+}
+.MainContent2 a .icon{
+    font-size: 2rem;
+}
+
+.MainContent2 a:hover{
+    color: rgb(203, 202, 202);
+}
 .project-card .MainContent2{
     padding-top: 20px;
     width: 100%;

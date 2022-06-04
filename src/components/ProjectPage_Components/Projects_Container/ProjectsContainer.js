@@ -46,7 +46,7 @@ const ProjectsContainer = ({ projects }) => {
                 </div>
                 <div className={classes.MainContent2}>
                     <p>{project.projectLanguage}</p>
-                  <a href={project.projectLink}><GitHubIcon/></a>  
+                  <a href={project.projectLink}><GitHubIcon className={classes.icon}/></a>  
                  </div>
             </div>
         </Card>
