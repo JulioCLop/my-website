@@ -124,7 +124,7 @@ const onChangeInputHandler = (e) => {
             <div className={classes["section-two_project-card-content"]}>
             <h4>Tic, Tac, Toe App</h4>
             <p>HTML, CSS, JS</p>
-            <LinkButton className={classes["a-2"]} href="www.github.com">view</LinkButton>
+            <LinkButton className={classes["a-2"]} href="https://github.com/JulioCLop/Tic-Tac-Toe-Game">view</LinkButton>
             </div>
           </Card>
           <Card className={classes["section-two_project-card"]}>
@@ -132,7 +132,7 @@ const onChangeInputHandler = (e) => {
             <div className={classes["section-two_project-card-content"]}>
             <h4>Expense App</h4>
             <p>ReactJS</p>
-            <LinkButton className={classes["a-2"]} href="www.github.com">View</LinkButton>
+            <LinkButton className={classes["a-2"]} href="https://github.com/JulioCLop/expense-app">View</LinkButton>
             </div>
           </Card>
         </div>
