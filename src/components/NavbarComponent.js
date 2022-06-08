@@ -37,16 +37,12 @@ const NavbarComponent = () => {
    
   };
 
-  const darkModeHandler = (e) => {
-    const checked = e.target.checked;
-    setDarkMode(checked);
-    return checked;
+  const darkModeHandler = () => {
+    setDarkMode((prevState)=> {
+      return !prevState
+    });
   };
 
-  useEffect(()=> {
-    setDarkMode(prevMode => !prevMode);
-  },[setDarkMode])
-  
   return (
     <React.Fragment>
       <header className={classes.header}>
