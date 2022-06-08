@@ -23,8 +23,12 @@ export const ThemeProvider = (props) =>{
 
     const darkModeStyles = {
         backgroundColor: 'black',
-        color: 'rgb(189, 182, 182)'
+        color: 'rgb(189, 182, 182)',
+         transition: '0.5s all'
     
+    }
+    const lightModeStyles = {
+      transition: '0.5s all'
     }
 
 
@@ -36,7 +40,8 @@ export const ThemeProvider = (props) =>{
             darkMode,
             setDarkMode,
             isLoading,
-            setIsLoading
+            setIsLoading,
+            lightModeStyles 
             }}>
         {props.children}
         </ThemeContext.Provider>

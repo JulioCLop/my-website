@@ -6,10 +6,10 @@ import classes from './MainView.module.css';
 
 const  MainView = (props) => {
 
-  const {darkModeStyles, darkMode} = useContext(ThemeContext);
+  const {darkModeStyles, darkMode, lightModeStyles } = useContext(ThemeContext);
 
   return (
-    <div style={darkMode ? darkModeStyles : props.style } className={`${classes['main-view']} ${props.darkMode}`}>
+    <div style={darkMode ? darkModeStyles : lightModeStyles  } className={`${classes['main-view']} ${props.darkMode} `}>
        {props.children}  
     </div>
   )

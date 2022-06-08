@@ -5,7 +5,13 @@
     padding-top: 3rem;
     position: relative;
     z-index: 0;
+   
 }
+.animation{
+  animation: backgroundView 2.5s;
+  
+}
+
 
 
 
