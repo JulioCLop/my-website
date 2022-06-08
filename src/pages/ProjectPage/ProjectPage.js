@@ -23,7 +23,6 @@ import MainHomePage from "../HomePage/MainHomePage";
 
 
 const ProjectPage = () => {
-  
   const { darkMode, darkModeStyles } = useContext(ThemeContext);
   const [ isProjects, setProjects ] = useState([]);
   const [isSearch, setSearch ] = useState('');
@@ -96,7 +95,7 @@ const onChangeInputHandler = (e) => {
   
   return (
     <MainHomePage>
-    <div style={darkMode ? darkModeStyles : {}}>
+    <div style={!darkMode ? darkModeStyles : {}}>
       <div className={classes['project-page']}>
       <div className={classes.outterdiv} >
     <section className={classes["section-one_project"]}>
