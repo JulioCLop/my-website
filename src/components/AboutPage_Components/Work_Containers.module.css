@@ -5,8 +5,7 @@
     height: 300px;
     border-radius: 8px;
     color:white;
-    
-  
+    transition: all 0.7s;
    
    
 }
@@ -25,6 +24,7 @@
     z-index: 4;
     display: flex;
     opacity: 0;  
+   
 }
 
 .work-job-containers:hover span{
@@ -60,6 +60,7 @@
    font-weight: bold;
    border-radius: 50px;
    transform: uppercase;
+ 
 }
 .a-1,
 .linkBtn:hover{
@@ -78,7 +79,7 @@
   width: 70px;
   background-color: rgb(148, 21, 21);
   height: 3px;
-  animation: underline 1.6s ;
+  animation: underline 1.3s ;
  
 }
 @keyframes underline {
