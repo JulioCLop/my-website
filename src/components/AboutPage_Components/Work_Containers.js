@@ -14,7 +14,7 @@ const {srcImage, link} = props;
     <Card className={classes["work-job-containers"]}>
     <img src={srcImage} style={{background: 'white'}} width='175' alt={props.alt}/>
     <span>
-    <LinkButton className={classes["a-1"]} href={link}>VIEW COMPANY SITE</LinkButton>
+    <a className={classes["a-1"]} href={link}>View</a>
     </span>
     </Card>
    

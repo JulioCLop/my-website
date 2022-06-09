@@ -5,6 +5,7 @@ import { ThemeContext } from "../../../context/Theme.Contexts";
 import Card from "../../UI/Card/Card";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
+import PreviewIcon from '@mui/icons-material/Preview';
 
 import classes from "./ProjectsContainer.module.css";
 
@@ -46,7 +47,10 @@ const ProjectsContainer = ({ projects }) => {
                 </div>
                 <div className={classes.MainContent2}>
                     <p>{project.projectLanguage}</p>
-                  <a href={project.projectLink}><GitHubIcon className={classes.icon}/></a>  
+                    <div>
+                     <a href={project.projectLink}><GitHubIcon className={classes.icon}/></a>  
+                     <a href={project.projectUrl}><PreviewIcon className={classes.icon}/></a>  
+                    </div>
                  </div>
             </div>
         </Card>

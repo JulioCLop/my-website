@@ -6,6 +6,7 @@ const projects = [
         projectText: ' Virtual birthday card created for my family member.',
         projectLink: 'https://github.com/JulioCLop/VirtualBirthdayCard',
         projectLanguage: "JavaScript",
+
       
     },{
         projectId: 2,
@@ -31,6 +32,7 @@ const projects = [
         projectText: ' Ideal Todo List with simple functionalities. ',
         projectLink: 'https://github.com/JulioCLop/React-Todo-App',
         projectLanguage: "React.js",
+        projectUrl: 'https://new-todo-list-sable.vercel.app'
         
     }, {
         projectId: 6,

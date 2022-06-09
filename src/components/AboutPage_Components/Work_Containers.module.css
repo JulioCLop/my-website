@@ -3,25 +3,34 @@
     max-width: 450px;
     min-width: 300px;
     height: 300px;
+    border-radius: 8px;
+    color:white;
+    
   
    
    
+}
+.work-job-containers:hover{
+  transform: scale(107%);
+  transition: all 0.7s;
+ 
 }
 
 .work-job-containers span{
     margin: 0 auto;
     position: absolute;
     transform: translate(-50%, -50%) scale(98%);
-    top: 50%;
-    left: 50%;
+    bottom: -15%;
+    left: 15%;
     z-index: 4;
     display: flex;
     opacity: 0;  
 }
 
 .work-job-containers:hover span{
-    transition: all 0.3s;
+    transition: opacity 0.3s;
     opacity: 1;
+   
 }
 .work-job-containers img{
     height: 100%;
@@ -34,8 +43,7 @@
 
 .work-job-containers:hover img{
     transition: all 0.4s;
-    transform: scale(98%);
-    filter: grayscale(98%);
+    filter: grayscale(100%);
 }
 .work-job-containers img:hover span{
    opacity: 0.6;
@@ -44,90 +52,76 @@
  .a-1,
  .linkBtn
  {
-   background-color: rgb(75, 4, 4) ;
+   position: relative;
    text-decoration: none;
-   font-size: 1rem;
-   color: white;
+   font-size: 1.8rem;
+   color: black;
    padding: 1rem;
+   font-weight: bold;
    border-radius: 50px;
+   transform: uppercase;
 }
 .a-1,
 .linkBtn:hover{
-    background-color: rgba(75, 4, 4, 0.98);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    color: inherit;
+    text-shadow:3px;
+    color: black;
     cursor: pointer;
+    
+}
+
+.work-job-containers:hover span:before{
+  content: "";
+  position: absolute;
+  bottom: 16px;
+  left:15px;
+  margin-top:5px;
+  width: 70px;
+  background-color: rgb(148, 21, 21);
+  height: 3px;
+  animation: underline 1.6s ;
+ 
+}
+@keyframes underline {
+  0%{
+    width: 0;
+  }
+  100%{
+   width: 70px;
+  }
 }
 
 
-  /* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
 @media (min-width: 1281px) {
   
-    /* CSS */
-    
+   
   }
   
-  /* 
-    ##Device = Laptops, Desktops
-    ##Screen = B/w 1025px to 1280px
-  */
+  
   
   @media (min-width: 1025px) and (max-width: 1280px) {
     
-    /* CSS */
+   
     
   }
   
-  /* 
-    ##Device = Tablets, Ipads (portrait)
-    ##Screen = B/w 768px to 1024px
-  */
   
   @media (min-width: 768px) and (max-width: 1024px) {
-    .a-1{
-        font-size: 15px;
-        text-align: center;
-    }
+   
     
   }
-  
-  /* 
-    ##Device = Tablets, Ipads (landscape)
-    ##Screen = B/w 768px to 1024px
-  */
   
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .a-1{
-        font-size: 15px;
-        text-align: center;
-    }
+   
     
   }
   
-  /* 
-    ##Device = Low Resolution Tablets, Mobiles (Landscape)
-    ##Screen = B/w 481px to 767px
-  */
   
   @media (min-width: 481px) and (max-width: 767px) {
-    .a-1{
-        font-size: 15px;
-        text-align: center;
-    }
+   
   }
   
-  /* 
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px to 479px
-  */
+  
   
   @media (max-width: 480px) {
-   .a-1{
-       font-size: 15px;
-       text-align: center;
-   }
+   
   }

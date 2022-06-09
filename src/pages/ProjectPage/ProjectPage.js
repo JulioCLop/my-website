@@ -145,7 +145,7 @@ const onChangeInputHandler = (e) => {
       <div className={classes["section-three_project_search"]} >
       <div>
         <label>Search Project</label>
-        <Input type="search" onChange={onChangeInputHandler }/>
+        <Input type="search" placeholder='Search project' onChange={onChangeInputHandler }/>
       </div>
       </div>
       <main className={classes["section-three_project_inner_main"]}>

@@ -24,6 +24,7 @@
 .project-card:hover .MainContent{
     background-color: rgba(0, 0, 0, 0.682);
     padding: 15px;
+    transition: opacity 0.7s;
     opacity: 1;
     display: flex;
     flex-direction: column;
@@ -53,6 +54,7 @@
 
 .MainContent2 a:hover{
     color: rgb(203, 202, 202);
+    cursor: pointer;
 }
 .project-card .MainContent2{
     padding-top: 20px;
@@ -73,6 +75,9 @@ width: 100%;
 z-index: -4;
 }
 
+.icon{
+    margin-left: 1rem;
+}
 
 
 /* error images */
