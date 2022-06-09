@@ -12,7 +12,7 @@
 .work-job-containers:hover{
   transform: scale(107%);
   transition: all 0.7s;
- 
+  
 }
 
 .work-job-containers span{
@@ -25,11 +25,14 @@
     display: flex;
     opacity: 0;  
    
+    letter-spacing: 0.05rem;
+   
 }
 
 .work-job-containers:hover span{
     transition: opacity 0.3s;
     opacity: 1;
+   
    
 }
 .work-job-containers img{
@@ -69,15 +72,18 @@
     cursor: pointer;
     
 }
+.a-1:hover{
+  color: black;
+}
 
 .work-job-containers:hover span:before{
   content: "";
   position: absolute;
   bottom: 16px;
-  left:15px;
+  left:18px;
   margin-top:5px;
   width: 70px;
-  background-color: rgb(148, 21, 21);
+  background-color: black;
   height: 3px;
   animation: underline 1.3s ;
  

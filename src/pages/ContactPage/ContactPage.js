@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 
 import useInput from "../../hooks/use_input";
 
-import FooterComponent from "../../components/FooterComponent";
 import Input from "../../components/UI/Input/Input";
 import Button from "../../components/UI/Button/Button";
 import ConfirmModal from "./ConfirmModal";
@@ -108,7 +107,7 @@ const ContactPage = () => {
  
   return (
     <MainHomePage>
-    <div className={`${darkMode && classes["is-darkmode"]}`}>
+    <div>
       { confirm &&  (
         <ConfirmModal
           modalAnimation={modalAnimation}
