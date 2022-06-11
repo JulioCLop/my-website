@@ -23,8 +23,11 @@
 .nomatch div p{
     position: absolute; 
     bottom: 15px;
+    width: 100%;
+    left: 15px;
     color: white;
     font-weight: bold;
+    font-size: 14px;
     letter-spacing: 0.05rem;
     right: 25px;
 }
@@ -54,7 +57,10 @@
 
 
 @media (min-width: 766px) and (max-width: 900px) and (orientation: landscape) {
-   
+    .nomatch div {
+       height: 200px;
+        
+   } 
 }
 
 
