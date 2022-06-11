@@ -28,7 +28,8 @@ const NavbarComponent = () => {
 
   let activeStyle = {
     color: "gray",
-    textDecoration: "line-through",
+    textDecoration: "overline",
+  
   };
 
   const clickHandler = () => {

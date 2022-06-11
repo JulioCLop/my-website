@@ -44,8 +44,7 @@ margin-right: 1.7rem;
 }
 
 .nav-btn:hover{
-    border: 1px solid whitesmoke;
-    color: rgba(255, 255, 255, 0.79);
+    color: rgba(255, 255, 255, 0.863);
     transition: all 0.1s ease;
   
 }
@@ -56,8 +55,11 @@ margin-right: 1.7rem;
 .navbar-inner-ul{
     display: flex;
     list-style: none;
+  
    
 }
+
+
 /* dark mode toggle */
 
 .moon-icon{
