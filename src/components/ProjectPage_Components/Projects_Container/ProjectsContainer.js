@@ -22,9 +22,6 @@ const ProjectsContainer = ({ projects }) => {
 
   const images = (imageid) => {
     const newImage = `/VBC-${imageid}.png`;
-
-    console.log(newImage);
-
     return newImage;
   };
 

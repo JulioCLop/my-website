@@ -15,6 +15,7 @@ import HomePage from './pages/HomePage/HomePage';
 
 
 import './App.css';
+import NoMatch from './components/ProjectPage_Components/Projects_Container/NoMatch/NoMatch';
 
 
 const SeeMorePage = React.lazy(()=> import('./pages/AboutPage/SeeMorePage/SeeMorePage'));
@@ -44,6 +45,7 @@ const App = () => {
       <Route path='/projects' element={<ProjectPage/>}/>
       <Route path='/contact' element={<ContactPage/>}/>
       <Route path='/see-more' element={<SeeMorePage/>}/>
+      <Route path='*' element={<NoMatch/>}/>
     </Routes>
     </React.Fragment>
     )
