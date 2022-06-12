@@ -8,13 +8,19 @@ import PreviewIcon from '@mui/icons-material/Preview';
 
 import classes from "./ProjectsContainer.module.css";
 
-const ProjectsContainer = ({ projects, newList, projectLength }) => {
+const ProjectsContainer = ({ projects, projectLength }) => {
   
   const images = (imageid) => {
     const newImage = `/VBC-${imageid}.png`;
     return newImage;
   };
 
+  let newList;
+  if(projectLength){
+    newList = projects.slice(0,12)
+  }else{
+    newList = projects;
+  }
 
   return (
     <React.Fragment>

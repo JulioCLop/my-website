@@ -31,12 +31,6 @@ const ProjectPage = () => {
   
 
 
-  let newList;
-  if(projectLength){
-    newList = projects.slice(0,12)
-  }else{
-    newList = projects;
-  }
   useEffect(()=>{
     setProjects(projects);
    
@@ -97,7 +91,7 @@ const onChangeInputHandler = (e) => {
        </div>)
       }else{
       return  <ProjectsContainer 
-                newList={newList}
+               
                  projectLength={projectLength}
                    projects={filteredProjects}
                     />;
