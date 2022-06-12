@@ -80,18 +80,3 @@ z-index: -4;
 }
 
 
-/* error images */
-
-.error-images{
-    height: 50px;
-    width: 100%;
-    background-color: rgba(146, 54, 54, 0.986);
-    text-align: center;
-    box-shadow: 1px 1.6px 3px rgba(0, 0, 0, 0.45);
-
-}
-.error-images h1{
-    font-size: 1rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-}

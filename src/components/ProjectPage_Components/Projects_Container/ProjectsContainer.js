@@ -1,6 +1,5 @@
-import React, { useState, useContext } from "react";
+import React, { useState} from "react";
 
-import { ThemeContext } from "../../../context/Theme.Contexts";
 
 import Card from "../../UI/Card/Card";
 
@@ -9,25 +8,20 @@ import PreviewIcon from '@mui/icons-material/Preview';
 
 import classes from "./ProjectsContainer.module.css";
 
-const ProjectsContainer = ({ projects }) => {
-  const { darkMode } = useContext(ThemeContext);
-  const [active, setActive] = useState(false);
-  const [errorImage, setErrorImage] = useState(false);
-
-  const errorImageContent = (
-    <div className={classes["error-images"]}>
-      <h1>No Image Provided</h1>
-    </div>
-  );
-
+const ProjectsContainer = ({ projects, newList, projectLength }) => {
+  
   const images = (imageid) => {
     const newImage = `/VBC-${imageid}.png`;
     return newImage;
   };
 
+
   return (
     <React.Fragment>
-      {projects.map((project) => (
+      {newList.map((project) =>{ 
+
+        return (
+
         <Card
           key={`${Math.random() * 100}`}
           className={classes["project-card"]}
@@ -36,7 +30,6 @@ const ProjectsContainer = ({ projects }) => {
             src={images(project.projectId)}
             alt={project.projectName}
           />
-          {errorImage && errorImageContent}
           <div className={classes.MainContent}>
                 <div className={classes.MainContent1}>
                 <h1>{project.projectName}</h1>
@@ -51,7 +44,9 @@ const ProjectsContainer = ({ projects }) => {
                  </div>
             </div>
         </Card>
-      ))}
+        )
+      })}
+     
     </React.Fragment>
   );
 };

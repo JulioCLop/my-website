@@ -1,3 +1,5 @@
+   
+
 
 const projects = [
     {
@@ -112,6 +114,22 @@ const projects = [
         projectName: 'Blog',
         projectText: 'Go ahead and lets blog about it!',
         projectLink: 'https://github.com/JulioCLop/hangman-app',
+        projectLanguage: "React.js",
+
+    
+    },{
+        projectId: 18,
+        projectName: 'Birthday Reminder',
+        projectText: 'Who\'s birthday is it anyways?',
+        projectLink: 'https://github.com/JulioCLop/birthdays-today',
+        projectLanguage: "React.js",
+
+    
+    },{
+        projectId: 19,
+        projectName: 'Plan you tour',
+        projectText: 'Let\'s plan your next tour!' ,
+        projectLink: 'https://github.com/JulioCLop/plan-you-tour',
         projectLanguage: "React.js",
 
     }

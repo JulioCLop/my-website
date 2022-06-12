@@ -27,7 +27,20 @@ const ProjectPage = () => {
   const [ isProjects, setProjects ] = useState([]);
   const [isSearch, setSearch ] = useState('');
   const [sorted, setSorted] = useState(false);
+  const [projectLength, setProjectLength] = useState(true);
   
+
+
+  let newList;
+  if(projectLength){
+    newList = projects.slice(0,12)
+  }else{
+    newList = projects;
+  }
+  useEffect(()=>{
+    setProjects(projects);
+   
+  },[]);
  
   const  filteredProjects = [...isProjects].filter((project)=> {
     return project.projectName.toLowerCase().includes(isSearch.toLowerCase())
@@ -83,15 +96,15 @@ const onChangeInputHandler = (e) => {
          <h1 >No Matches</h1> 
        </div>)
       }else{
-      return  <ProjectsContainer  projects={filteredProjects} />;
+      return  <ProjectsContainer 
+                newList={newList}
+                 projectLength={projectLength}
+                   projects={filteredProjects}
+                    />;
       }
 
     };
 
-    useEffect(()=>{
-      setProjects(projects);
-     
-    },[]);
   
   return (
     <MainHomePage>
@@ -151,6 +164,11 @@ const onChangeInputHandler = (e) => {
       <main className={classes["section-three_project_inner_main"]}>
         <div style={filteredProjects >= 0 ? {gridTemplateColumns: '1fr'} : {}} className={classes["section-three_project_cards_container" ]}>
       {noMatches()}
+        </div>
+        <div className={classes.showBtnContainer}>
+        <button onClick={()=> setProjectLength(prev => !prev)}>
+          {projectLength ? 'see more': 'show less'}
+      </button>
         </div>
       </main>
         </section>
