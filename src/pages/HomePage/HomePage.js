@@ -1,8 +1,5 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-
-import Card from '../../components/UI/Card/Card';
 import NavbarComponent from "../../components/NavbarComponent";
 import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
 
@@ -17,26 +14,25 @@ const HomePage = () => {
     <React.Fragment> 
      <NavbarComponent  />
       <MobileNavigation  /> 
-      <div className={classes["home-page"]}>
-      <main>
+      <main className={classes["home-page"]}>
         <section className={classes["section-flex"]}>
-        <Card className={classes.cardContainer}>
-        <div className={classes.cardContainerSections}>
-        <div>
-        <h1>Front-end Developer</h1>
-        <p>I'm a React developer, and I build anything from mobile to web apps.</p>
-        </div>
-        </div>
-       <div className={classes.cardContainerSections}>
+         <article>
          <div>
-         <small>Feel free to start by looking at my projects!</small>
-         <Link  to="/projects">Check it out!</Link>
+           <h1>Next Level</h1>
+           <h1>Front End Developer</h1>
          </div>
-       </div>
-        </Card>
+         <div>
+           <p>I'm a Front-end Developer, and I build anything from mobile to web apps.</p>
+         </div>
+         </article>
+         <article>
+         <div>
+           <button>Let's get started</button>
+         </div>
+         </article>
         </section>
-      </main>
-    </div>
+      <div className={classes.sideLink}><small>Let's get to talking</small></div>
+    </main>
     </React.Fragment>
   );
 }

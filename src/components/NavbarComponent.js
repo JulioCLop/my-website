@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -128,7 +128,7 @@ const NavbarComponent = () => {
           </div>
         </nav>
       </header>
-      <div id={classes.margin} />
+      <div />
     </React.Fragment>
   );
 }

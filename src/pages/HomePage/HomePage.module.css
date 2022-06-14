@@ -3,128 +3,101 @@
   background-image: url("https://images.unsplash.com/photo-1642355008521-236f1d29d0a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80");
   background-size: cover;
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-repeat: no-repeat;
   background-position: center;
-  height: calc(100vh - 80px);
+  height:100vh;
   color: white;
-}
-.react-image{
-  height: 80px;
-  width: 80px;
-  position: absolute;
-  left: 265px;
-  bottom: 162px;
-}
-.section-flex {
-  display: flex;
-  justify-content: space-around;
   position: relative;
 }
-.cardContainer{
-  width: 600px;
-  height: 400px;
+
+.home-page section{
+margin-top: 200px;
+margin-left: 4rem;
+width: 100%;
 }
-.cardContainerSections{
+
+.home-page section article:nth-child(1){
+  margin-top: 8rem;
+  margin-left: 4rem;
+  height: 250px;
+}
+.home-page section article div h1{
+  font-size: 3rem;
+  margin-top: 1rem;
+  letter-spacing: 0.02rem;
   width: 100%;
-  height: 50%;
 }
-.cardContainerSections div{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-
-}
-.cardContainerSections div h1{
- font-family:var(--primary-font-family);
- font-size: 3rem;
-}
-.cardContainerSections div p,
-.cardContainerSections div small
-{
-  font-family: var(--secondary-font-family);
+.home-page section article div p{
+  margin-top: 1rem;
   font-size: 1.2rem;
+  letter-spacing: 0.02rem;
 }
-.cardContainerSections div a{
-  font-family: var(--button-font);
-  color: rgb(255, 255, 255);
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
+
+.home-page section article:nth-child(2){
+  margin-left: 4rem;
+}
+.home-page section article div button{
+  padding: 1rem;
+  color: #eef1f6;
+  border: 2.4px solid #1363DF;
+  background-color: black;
   font-size: 1rem;
-  padding: 15px 30px;
-  border-radius: 80px;
-  background-color: var(--main-red);
-  border: none;
-  box-shadow: var(--button-box-show);
-}
-.cardContainerSections div a:hover{
-  background-color: var(--light-red);
   cursor: pointer;
-  box-shadow: none;
-  color: whitesmoke;
+  font-weight: bold;
+ 
+}
+.home-page section article div button:hover{
+  animation: 1s containerFill forwards;
 }
 
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
+@keyframes containerFill {
+  to{
+    background-color: #47B5FF;
+    border-color: transparent;
+ }
 
+}
+
+
+
+
+.sideLink{
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: rotate(270deg);
+}
 @media (min-width: 1281px) {
   
-  /* CSS */
+ 
   
 }
 
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-  
-  /* CSS */
+ 
   
 }
 
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  
-  /* CSS */
+ 
   
 }
 
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
+
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
-  /* CSS */
+  
   
 }
 
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
 
 @media (min-width: 481px) and (max-width: 767px) {
   
 }
 
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
 
 @media (min-width: 320px) and (max-width: 480px) and (min-height: 500px) {
   
