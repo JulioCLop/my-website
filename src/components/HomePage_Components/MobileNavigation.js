@@ -18,8 +18,8 @@ const MobileNavigation = () => {
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   let activeStyle = {
-    color: "gray",
-    textDecoration: "line-through",
+    
+   
   };
 
   if (!matchesMD) {

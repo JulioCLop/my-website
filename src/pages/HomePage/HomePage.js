@@ -1,14 +1,19 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import NavbarComponent from "../../components/NavbarComponent";
 import MobileNavigation from "../../components/HomePage_Components/MobileNavigation";
 
-
+import {  useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import classes from "./HomePage.module.css";
 
 
 
 const HomePage = () => {
+  const theme = useTheme();
+  const matchesMD = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
     <React.Fragment> 
@@ -26,12 +31,12 @@ const HomePage = () => {
          </div>
          </article>
          <article>
-         <div>
-           <button>Let's get started</button>
+         <div id={classes.container}>
+           <Link to='/about'>Let's get started</Link>
          </div>
          </article>
         </section>
-      <div className={classes.sideLink}><small>Let's get to talking</small></div>
+      <div className={`${!matchesMD  ? classes['sideLink-mobile'] : classes.sideLink} }`}><Link to="/contact"><small>Let's get to talking</small></Link></div>
     </main>
     </React.Fragment>
   );

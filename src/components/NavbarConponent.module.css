@@ -26,24 +26,31 @@ justify-content: center;
     
 }
 .navbar-container-2{
-margin-right: 1.7rem;
+  margin-right: 1.7rem;
+}
+.navbar-mobile{
+  position: absolute;
+  right: 3rem;
+  top: 4rem;
 }
 
+
+
 .nav-btn{
-    font-size: 15.5px;
+    font-size: 16px;
     color: white;
     padding: 0.6rem;
     font-weight: 900;
     letter-spacing: 0.05rem;
     text-decoration: none;
-    margin-right: 0.6rem;
-    text-transform: uppercase;
+    margin-right: 1.5rem;
+    
    
   
 }
 
 .nav-btn:hover{
-    color: #30AADD;
+    color: #002BDC;
     transition: all 0.1s ease;
   
 }
@@ -55,19 +62,8 @@ margin-right: 1.7rem;
 .navbar-inner-ul{
     display: flex;
     list-style: none;
-  
-   
 }
 
-
-/* dark mode toggle */
-
-.moon-icon{
-  position: absolute;
-  top: 0.6rem;
-  right: 0.9rem;
-  color: white;
-}
 
   /* Toggle Menu Hamburger */
   .toggle-button{
@@ -255,18 +251,18 @@ margin-right: 1.7rem;
   */
   
   @media (min-width: 481px) and (max-width: 767px) {
-    
-    /* CSS */
+    .navbar-container-1 img{
+      margin-left: 0rem;
+      left: -1rem;
+  }
     
   }
-  
-  /* 
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px to 479px
-  */
-  
+ 
   @media (min-width: 320px) and (max-width: 480px) {
-    
+    .navbar-container-1 img{
+      margin-left: 0rem;
+      left: -1rem;
+  }
    .toggle-button{
        transform: scale(60%);
    }
