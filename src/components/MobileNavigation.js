@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 
 import { NavLink } from "react-router-dom";
 
-import { ThemeContext } from "../../context/Theme.Contexts";
+import { ThemeContext } from "../context/Theme.Contexts";
 
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
@@ -18,21 +18,26 @@ const MobileNavigation = () => {
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   let activeStyle = {
-    
-   
+    textDecoration: 'underline',
   };
-
   if (!matchesMD) {
     setSideNav(false);
   };
 
+  const closeHandler = () => {
+    setSideNav(prev=> !prev);
+    
+  }
+
+  
+
+  
+
   return (
-    <>
-     
+    <React.Fragment>
       {sideNav && matchesMD ? (
-        <>
-       
-          <nav className={classes["mobile-nav"]}>
+        <React.Fragment>
+          <nav  className={`${classes["mobile-nav"]} ${sideNav && classes['open-mobile-nav']}`}>
             <ul className={classes["mobile-nav_items"]}>
               <li className={classes["mobile-nav_item"]}>
                 <NavLink
@@ -75,12 +80,12 @@ const MobileNavigation = () => {
               </li>
             </ul>
           </nav>
-          <div className={classes["mobile-background"]} />
-        </>
+          <div onClick={closeHandler} className={classes["mobile-background"]} />
+        </React.Fragment>
       ) : (
         ""
       )}
-    </>
+    </React.Fragment>
   );
 }
 

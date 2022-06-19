@@ -4,32 +4,19 @@ import { ThemeContext } from './context/Theme.Contexts';
 
 import {Routes, Route} from 'react-router-dom';
 
-
-
 import LoadingPage from './pages/LoadingPage/LoadingPage';
 import HomePage from './pages/HomePage/HomePage';
-// import MainView from './components/UI/MainView/MainView';
-// import NavbarComponent from './components/NavbarComponent';
-// import MobileNavigation from './components/HomePage_Components/MobileNavigation';
-// import FooterComponent from './components/FooterComponent';
-
+import NoMatch from './components/ProjectPage_Components/Projects_Container/NoMatch/NoMatch';
+import  SeeMorePage  from './pages/AboutPage/SeeMorePage/SeeMorePage'
+import ProjectPage from './pages/ProjectPage/ProjectPage'
+import  AboutPage from './pages/AboutPage/AboutPage'
+import ContactPage from './pages/ContactPage/ContactPage'
 
 import './App.css';
-import NoMatch from './components/ProjectPage_Components/Projects_Container/NoMatch/NoMatch';
-
-
-const SeeMorePage = React.lazy(()=> import('./pages/AboutPage/SeeMorePage/SeeMorePage'));
-const ProjectPage = React.lazy(()=> import('./pages/ProjectPage/ProjectPage'));
-const AboutPage = React.lazy(()=> import('./pages/AboutPage/AboutPage'));
-const ContactPage = React.lazy(()=> import('./pages/ContactPage/ContactPage'));
-
 
 
 const App = () => {
   const { isLoading } = useContext(ThemeContext);
-  
-
-   
   
   return (
     <React.Fragment>

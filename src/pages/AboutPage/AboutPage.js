@@ -13,6 +13,8 @@ import classes from  "./AboutPage.module.css";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MainHomePage from "../HomePage/MainHomePage";
 import Resume from "../../components/Resume_Component/Resume";
+import { ContainerIntro } from "../../components/AboutPage_Components/ContainerIntro";
+import SmallDesc from "../../components/AboutPage_Components/SmallDesc";
 
 const skillsBarContent = [
   {
@@ -81,37 +83,10 @@ const handleTopClick = () => {
   <React.Fragment>
   <MainHomePage>
     <div ref={topElement} className={classes["about-Page" ]} >
-      <section className={classes["section-one-about"]}>
-      <ScrollBtn  onClick={handleBackClick}>
-      <span id='arrow-down' className={classes.span}>{ <KeyboardArrowDownIcon fontSize='large' sx={{color: "white"}} />}</span>
-      </ScrollBtn>
-        <div
-          className={classes["section-main-img"]}
-          style={darkMode ? { backgroundImage:"url('https://images.unsplash.com/photo-1468906824284-242b500c38b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80')"} : { backgroundImage:"url('https://images.unsplash.com/photo-1526289034009-0240ddb68ce3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80')"}} 
-        
-        />
-        <div
-          className={
-            ` ${classes["section-one-containers"]} ${classes["section-one-flex-helper"]}`
-          }
-        >
-          <div className={classes["section-one-div1"]}>
-            <h1>
-              &ldquo;When something is important enough, you do it, even if the
-              odds are not in your favor. &rdquo;
-              <header-quote>
-                <small className={classes["s"]}>-Elon Musk-</small>
-              </header-quote>
-            </h1>
-          </div>
-          <div className={classes["section-one-div2"]}>
-            <h3>
-              <Link to="/contact">Let’s fuel your creativity!</Link>
-            </h3>
-          </div>
-        </div>
-      </section>
-      <div style={{height: '50px'}} ref={elementTitle} />
+    <div style={{height: '50px'}} ref={elementTitle} />
+     <ContainerIntro/>
+     <SmallDesc/>
+
       <section  className={classes["section-two-react-intro"]}>
         <div className={classes["react-header"]}>
           <h2>Front End React<br/><span  className={classes["title-developer"]}>DEVELOPER</span></h2>

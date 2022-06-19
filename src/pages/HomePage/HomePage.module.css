@@ -10,6 +10,18 @@
   position: relative;
 }
 
+.logo{
+  position: absolute;
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+  width: 70px;
+  height: 200px;
+  top: 5rem;
+  left: 7.5rem;
+ 
+}
+
 .home-page section {
   margin-top: 200px;
   margin-left: 4rem;
@@ -48,6 +60,10 @@
 }
 .home-page section article div a:hover {
   animation: 1s containerFill forwards;
+}
+
+#container{
+  padding-top: 3rem;
 }
 
 @keyframes containerFill {
@@ -95,6 +111,25 @@
   letter-spacing: 0.05rem;
   font-size: 0.9rem;
 }
+.arrowRight{
+  font-size: 5rem;
+  position: relative;
+  left: 7rem;
+  transform: rotate(90deg);
+  animation: arrowAnimated 1.7s infinite ;
+}
+
+@keyframes arrowAnimated {
+  0% {
+    bottom: 3rem;
+  }
+  50% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 3rem;
+  }
+}
 @media (min-width: 1281px) {
 }
 
@@ -117,7 +152,7 @@
     width: 100%;
   }
   .home-page section article:nth-child(1){
-    margin-left: 1rem;
+    margin-left: 1.5rem;
   }
   .home-page section article div h1 {
     font-size: 2rem;
@@ -148,6 +183,14 @@
   }
   .home-page section article:nth-child(2) {
     margin-left: 0rem;
+  }
+  .home-page section article div h1{
+    text-align: center;
+  }
+  .home-page section article div p{
+    text-align: center;
+    padding-top: 2rem;
+    margin: 0 5px
   }
   #container{
     display: flex;

@@ -8,7 +8,7 @@ import TranslateIcon from '@mui/icons-material/Translate';
 
 import FooterComponent from "../../../components/FooterComponent";
 import NavbarComponent from "../../../components/NavbarComponent";
-import MobileNavigation from "../../../components/HomePage_Components/MobileNavigation";
+import MobileNavigation from "../../../components/MobileNavigation";
 import SchoolIcon from '@mui/icons-material/School';
 
 import classes from "./SeeMorePage.module.css";

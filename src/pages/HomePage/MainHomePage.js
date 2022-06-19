@@ -3,7 +3,7 @@ import React, {useContext} from 'react';
 import { ThemeContext } from '../../context/Theme.Contexts';
 
 import NavbarComponent from '../../components/NavbarComponent';
-import MobileNavigation from '../../components/HomePage_Components/MobileNavigation';
+import MobileNavigation from '../../components/MobileNavigation';
 import MainView from '../../components/UI/MainView/MainView';
 import FooterComponent from '../../components/FooterComponent';
 

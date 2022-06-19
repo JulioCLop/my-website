@@ -1,17 +1,34 @@
 .header{  
-    position: fixed;
+    position: relative;
     z-index: 5;
     top: 0;
     width: 100%;
-    height: 12rem;
+    height: 20rem;
+    background-image: url(../assets/Nav/sumaid-pal-singh-bakshi-XWSmgos6l5k-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(20%);
+  
+   
 }
-
+.activePage{
+  position: absolute;
+  top: 50%;
+  left: 41%;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
 nav{
 position: relative;
+padding-top: 5rem;
 width: 100%;
 height: 100%;
 display: flex;
-align-items: center;
+align-items: flex-start;
 justify-content: center;
 
 }
@@ -25,6 +42,7 @@ justify-content: center;
     top: 1rem
     
 }
+
 .navbar-container-2{
   margin-right: 1.7rem;
 }
@@ -44,7 +62,7 @@ justify-content: center;
     letter-spacing: 0.05rem;
     text-decoration: none;
     margin-right: 1.5rem;
-    
+    font-family: 'Poppins', sans-serif;
    
   
 }
@@ -70,7 +88,7 @@ justify-content: center;
     margin-top: 15px;
    width: 60px;
    cursor: pointer;
-   transform: scale(80%);
+   transform: scale(70%);
 }
 .toggle-button span {
    display: block;
@@ -201,69 +219,60 @@ justify-content: center;
   }
 
 
-  /* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
 
 @media (min-width: 1281px) {
   
-    /* CSS */
+   
     
   }
   
-  /* 
-    ##Device = Laptops, Desktops
-    ##Screen = B/w 1025px to 1280px
-  */
   
   @media (min-width: 1025px) and (max-width: 1280px) {
-    
-    /* CSS */
+   
     
   }
   
-  /* 
-    ##Device = Tablets, Ipads (portrait)
-    ##Screen = B/w 768px to 1024px
-  */
   
   @media (min-width: 768px) and (max-width: 1024px) {
-    
-    /* CSS */
+    .activePage{
+      left: 38%;
+    }
     
   }
   
-  /* 
-    ##Device = Tablets, Ipads (landscape)
-    ##Screen = B/w 768px to 1024px
-  */
   
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    
-    /* CSS */
+    .activePage{
+      left: 38%;
+    }
     
   }
   
-  /* 
-    ##Device = Low Resolution Tablets, Mobiles (Landscape)
-    ##Screen = B/w 481px to 767px
-  */
+  
   
   @media (min-width: 481px) and (max-width: 767px) {
     .navbar-container-1 img{
       margin-left: 0rem;
       left: -1rem;
   }
+  .activePage{
+    left: 32%;
+  }
     
   }
- 
-  @media (min-width: 320px) and (max-width: 480px) {
+  
+  
+  @media  (max-width: 480px) {
     .navbar-container-1 img{
       margin-left: 0rem;
       left: -1rem;
   }
-   .toggle-button{
-       transform: scale(60%);
-   }
+  .navbar-mobile{
+    right: 0;
+  }
+  .activePage{
+    left: 23%;
+  }
+  
+   
   }

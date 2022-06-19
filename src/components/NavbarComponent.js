@@ -1,4 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState} from "react";
+import { useLocation } from "react-router-dom";
 
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -13,12 +14,11 @@ import {  useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import classes from "./NavbarConponent.module.css";
-import  "./toggle.css";
-
 
 
 
 const NavbarComponent = () => {
+  const location = useLocation();
   const theme = useTheme();
   const { sideNav, setSideNav } = useContext(ThemeContext);
   const [activeBtn, setActiveBtn] = useState(false);
@@ -27,10 +27,15 @@ const NavbarComponent = () => {
   let activeStyle = {
     color: "gray",
     margin: '12px',
-    textDecoration: 'overline'
   
   };
 
+ const activeLocation = () => {
+  const path = location.pathname.toString();
+   const pathName =  path.split('').splice(2)
+   const pathNameCase = path.split('').splice(1)[0].toUpperCase();
+    return pathNameCase + pathName.join('')
+ };
 
   const clickHandler = () => {
     setActiveBtn( prevActiveBtn => !prevActiveBtn)
@@ -93,7 +98,7 @@ const NavbarComponent = () => {
                     className={classes["nav-btn"]}
                     to="/projects"
                   >
-                    Project
+                    Projects
                   </NavLink>
                 </li>
                 <li>
@@ -114,7 +119,9 @@ const NavbarComponent = () => {
           </div>
       <DarkMode/>
         </nav>
+     <h1 className={classes.activePage}>{activeLocation()} page</h1>
       </header>
+      
       <div />
     </React.Fragment>
   );
