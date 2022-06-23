@@ -1,0 +1,41 @@
+.section-two_project {
+    padding-top: 125px 75px;
+     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionTwoProjectTitle{
+    width: 50%;
+}
+.sectionTwoProjectTitle h2{
+    padding-bottom: 15px;
+    font-size: 2rem;
+}
+
+.innerContainerContent{
+    padding-top: 15px;
+}
+.innerContainerContent h3{
+
+}
+.innerContainerContent p{
+color: #545454;
+letter-spacing: 0.05rem;
+line-height: 25px;
+}
+
+.projectTypes{
+    display: flex;
+    padding-top: 30px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.projectTypes h3{
+    padding-top: 5px;
+}
+.projectTypes p{
+    color: #545454;
+}

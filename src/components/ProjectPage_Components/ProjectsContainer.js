@@ -1,7 +1,7 @@
-import React, { useState} from "react";
+import React from "react";
 
 
-import Card from "../../UI/Card/Card";
+import Card from "../UI/Card/Card";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
 import PreviewIcon from '@mui/icons-material/Preview';

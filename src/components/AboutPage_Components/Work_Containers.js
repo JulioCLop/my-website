@@ -1,21 +1,25 @@
 import React from 'react';
 
-import LinkButton from '../UI/Button/Link-Button';
 import Card from '../UI/Card/Card';
 
 import classes from './Work_Containers.module.css';
 
 const  WorkContainers = props => {
   
-const {srcImage, link} = props;
+const {srcImage, link, name, position} = props;
 
   return (
    
     <Card className={classes["work-job-containers"]}>
-    <img src={srcImage} style={{background: 'white'}} width='175' alt={props.alt}/>
-    <span>
-    <a className={classes["a-1"]} href={link}>View</a>
-    </span>
+      <div className={classes.backgroundAnimation} />
+      <img src={srcImage} style={{background: 'white'}} width='175' alt={props.alt}/>
+     <section className={classes.workCardSection}>
+     <div>
+     <h3>{name}</h3>
+      <p>{position}</p>
+     </div>
+    <a href={link}>Website</a>
+     </section>
     </Card>
    
   );

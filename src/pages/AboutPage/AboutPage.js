@@ -1,20 +1,18 @@
-import React, { useContext, useState, useRef} from "react";
+import React, { useContext, useRef} from "react";
 
-
-import { Link } from "react-router-dom";
 
 import { ThemeContext } from "../../context/Theme.Contexts";
 
-import WorkContainers from "../../components/AboutPage_Components/Work_Containers";
-import Bar from "../../components/UI/Bar/Bar";
 import ScrollBtn from "../../components/UI/Button/ScrollBtn";
 
 import classes from  "./AboutPage.module.css";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MainHomePage from "../HomePage/MainHomePage";
-import Resume from "../../components/Resume_Component/Resume";
 import { ContainerIntro } from "../../components/AboutPage_Components/ContainerIntro";
 import SmallDesc from "../../components/AboutPage_Components/SmallDesc";
+import SkillSetSection from "../../components/AboutPage_Components/SkillSetSection";
+import Worked from "../../components/AboutPage_Components/Worked";
+import {BiArrowToTop} from 'react-icons/bi';
+import CVSection from "../../components/AboutPage_Components/CVSection";
 
 const skillsBarContent = [
   {
@@ -40,22 +38,14 @@ const skillsBarContent = [
 
 const  AboutPage = () => {
   const { darkMode} = useContext(ThemeContext);
-  const [cvShow, setShow] = useState(false);
-  const [isContent, setContent] = useState(skillsBarContent);
-  const [viewPDF, setViewPDF] = useState(false)
+ 
 
   const elementTitle = useRef();
   const elementWork = useRef();
   const topElement = useRef();
  
 
-  const barElements = isContent.map(bar => (
-    <Bar
-    title={bar.title}
-    fraction={bar.fraction}
-    key={bar.key}
-    />
-  ));
+  
 
 const handleTopClick = () => {
   topElement.current.scrollIntoView({behavior: 'smooth'})
@@ -71,10 +61,6 @@ const handleTopClick = () => {
 
   };
 
-  const viewPdfHandler = () => {
-    setViewPDF(true);
-    
-  }
 
 
  
@@ -86,83 +72,13 @@ const handleTopClick = () => {
     <div style={{height: '50px'}} ref={elementTitle} />
      <ContainerIntro/>
      <SmallDesc/>
-
-      <section  className={classes["section-two-react-intro"]}>
-        <div className={classes["react-header"]}>
-          <h2>Front End React<br/><span  className={classes["title-developer"]}>DEVELOPER</span></h2>
-        </div>
-        <div className={classes["developer-intro"]}>
-          <p>
-            <span className={classes["about-name"]}>Hello, I'm Julio Lopez.</span> <br/> I am a <span  className={classes.spanWhite}>React Developer</span>. But,
-            still exploring other technologies that spike my interest. I work on
-            builds and maintenance for a variety of client requests. Attentive
-            to UI/UX details and high quality and maintainable code. 
-          </p>
-        </div>
-      </section>
-   <section  className={`${classes["F-AC"]} ${classes["about-section-3"]}`}>
-     <div className={classes["about-section-3-img-container"]}>
-          <img src="https://images.unsplash.com/photo-1637044527986-1727785b1fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt='office' />
-     </div>
-     <div className={`${classes["FC-AC"]} ${classes["about-section-content-container"]}`}>
-          <div className={classes["content-inner-container-1"]}>
-            <h2>A litte about my skill sets</h2>
-            <p>I began my journey as a developer nearly two years ago, I've mostly worked at startups and have collaberated with a variety of talented people to create web applications products for both businsess and consumer use.</p>
-            <p>In my time as a developer, I have gained the neccesary skills to create responsive websites that are fast, user friendly, and built with best code practices. My main area of expertise is in front-end development, HTML, CSS, JS, ReactJS. I have used a variety of resources that collaborate with the coding interactive layouts.  </p>
-            <p>If you're looking for a developer to
-            add to your team, I'd love to hear from you!</p>
-          </div>
-          <div className={`${classes["F-AC"]} ${classes["content-inner-button-container"]}`}>
-            <Link to="/see-more">see more</Link>
-          </div>
-        <div className={`${classes["content-inner-skill-view"]}`}>
-          <div className={`${classes["inner-skill-view"]}`}>
-                  {barElements}
-          </div>
-          </div>
-     </div>
-     <ScrollBtn  onClick={forwardWorkHandler}>
-     <span id='arrow-down' className={classes.span}>{ <KeyboardArrowDownIcon fontSize='large' sx={{color: "white"}} />}</span>
-     </ScrollBtn>
-   </section>
-   <div style={{paddingBottom: '10px'}} ref={elementWork}/>
-   <section   className={classes["work-section"]}>
-  
-     <div className={classes["work-header"]}>
-       <h1>Where I've <span style={darkMode ? {color: 'gray'} : {color: 'rgba(128, 128, 128, 0.822)'}}>worked</span></h1>
-     </div>
-     <div className={classes["work-main-job-containers"]}>
-      <WorkContainers srcImage='https://gethalen.com/images/logo.png' link='https://gethalen.com/' alt="halen"/>
-      <WorkContainers srcImage='https://orlandospencer.com/media/cache/73/04/73042ae0f959b479bc9fbf6dd7bfb3ee.jpg' link='https://orlandospencer.com/' alt='orlando spencer'/>
-      <WorkContainers srcImage='https://couponseeker.com/storage/CCS-SUPPLY-STORE.jpg' link='https://ccssupplystore.com/' alt="ccs supply store"/>
-     </div>
-   </section>
-   <section className={classes["CV_Section"]}>
-   <h1>Learn More <span style={{color:'gray'}}>About Me...</span></h1>
-    <div className={classes["cv-show-contianer"]} onMouseEnter={()=> setShow(true)} onMouseLeave={()=> setShow(false)}>
-    {
-      cvShow ? 
-    <div onClick={viewPdfHandler} className={cvShow ? classes.viewCV : classes.viewCVAlt1}>
-       <p>Check out my CV</p>
-     </div>
-       : 
-      
-      <div className={cvShow ? classes.viewCV1 : classes.viewCVAlt}>
-      <h1 >CV</h1>
-      </div>
-      
-     
-    }
-    
-     </div>
+     <SkillSetSection/>
+     <Worked/>
+      <CVSection/>
      <ScrollBtn  onClick={handleTopClick}>
-       <p>Top</p>
+     <BiArrowToTop/>
      </ScrollBtn>
-    
-   </section>
-   {viewPDF && <Resume viewPDF={viewPDF} onMouseLeave={()=> setViewPDF(false)}/>}
     </div>
-
     </MainHomePage>
     </React.Fragment>
   );

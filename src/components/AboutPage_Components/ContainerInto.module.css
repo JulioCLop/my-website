@@ -14,8 +14,6 @@
   justify-content: center;
 }
 
-
-
 .containerOne article {
   width: 310px;
   height: 417px;
@@ -51,7 +49,7 @@
   .underline{
       position: relative;
       margin-top: 5px;
-      width: 365px;
+      width: 280px;
       height: 2px;
       background-color: #002cdc8b;
   }
@@ -81,21 +79,34 @@
   .containerTwo .inner-container a:hover {
     border: 2px solid #2f4bff;
   }
+
+  .inner-container a:hover{
+    animation: 1.4s buttonColor forwards;
+  }
   .btn-background{
 position: absolute;
-color: black;
 background-color: #2f4bff;
 height: 100%;
 bottom: 0;
 left: 0;
-width: 0;
 z-index: -1;
   }
 
+  @keyframes buttonColor {
+    to{
+      color: #fff;
+    }
+    
+  }
 
   @keyframes ButtonAnimation {
-      to{
-       width: 100%;
+      0%{
+       width: 0;
+      
+      }
+    
+      100%{
+        width: 100%;
       }
   }
 
@@ -109,6 +120,11 @@ width: 120px;
 background-color: rgb(103, 100, 100);
   }
 
+  .nameSpan{
+      color: #000;
+      font-weight: bold;
+      font-size: 1.2rem;
+  }
 
 /* Media Queries */
 

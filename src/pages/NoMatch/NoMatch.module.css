@@ -1,0 +1,42 @@
+.nomatch{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.301);
+}
+
+
+
+
+@media (min-width: 1281px) {
+   
+
+    
+}
+
+@media (min-width: 918px) and (max-width: 1280px) {
+  
+  
+}
+
+
+@media (min-width: 766px) and (max-width: 917px) {
+  
+ 
+}
+
+
+@media (min-width: 766px) and (max-width: 900px) and (orientation: landscape) {
+  
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+
+}
+
+
+@media (max-width: 480px){
+   
+ 
+}

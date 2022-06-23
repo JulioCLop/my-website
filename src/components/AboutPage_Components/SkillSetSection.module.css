@@ -1,0 +1,67 @@
+.SkillSetSectionContainer{
+    height: 500px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.SkillSetSectionContainers{
+    padding: 0 75px;
+
+}
+.SkillSetSectionContainers img{
+height: 500px;
+width: 900px;
+object-fit: cover;
+background-position: left 5%;
+border-radius: 8px;
+}
+.SkillSetSectionContainers:nth-child(2){
+    background-color: #343a40;
+    transform: translate(-65%, 25%);
+    border-radius: 8px;
+    width: 600px;
+    height: 350px;
+    color: #d9d7d7;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly;
+    align-items: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.SkillSetSectionContainers:nth-child(2) h1{
+    padding: 8px;
+    color:#fff ;
+}
+
+.SkillSetSectionContainers:nth-child(2) p{
+    height: 200px;
+    font-size: smaller;
+    letter-spacing: 0.05rem;
+    line-height: 22px;
+     color: #fff;
+    
+}
+.SkillSetSectionContainers:nth-child(2) small{
+    margin-top: 12px;
+    color:#fff ;
+}
+.SkillSetSectionContainers:nth-child(2) a{
+    margin-top: 25px;
+    color: #fff;
+    border:2px solid#002cdc8b ;
+    background-color: transparent;
+    padding: 0.9rem 2rem 0.9rem 2rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+
+}
+
+.SkillSetSectionContainers:nth-child(2) a:hover{
+    transition: 0.5s all;
+    background-color: #002cdc68;
+    cursor: pointer;
+}

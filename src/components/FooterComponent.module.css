@@ -16,17 +16,7 @@
   
 }
 .logo img{
-border-radius: 70px;
-transform: scale(200%);
-}
-.logo p{
-   position: relative;
-   left: -0.6rem;
-   bottom: 5%;
-   color: white;
-   font-weight: bold;
-   letter-spacing: 0.14rem;
-   font-size:1.3rem;
+transform: scale(200%) translate(-60%);
 }
 .socialmedia{
     display: flex;

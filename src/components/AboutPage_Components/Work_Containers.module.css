@@ -2,38 +2,77 @@
     position: relative;
     max-width: 450px;
     min-width: 300px;
-    height: 300px;
+    height: 400px;
     border-radius: 8px;
-    color:white;
-    transition: all 0.7s;
-   
-   
+    overflow: hidden;
+    color:whitesmoke;
 }
-.work-job-containers:hover{
-  transform: scale(107%);
-  transition: all 0.7s;
+
+.work-job-containers:hover .backgroundAnimation{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  opacity: 0.2;
+  animation: 0.5s backgroundAnimation forwards;
+
+}
+@keyframes backgroundAnimation {
+  from{
+    opacity: 0;
+    
+  }
+  to{
+ opacity: 0.8;
+ background-color: black;
+  }
+}
+.work-job-containers:hover  .workCardSection{
+  width: 80%;
+  height: 70%;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 1;
+}
+.workCardSection{
+ opacity: 0;
+}
+.workCardSection a{
+  text-decoration: none;
+  color: whitesmoke;
+  letter-spacing: 0.06rem;
+  font-weight: bold;
+  position: absolute; 
+  bottom: -13px;
+  right: -10px;
+  border: 2px solid #002bdc;
+  padding: 12px;
+}
+.workCardSection a:hover{
+ background-color: rgba(128, 128, 128, 0.229);
+ background-color: #002bdc;
+
+}
+.workCardSection div{
+ width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center ;
+}
+.workCardSection div h3{
+  font-weight: bold;
+  font-size: 2rem;
+  width: 100%;
+  color: white;
   
-}
-
-.work-job-containers span{
-    margin: 0 auto;
-    position: absolute;
-    transform: translate(-50%, -50%) scale(98%);
-    bottom: -15%;
-    left: 15%;
-    z-index: 4;
-    display: flex;
-    opacity: 0;  
-   
-    letter-spacing: 0.05rem;
-   
-}
-
-.work-job-containers:hover span{
-    transition: opacity 0.3s;
-    opacity: 1;
-   
-   
+	-webkit-text-stroke: 1px #F8F8F8;
+	text-shadow: 0px 1px 4px #0c1d43;
+  letter-spacing: 0.05rem;
 }
 .work-job-containers img{
     height: 100%;
@@ -42,59 +81,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px;
-}
-
-.work-job-containers:hover img{
-    transition: all 0.4s;
-    filter: grayscale(100%);
-}
-.work-job-containers img:hover span{
-   opacity: 0.6;
-}
-
- .a-1,
- .linkBtn
- {
-   position: relative;
-   text-decoration: none;
-   font-size: 1.8rem;
-   color: black;
-   padding: 1rem;
-   font-weight: bold;
-   border-radius: 50px;
-   transform: uppercase;
- 
-}
-.a-1,
-.linkBtn:hover{
-    text-shadow:3px;
-    color: black;
-    cursor: pointer;
-    
-}
-.a-1:hover{
-  color: black;
-}
-
-.work-job-containers:hover span:before{
-  content: "";
-  position: absolute;
-  bottom: 16px;
-  left:18px;
-  margin-top:5px;
-  width: 70px;
-  background-color: black;
-  height: 3px;
-  animation: underline 1.3s ;
- 
-}
-@keyframes underline {
-  0%{
-    width: 0;
-  }
-  100%{
-   width: 70px;
-  }
 }
 
 

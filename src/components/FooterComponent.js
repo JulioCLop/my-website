@@ -23,7 +23,6 @@ const getYear = () => {
   <footer className={classes.footer}>
    <div className={classes.logo}>
       <img src={Logo} width='70' alt=''/>
-      <p>Front-end Developer</p>
    </div>
    <div className={classes.socialmedia}>
    <ul>

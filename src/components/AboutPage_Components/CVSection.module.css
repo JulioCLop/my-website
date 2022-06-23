@@ -1,0 +1,64 @@
+
+.CV_Section{
+    position: relative;
+    margin-top: 10rem;
+    padding: 2rem 75px 5rem 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ 
+}
+.CV_Section .title{
+    transform: translate(0, -100px);
+    height: 300px;
+    width: 50%;
+    background-color: #343a40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 16px;
+    color: #fff;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.title h3{
+    font-size: 23px;
+    text-align: center;
+   
+}
+
+.btn{
+    height: 100px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0,-50%);
+    z-index: 3;
+}
+
+.btn a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    background-color: #002bdc;
+    padding:15px;
+    color:#FFF;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btn a:hover{
+    opacity: 0.9;
+}
+
+.cvImage{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    background-image: url('../../assets/AboutPage/cv.jpg');
+    height: 100%;
+    width: 70%;
+}
