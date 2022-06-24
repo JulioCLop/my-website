@@ -21,6 +21,7 @@
 
 }
 .innerContainerContent p{
+    margin-top: 25px;
 color: #545454;
 letter-spacing: 0.05rem;
 line-height: 25px;
