@@ -13,8 +13,6 @@ import SectionThree from "../../components/ProjectPage_Components/SectionThree";
 
 const allCategories =['all',...new Set(projects.map( item=> item.type)) ] 
 
-console.log(allCategories)
-
 
 const ProjectPage = () => {
   const { darkMode, darkModeStyles } = useContext(ThemeContext);

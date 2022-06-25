@@ -6,10 +6,13 @@ import {FiGithub} from 'react-icons/fi';
 
 const SectionThree = ({allCategories,setProjects,projects,isProjects,categories}) => {
     const [value, setValue]= useState(0);
+    const [seeMore, setSeeMore] = useState(true);
+ 
 
     const filterItems = (type) => {
         if(type === 'all'){
             setProjects(projects)
+            setSeeMore(true)
             return;
         }
         const newItems = projects.filter(item=> item.type === type)
@@ -22,7 +25,8 @@ const SectionThree = ({allCategories,setProjects,projects,isProjects,categories}
             setValue(index);
             
     };
- console.log(value)
+    const seeMoreFunction = seeMore ? isProjects.slice(0,5) : isProjects;
+
   return (
     <section className={classes["section-three_project"]}>
     <div className={classes["section-three_project_header"]}>
@@ -45,9 +49,9 @@ const SectionThree = ({allCategories,setProjects,projects,isProjects,categories}
        })}
   
     </div>
-    <main>
+    <main className={classes.projects}>
         {
-            isProjects.map(items => {
+            seeMoreFunction.map(items => {
                 return(
                     <div className={classes.mainProjectContainer}>
                         <div className={classes.containerOne}>
@@ -64,10 +68,14 @@ const SectionThree = ({allCategories,setProjects,projects,isProjects,categories}
                                 <a target='_blank' rel='noreferrer' href={items.projectLink}><FiGithub className={classes.icon}/></a>
                             </div>
                         </div>
+                       
                     </div>
                 )
             })
+           
         }
+        {isProjects.length >= 4 && <button className={classes.seeMoreBtn} onClick={()=> setSeeMore(prev => !prev)}>{!seeMore? 'show more': 'show less'}</button> }
+      
     </main>
     </section>
   )

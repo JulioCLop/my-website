@@ -52,6 +52,21 @@
     color: #002bdc;
     
 }
+
+.projects{
+    position: relative;
+}
+.seeMoreBtn{
+border: #545454 3px solid;
+padding:12px;
+background-color: transparent;
+position: absolute; 
+left: 50%;
+margin-top: 35px;
+
+
+
+}
 .active-btn:after{
     content : "";
   position : absolute;
