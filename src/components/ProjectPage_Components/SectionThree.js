@@ -5,6 +5,8 @@ import classes from './SectionThree.module.css';
 import {FiGithub} from 'react-icons/fi';
 
 const SectionThree = ({allCategories,setProjects,projects,isProjects,categories}) => {
+    const [value, setValue]= useState(0);
+
     const filterItems = (type) => {
         if(type === 'all'){
             setProjects(projects)
@@ -15,11 +17,12 @@ const SectionThree = ({allCategories,setProjects,projects,isProjects,categories}
     };
     
      
-    const listButtonHandler = (item)=> {
+    const listButtonHandler = (item,index)=> {
             filterItems(item);
+            setValue(index);
             
     };
- 
+ console.log(value)
   return (
     <section className={classes["section-three_project"]}>
     <div className={classes["section-three_project_header"]}>
@@ -28,12 +31,12 @@ const SectionThree = ({allCategories,setProjects,projects,isProjects,categories}
     </div>
     <div className={classes.listProjects}>
        {allCategories.map((item,index)=> {
-     
         return(
             <React.Fragment>
               <button 
-               onClick={()=>listButtonHandler(item)}
-               type='button'
+                className={`${index === value && classes['active-btn']} `}
+                onClick={()=>listButtonHandler(item,index)}
+                type='button'
                 key={index}>
                {item}
                </button>
