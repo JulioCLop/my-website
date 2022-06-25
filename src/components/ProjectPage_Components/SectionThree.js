@@ -38,7 +38,7 @@ const SectionThree = ({allCategories,setProjects,projects,isProjects,categories}
         return(
             <React.Fragment>
               <button 
-                className={`${index === value && classes['active-btn']} `}
+                className={`${classes.btn} ${index === value && classes['active-btn']} `}
                 onClick={()=>listButtonHandler(item,index)}
                 type='button'
                 key={index}>

@@ -47,9 +47,11 @@
     grid-template-columns: 1fr 2fr;
 
 }
-
+.btn{
+    color: #545454;
+}
 .active-btn{
-    color: #002bdc;
+    color: #000;
     
 }
 
@@ -70,11 +72,11 @@ margin-top: 35px;
 .active-btn:after{
     content : "";
   position : absolute;
-  width : 100%;
+  width : 50%;
   height : 3px;
-  background-color: #002bdc;
+  background-color: #000;
   top: 0;
-  left: 0;
+  left: 26%;
 
 }
 
