@@ -52,7 +52,7 @@
 }
 .active-btn{
     color: #000;
-    
+   
 }
 
 .projects{
@@ -65,9 +65,11 @@ background-color: transparent;
 position: absolute; 
 left: 50%;
 margin-top: 35px;
-
-
-
+min-width: 115px;
+}
+.seeMoreBtn:hover{
+    background-color: #545454;
+    color: white;
 }
 .active-btn:after{
     content : "";
@@ -77,9 +79,14 @@ margin-top: 35px;
   background-color: #000;
   top: 0;
   left: 26%;
-
+  opacity: 0;
+  animation: opacity 1.3s forwards;
 }
-
+@keyframes opacity {
+    to{
+opacity: 1;
+    }
+}
 /* container one */
 .containerOne{
     display: flex;

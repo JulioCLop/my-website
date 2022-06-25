@@ -3,7 +3,7 @@
     z-index: 5;
     top: 0;
     width: 100%;
-    height: 20rem;
+    height: 13rem;
     background-image: url(../assets/Nav/sumaid-pal-singh-bakshi-XWSmgos6l5k-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,8 +14,8 @@
 }
 .activePage{
   position: absolute;
-  top: 50%;
-  left: 41%;
+  bottom: 10%;
+  left: 42.5%;
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   background-clip: text;

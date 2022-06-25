@@ -15,9 +15,11 @@
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "react-spring": "^9.4.5",
     "react-toggle": "^4.1.2",
     "react-transition-group": "^4.4.2",
     "styled-components": "^5.3.5",
+    "transition-hook": "^1.5.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
