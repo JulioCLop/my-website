@@ -18,7 +18,7 @@ const {srcImage, link, name, position} = props;
      <h3>{name}</h3>
       <p>{position}</p>
      </div>
-    <a href={link}>Website</a>
+    <a href={link}>View</a>
      </section>
     </Card>
    

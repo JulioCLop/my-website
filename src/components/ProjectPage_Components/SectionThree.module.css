@@ -59,8 +59,9 @@
     position: relative;
 }
 .seeMoreBtn{
-border: #545454 3px solid;
+border: #545454 2.5px solid;
 padding:12px;
+font-weight: bold;
 background-color: transparent;
 position: absolute; 
 left: 50%;
@@ -68,7 +69,9 @@ margin-top: 35px;
 min-width: 115px;
 }
 .seeMoreBtn:hover{
-    background-color: #545454;
+    background-color: #2f4bff7d;
+    padding: 14.5px;
+    border: none;
     color: white;
 }
 .active-btn:after{
@@ -111,6 +114,10 @@ padding-bottom: 15px;
 }
 .innerContainerOne h3{
     padding-bottom: 5px;
+}
+
+.innerContainerOne hr{
+    width: 60%;
 }
 
 .innerContainerTwo{

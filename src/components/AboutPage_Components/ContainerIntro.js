@@ -29,12 +29,8 @@ export const ContainerIntro = () => {
         <article>
           <div className={classes["inner-container"]}>
             <h1>A Little About Me</h1>
-            <div className={classes.underline}>
-              <span
-                style={darkMode ? { backgroundColor: "white" } : {}}
-                className={classes.underlineBox}
-              ></span>
-            </div>
+            <div className={classes.underline}/>
+           
           </div>
           <div className={classes["inner-container"]}>
             <p>
@@ -47,7 +43,6 @@ export const ContainerIntro = () => {
           </div>
           <div className={classes["inner-container"]}>
             <Link style={darkMode ? { color: "white" } : {}} to="/contact">
-              <div className={classes["btn-background"]} />
               Lets fuel your creativity
             </Link>
           </div>

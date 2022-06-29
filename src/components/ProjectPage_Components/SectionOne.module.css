@@ -24,6 +24,9 @@
    border-radius: 8px;
    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.sectionOneContent h1{
+    padding-bottom: 1rem;
+}
 
 .sectionOneImage{
     background-image: url('../../assets/ProjectPage/wireframe.jpg');

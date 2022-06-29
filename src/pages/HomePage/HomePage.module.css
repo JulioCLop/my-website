@@ -51,9 +51,8 @@
 .home-page section article div a {
   padding: 1rem;
   color: #eef1f6;
-  border: 2.4px solid #002bdc;
+  background-color: #002bdc;
   text-decoration: none;
-  background-color: black;
   font-size: 1rem;
   cursor: pointer;
   font-weight: bold;
@@ -68,7 +67,7 @@
 
 @keyframes containerFill {
   to {
-    background-color: #2f4bff;
+    background-color: #2f4bff7d;
     border-color: transparent;
   }
 }
@@ -85,7 +84,7 @@
   text-decoration: none;
 }
 .sideLink-mobile a:hover {
-  color: gray;
+  color: #2f4bff7d;
 }
 
 .sideLink-mobile a small {
@@ -104,7 +103,7 @@
   text-decoration: none;
 }
 .sideLink a:hover {
-  color: gray;
+  color: #2f4bff7d;
 }
 
 .sideLink a small {

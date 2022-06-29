@@ -42,6 +42,7 @@
   }
   .containerTwo .inner-container{
       margin-top: 2rem;
+      margin-left: 2rem;
   }
   .containerTwo .inner-container h1{
       font-size: 2rem;
@@ -50,8 +51,8 @@
       position: relative;
       margin-top: 5px;
       width: 280px;
-      height: 2px;
-      background-color: #002cdc8b;
+      height: 3px;
+      background-color: #0203078b;
   }
 
   .containerTwo .inner-container p{
@@ -63,61 +64,16 @@
   }
 
   .containerTwo .inner-container a{
-      position: relative;
-      z-index: 2;
-    color: #000;
+    color: #fff;
     text-decoration: none;
-    border: 2px solid #002bdc;
-    padding: 1rem;
+    background-color: #2f4bff;
+     padding: 1rem;
     font-family: 'Poppins', sans-serif;
 
   }
-  .containerTwo .inner-container a:hover .btn-background{
-      animation: 1.4s ButtonAnimation forwards;
-  }
-
+  
   .containerTwo .inner-container a:hover {
-    border: 2px solid #2f4bff;
-  }
-
-  .inner-container a:hover{
-    animation: 1.4s buttonColor forwards;
-  }
-  .btn-background{
-position: absolute;
-background-color: #2f4bff;
-height: 100%;
-bottom: 0;
-left: 0;
-z-index: -1;
-  }
-
-  @keyframes buttonColor {
-    to{
-      color: #fff;
-    }
-    
-  }
-
-  @keyframes ButtonAnimation {
-      0%{
-       width: 0;
-      
-      }
-    
-      100%{
-        width: 100%;
-      }
-  }
-
-
-
-  .underlineBox{
-position: absolute;
-top: -2.2px;
-height: 6px;
-width: 120px;
-background-color: rgb(103, 100, 100);
+    background-color: #2f4bff7d;
   }
 
   .nameSpan{

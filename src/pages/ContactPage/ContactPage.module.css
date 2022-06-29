@@ -1,56 +1,37 @@
 .contact-page{
-    position: relative;
-    z-index: 2;
-    background: url('https://www.canva.com/design/DAFCZd0WPnA/cfOzZ5e3BTHTKrSTsMJ9HQ/watch?utm_content=DAFCZd0WPnA&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel');
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - (418px - 60px));
 }
 
-
-.section-contact-1{
-    position: relative;
-    height: 50vh;
-    width: 100%;
- }
-.section-contact-1 h1{
-    color: white;
-    text-transform: uppercase;
-    font-size: 2rem;
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-    
-}
 .section-contact-2{
   padding: 2rem 0;
-    min-height: 550px;
     display: flex;
     justify-content: center;
     width: 100%;
+
+}
+form{
+    width: 40%;  
+    
 }
 .section-contact-2 div{
-    height: 450px;
-    width: 80%;
-    padding: 0.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr;
-    align-items: center;
-    justify-content: center;
+    width: 90%;  
 }
 div .name-input,
 div .email-input,
 div .message-input{
     display: flex;
     width: 100%;
-    height: 100%;
     flex-direction: column;
+   
    
 }
 
 div .name-input label,
 div .email-input label,
 div .message-input label{
-text-align: start;
 width: 100%;
 }
 div .name-input input,
@@ -60,32 +41,22 @@ width: 100%;
 height: 2.5rem;
 font-size: 1rem;
 padding-left: 8px;
+margin-bottom: 25px;
+border: 2px solid rgba(128, 128, 128, 0.131);
 }
 div .message-input textarea{
     width: 100%;
-    height: 100%;
+    height: 150px;
     font-size: 1rem;
     padding-left: 8px;
+    border: 2px solid rgba(128, 128, 128, 0.131);
 
 }
 
-.contact-page-main-background{
-    background-image: url('https://images.unsplash.com/photo-1511140973288-19bf21d7e771?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-   
-
-}
 .contact-btn-container{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 10rem;
 }
 div .message-input-2{
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -106,20 +77,7 @@ div .message-input-2 p{
 div .message-input-2 ul{
 padding-top: 2rem;
 }
-.icons{
-    color: gray;
-   
-}
-.icons:hover{
-    box-shadow: none;
-    color: rgba(128, 128, 128, 0.751);
-}
-div .message-input-2 ul li a .icons{
-    font-size: 3rem;
-}
-.contact-btn-container{
-    background-color: rgba(117, 112, 112, 0.089);
-}
+
  .button{
     text-decoration: none;
     font-size: 1.5rem;
@@ -128,12 +86,13 @@ div .message-input-2 ul li a .icons{
     text-transform: uppercase;
     font-weight: bold;
     color: rgb(255,255,255);
-    border-radius: 80px;
-    background-color: var(--main-red);
+    background-color: #2f4bff;
     box-shadow: var(--button-box-show);
-    padding: 0.8rem 7rem;
+    padding: 0.8rem 0;
     cursor: pointer;
+    width: 100%;
     border: none;
+    margin-bottom: 62px;
     }
     .inactive-cursor:hover {
       cursor:none;
@@ -144,39 +103,39 @@ div .message-input-2 ul li a .icons{
 .email-input.invalid input,
 .name-input.invalid input
 {
-    border: 1.5px solid rgb(75, 4, 4);
-    color: white;
-    background-color: rgba(151, 8, 8, 0.137);
+    border: 3px solid rgba(151, 8, 8, 0.137);
+}
+
+@keyframes invalidLabel {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 .message-input.invalid textarea{
-    border: 1.5px solid rgb(75, 4, 4);
-    color: white;
-    background-color: rgba(151, 8, 8, 0.137);
+    border: 3px solid rgba(151, 8, 8, 0.137);
+  
 }
 .invalid-label{
     color: rgb(109, 6, 6);
     font-size: 1rem;
      font-weight: 700;
      width: 100%;
-     text-align: center;
-     transform: translateX(25%); 
-      transition: all 1s ease-in-out;
+     animation: 1s invalidLabel forwards;
+    
 }
-.NameTranHelp{
-    transform: translateX(30%);
-}
+
 .valid-label{
-    transition: all 1s ease-in-out;
     color: inherit;
     font-size: inherit;
     font-weight: inherit;
-    transform: translateX(0);
-    
 }
 .button:disabled,
 .button:disabled:active{
-background-color: #ccc;
-color: #292929;
+background-color: #2f4bff7d;
+color: #fff;
 cursor: not-allowed;
 }
 button.btn-invalid {
@@ -209,52 +168,28 @@ label{
 }
 
 
-
-
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
 @media (min-width: 1281px) {
    
 
     
   }
   
-  /* 
-    ##Device = Laptops, Desktops
-    ##Screen = B/w 1025px to 1280px
-  */
   
   @media (min-width: 918px) and (max-width: 1280px) {
     
     
   }
   
-  /* 
-    ##Device = Tablets, Ipads (portrait)
-    ##Screen = B/w 768px to 1024px
-  */
   
   @media (min-width: 766px) and (max-width: 917px) {
     
    
   }
   
-  /* 
-    ##Device = Tablets, Ipads (landscape)
-    ##Screen = B/w 768px to 1024px
-  */
   
   @media (min-width: 766px) and (max-width: 900px) and (orientation: landscape) {
     
   }
-  
-  /* 
-    ##Device = Low Resolution Tablets, Mobiles (Landscape)
-    ##Screen = B/w 481px to 767px
-  */
   
   @media (min-width: 481px) and (max-width: 767px) {
     .section-contact-2 div{
@@ -280,14 +215,6 @@ label{
 
   }
   
-  /* 
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px to 479px
-  */
-  
-  /* @media (min-width: 320px) and (max-width: 480px) {
-   
-  } */
 
   @media (max-width: 480px){
     .section-contact-2 div{

@@ -57,6 +57,7 @@ const SectionThree = ({
       <main className={classes.projects}>
         {seeMoreFunction.map((items) => {
           return (
+            <React.Fragment>
             <div className={classes.mainProjectContainer}>
               <div className={classes.containerOne}>
                 <img
@@ -77,7 +78,10 @@ const SectionThree = ({
                   </a>
                 </div>
               </div>
+             
             </div>
+            <hr style={{width: '70%', margin: '0px  auto 20px auto'}}  />
+            </React.Fragment>
           );
         })}
         {isProjects.length >= 4 && (
@@ -85,9 +89,10 @@ const SectionThree = ({
             className={classes.seeMoreBtn}
             onClick={() => setSeeMore((prev) => !prev)}
           >
-            {seeMore ? "show more" : "show less"}
+            {seeMore ? "Show more" : "Show less"}
           </button>
         )}
+      
       </main>
     </section>
   );

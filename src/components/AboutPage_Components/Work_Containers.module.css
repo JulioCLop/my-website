@@ -42,18 +42,20 @@
 }
 .workCardSection a{
   text-decoration: none;
+  width: 90px;
+  text-align: center;
   color: whitesmoke;
   letter-spacing: 0.06rem;
   font-weight: bold;
   position: absolute; 
   bottom: -13px;
   right: -10px;
-  border: 2px solid #002bdc;
+  background-color: #002bdc;
   padding: 12px;
 }
 .workCardSection a:hover{
  background-color: rgba(128, 128, 128, 0.229);
- background-color: #002bdc;
+ background-color: #2f4bff7d;
 
 }
 .workCardSection div{
@@ -66,10 +68,10 @@
 }
 .workCardSection div h3{
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.7rem;
   width: 100%;
   color: white;
-  
+  padding-bottom: 1rem;
 	-webkit-text-stroke: 1px #F8F8F8;
 	text-shadow: 0px 1px 4px #0c1d43;
   letter-spacing: 0.05rem;
