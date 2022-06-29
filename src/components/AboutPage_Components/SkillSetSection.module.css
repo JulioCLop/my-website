@@ -51,8 +51,7 @@ border-radius: 8px;
 .SkillSetSectionContainers:nth-child(2) a{
     margin-top: 25px;
     color: #fff;
-    border:2px solid#002cdc8b ;
-    background-color: transparent;
+    background-color: #2f4bff;
     padding: 0.9rem 2rem 0.9rem 2rem;
     font-weight: bold;
     letter-spacing: 0.05rem;
@@ -61,7 +60,7 @@ border-radius: 8px;
 }
 
 .SkillSetSectionContainers:nth-child(2) a:hover{
-    transition: 0.5s all;
+    transition: 0.3s all;
     background-color: #002cdc68;
     cursor: pointer;
 }
