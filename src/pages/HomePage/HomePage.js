@@ -6,7 +6,7 @@ import Logo from '../../assets/LoadingPage/newLogoNoBackround.png';
 
 import {  useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import {MdArrowForwardIos} from 'react-icons/md';
+import { MdArrowForwardIos } from 'react-icons/md';
 
 import classes from "./HomePage.module.css";
 
@@ -32,7 +32,6 @@ const HomePage = () => {
          </article>
          <article>
          <div id={classes.container}>
-       
            <Link to='/about'>Let's get started</Link>
          </div>
          </article>
