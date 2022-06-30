@@ -15,7 +15,8 @@
 .activePage{
   position: absolute;
   bottom: 10%;
-  left: 42.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   background-clip: text;
@@ -44,11 +45,11 @@ justify-content: center;
 }
 
 .navbar-container-2{
-  margin-right: 1.7rem;
+ 
 }
 .navbar-mobile{
   position: absolute;
-  right: 3rem;
+  right: 0rem;
   top: 4rem;
 }
 
@@ -61,7 +62,6 @@ justify-content: center;
     font-weight: 900;
     letter-spacing: 0.05rem;
     text-decoration: none;
-    margin-right: 1.5rem;
     font-family: 'Poppins', sans-serif;
    
   
@@ -234,18 +234,48 @@ justify-content: center;
   
   
   @media (min-width: 768px) and (max-width: 1024px) {
-    .activePage{
-      left: 38%;
-    }
-    
+    .navbar-container-1 img{
+      margin-left: 0rem;
+      left: -1rem;
+  }
+  .navbar-mobile{
+    right: 0;
+  }
+  .activePage{
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+  }
+  .toggle-button{
+    margin-right: 1rem;
+   }
+   
+   
   }
   
   
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .activePage{
-      left: 38%;
-    }
-    
+    .navbar-container-1 img{
+      margin-left: 0rem;
+      left: -1rem;
+  }
+  .navbar-mobile{
+    right: 0;
+  }
+  .activePage{
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  .navbar-mobile{
+    position: absolute;
+    right: 0rem;
+    top: 4rem;
+  }
+  .toggle-button{
+    margin-right: 1rem;
+   }
+   
   }
   
   
@@ -255,9 +285,23 @@ justify-content: center;
       margin-left: 0rem;
       left: -1rem;
   }
-  .activePage{
-    left: 32%;
+  .navbar-mobile{
+    right: 0;
   }
+  .activePage{
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+  }
+  .navbar-mobile{
+    position: absolute;
+    right: 0rem;
+    top: 4rem;
+  }
+  .toggle-button{
+    margin-right: 1rem;
+   }
+   
     
   }
   
@@ -271,7 +315,17 @@ justify-content: center;
     right: 0;
   }
   .activePage{
-    left: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+  }
+  .navbar-mobile{
+    position: absolute;
+    right: 0rem;
+    top: 4rem;
+  }
+  .toggle-button{
+   margin-right: 1rem;
   }
   
    

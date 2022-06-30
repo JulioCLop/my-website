@@ -14,34 +14,10 @@ import Worked from "../../components/AboutPage_Components/Worked";
 import {BiArrowToTop} from 'react-icons/bi';
 import CVSection from "../../components/AboutPage_Components/CVSection";
 
-const skillsBarContent = [
-  {
-    key:'skill1',
-    id: 'skill1',
-    title: 'Front-end',
-    fraction: "8"
-  },
-  {
-    key:'skill2',
-    id: 'skill2',
-    title: 'Back-end',
-    fraction: "5"
-  },
-  {
-    key:'skill3',
-    id: 'skill3',
-    title: 'React',
-    fraction: "9"
-  }
-];
-
 
 const  AboutPage = () => {
   const { darkMode} = useContext(ThemeContext);
- 
-
   const elementTitle = useRef();
-  const elementWork = useRef();
   const topElement = useRef();
  
 
@@ -51,25 +27,14 @@ const handleTopClick = () => {
   topElement.current.scrollIntoView({behavior: 'smooth'})
 };
 
-  const handleBackClick = () => {
-    elementTitle.current.scrollIntoView({behavior: 'smooth'});
-
-  };
-
-  const forwardWorkHandler = () => {
-    elementWork.current.scrollIntoView({behavior: 'smooth'})
-
-  };
-
-
-
  
   
   return (
   <React.Fragment>
-  <MainHomePage>
-    <div ref={topElement} className={classes["about-Page" ]} >
+   <span ref={topElement}/>
+  <MainHomePage >
     <div style={{height: '50px'}} ref={elementTitle} />
+    <div  className={classes["about-Page" ]} >
      <ContainerIntro/>
      <SmallDesc/>
      <SkillSetSection/>
