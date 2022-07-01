@@ -12,8 +12,6 @@ const LoadingPage = ()=> {
         <div className={classes["loading_page_info"]}>
           <div className={classes["loading_logo_container"]}>
             <img src={LoadingPageLogo} alt="Logo" />
-          </div>
-          <div className={classes["loading_page_context"]}>
             <div className={classes["sp-wave"]}></div>
           </div>
         </div>

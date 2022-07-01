@@ -15,17 +15,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: grayscale(50%);
 }
 .loading_page_info{
+    position: relative;
     width: 24rem;
-    background-color: rgba(0, 0, 0, 0.74);
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+ 
   
 }
 .loading_page_info img{
-    height: 10rem;
-    width: 10rem;
+    height: 15rem;
+    width: 15rem;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
    
 }
 
