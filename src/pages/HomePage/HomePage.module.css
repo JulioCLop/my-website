@@ -1,7 +1,10 @@
+
 .home-page {
   overflow: hidden;
   background-image: url("https://images.unsplash.com/photo-1642355008521-236f1d29d0a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80");
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-repeat: no-repeat;
   background-position: center;
@@ -58,11 +61,19 @@
   font-weight: bold;
 }
 .home-page section article div a:hover {
-  animation: 1s containerFill forwards;
+  -webkit-animation: 1s containerFill forwards;
+          animation: 1s containerFill forwards;
 }
 
 #container{
   padding-top: 3rem;
+}
+
+@-webkit-keyframes containerFill {
+  to {
+    background-color: #2f4bff7d;
+    border-color: transparent;
+  }
 }
 
 @keyframes containerFill {
@@ -76,11 +87,16 @@
   position: absolute;
   bottom: 15%;
   left: 50%;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
   transition: all 1s;
-  transform: rotate(360deg) translate(-50%, -50%);
+  -webkit-transform: rotate(360deg) translate(-50%, -50%);
+      -ms-transform: rotate(360deg) translate(-50%, -50%);
+          transform: rotate(360deg) translate(-50%, -50%);
 }
 .sideLink-mobile a {
-  color: #002bdc;
+  color: #fff;
+  font-size: 1rem;
   text-decoration: none;
 }
 .sideLink-mobile a:hover {
@@ -95,7 +111,9 @@
   position: absolute;
   right: 1rem;
   top: 50%;
-  transform: rotate(269deg);
+  -webkit-transform: rotate(269deg);
+      -ms-transform: rotate(269deg);
+          transform: rotate(269deg);
 }
 
 .sideLink a {
@@ -114,8 +132,23 @@
   font-size: 5rem;
   position: relative;
   left: 7rem;
-  transform: rotate(90deg);
-  animation: arrowAnimated 1.7s infinite ;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-animation: arrowAnimated 1.7s infinite ;
+          animation: arrowAnimated 1.7s infinite ;
+}
+
+@-webkit-keyframes arrowAnimated {
+  0% {
+    bottom: 3rem;
+  }
+  50% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 3rem;
+  }
 }
 
 @keyframes arrowAnimated {
@@ -332,13 +365,14 @@
  background-repeat: no-repeat;
   width: 70px;
   height: 200px;
-  top: 5rem;
+  top: 0rem;
   left: 50%;
-  transform: translate(-50%, 20%);
+  transform: translate(-50%, -10%);
  
 }
+
   .home-page section {
-    margin-top: 300px;
+    margin-top: 100px;
     margin-left: 0;
   }
 
@@ -349,15 +383,19 @@
   text-align: center;
 }
 .home-page section article div h1{
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+.home-page section article div p{
+ margin-top: 1.5rem;
 }
 
 .sideLink-mobile {
   position: absolute;
-  bottom: 0%;
-  left: 40%;
+  bottom: 5%;
+  left: 57%;
   transition: all 1s;
-  transform: rotate(360deg) translate(-50%, -50%);
+  transform: rotate(360deg) translate(-50%, -50%) scale(75%);
+  width: 100%;
 }
 
 .home-page section article:nth-child(1) {
@@ -375,12 +413,15 @@
   padding: 3rem;
 }
 .home-page section article div a{
- margin: 0 auto;
+font-size: 1rem;
 
- 
+
 }
 #container{
   padding-top: 0rem;
+}
+.container a{
+  color: white;
 }
 
 }
