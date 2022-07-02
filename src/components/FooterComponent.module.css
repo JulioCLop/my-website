@@ -194,7 +194,7 @@ transform: scale(200%) translate(-60%);
   
     .footer{
         grid-template-columns: 1fr;
-        height: fit-content;
+        height: 175px;
         gap: 1rem;
         
     } 
@@ -216,5 +216,7 @@ transform: scale(200%) translate(-60%);
     margin-left: 1.8rem;
 }
   
- 
+.socialmedia{
+  padding-top: 1rem;
+}
 }

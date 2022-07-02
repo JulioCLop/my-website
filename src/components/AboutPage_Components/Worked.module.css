@@ -28,3 +28,54 @@
    
     font-family: 'Poppins', sans-serif;
 }
+
+
+
+@media (min-width: 1281px) {
+  
+  
+    
+}
+
+
+
+@media (min-width: 918px) and (max-width: 1280px) {
+ 
+  
+}
+
+
+
+@media (min-width: 768px) and (max-width: 917px) {
+ 
+
+}
+
+
+@media (min-width: 768px) and (max-width: 900px) and (orientation: landscape) {
+  
+ 
+}
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+   
+ 
+
+}
+
+
+@media (max-width: 480px){
+    .work-main-job-containers{
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem; 
+    }
+    .workSectionContainer{
+        padding: 0;
+    }
+    
+
+}

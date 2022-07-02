@@ -118,5 +118,8 @@
   
   
   @media (max-width: 480px) {
-   
+    .work-job-containers{
+    transform: scale(90%);
+  }
+  
   }

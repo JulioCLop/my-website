@@ -1,103 +1,152 @@
-.loading_page{
-    height: 100vh;
-    width: 100%;
+.loading_page {
+  height: 100vh;
+  width: 100%;
 }
-.loading_page h1{
-    color: white;
-    margin: 0;
+.loading_page h1 {
+  color: white;
+  margin: 0;
 }
-.loading_page .img{
-    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/9c9704134522497.61d732072828d.jpg');
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    filter: grayscale(50%);
+.loading_page .img {
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/9c9704134522497.61d732072828d.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
 }
-.loading_page_info{
-    position: relative;
-    width: 24rem;
- 
-  
+.loading_page_info {
+  position: relative;
+  width: 24rem;
 }
-.loading_page_info img{
-    height: 15rem;
-    width: 15rem;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-
-   
-}
-
-.loading_logo_container{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-}
-.loading_page_context{
-    height: 5rem;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
+.loading_page_info img {
+  height: 15rem;
+  width: 15rem;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
 
-.h4-intro{
-    text-align: center;
-    color: rgb(146, 141, 141);
-    text-transform: uppercase;
+.loading_logo_container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.loading_page_context {
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.h4-intro {
+  text-align: center;
+  color: rgb(146, 141, 141);
+  text-transform: uppercase;
 }
 
 /* Spinner Wave */
 .sp-wave {
-    width: 30px;
-    height: 30px;
-	border-radius: 50%;
-	position: relative;
-	opacity: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+  opacity: 1;
 }
 .sp-wave:before,
- .sp-wave:after  {
-	content:'';
-	border: 1px white solid;
-	border-radius: 50%;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	left:0px;
+.sp-wave:after {
+  content: "";
+  border: 1px white solid;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
 }
 .sp-wave:before {
-	transform: scale(1,1);
-	opacity: 1;
-	-webkit-animation: spWaveBe 0.6s infinite linear;
-	animation: spWaveBe 0.6s infinite linear;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  opacity: 1;
+  -webkit-animation: spWaveBe 0.6s infinite linear;
+  animation: spWaveBe 0.6s infinite linear;
 }
 .sp-wave:after {
-	transform: scale(0,0);
-	opacity: 0;
-	-webkit-animation: spWaveAf 0.6s infinite linear;
-	animation: spWaveAf 0.6s infinite linear;
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  transform: scale(0, 0);
+  opacity: 0;
+  -webkit-animation: spWaveAf 0.6s infinite linear;
+  animation: spWaveAf 0.6s infinite linear;
 }
 @-webkit-keyframes spWaveAf {
-	from { -webkit-transform: scale(0.5,0.5); opacity: 0; }
-	to { -webkit-transform: scale(1,1); opacity: 1; }
+  from {
+    -webkit-transform: scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
 }
 @keyframes spWaveAf {
-	from { transform: scale(0.5,0.5); opacity: 0; }
-	to { transform: scale(1,1); opacity: 1; }
+  from {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 1;
+  }
 }
 @-webkit-keyframes spWaveBe {
-	from { -webkit-transform: scale(1,1); opacity: 1; }
-	to { -webkit-transform: scale(1.5,1.5); opacity: 0; }
+  from {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
 }
 @keyframes spWaveBe {
-	from { -webkit-transform: scale(1,1); opacity: 1; }
-	to { -webkit-transform: scale(1.5,1.5); opacity: 0; }
+  from {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
 }
