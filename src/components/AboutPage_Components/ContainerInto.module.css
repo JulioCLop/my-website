@@ -1,5 +1,5 @@
 .section-one-about {
-    padding-top: 5rem;
+  padding-top: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,66 +21,61 @@
   border-bottom-right-radius: 8px;
 }
 
-
 .containerIntroImage {
-    transform: translate(-10%, -7%);
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: translate(-10%, -7%);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* Container two */
 .containerTwo {
-    width: 60%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-   
-  }
-  .containerTwo article{
-      padding-right: 2rem;
-     
-  }
-  .containerTwo .inner-container{
-      margin-top: 2rem;
-      margin-left: 2rem;
-  }
-  .containerTwo .inner-container h1{
-      font-size: 2rem;
-  }
-  .underline{
-      position: relative;
-      margin-top: 5px;
-      width: 280px;
-      height: 3px;
-      background-color: #0203078b;
-  }
+  width: 60%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.containerTwo article {
+  padding-right: 2rem;
+}
+.containerTwo .inner-container {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.containerTwo .inner-container h1 {
+  font-size: 2rem;
+}
+.underline {
+  position: relative;
+  margin-top: 5px;
+  width: 280px;
+  height: 3px;
+  background-color: #0203078b;
+}
 
-  .containerTwo .inner-container p{
-      height: 200px;
-      letter-spacing: 0.05rem;
-      line-height: 25px;
-       color: #545454;
-      
-  }
+.containerTwo .inner-container p {
+  height: 200px;
+  letter-spacing: 0.05rem;
+  line-height: 25px;
+  color: #545454;
+}
 
-  .containerTwo .inner-container a{
-    color: #fff;
-    text-decoration: none;
-    background-color: #2f4bff;
-     padding: 1rem;
-    font-family: 'Poppins', sans-serif;
+.containerTwo .inner-container a {
+  color: #fff;
+  text-decoration: none;
+  background-color: #2f4bff;
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+}
 
-  }
-  
-  .containerTwo .inner-container a:hover {
-    background-color: #2f4bff7d;
-  }
+.containerTwo .inner-container a:hover {
+  background-color: #2f4bff7d;
+}
 
-  .nameSpan{
-      color: #000;
-      font-weight: bold;
-      font-size: 1.2rem;
-  }
+.nameSpan {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
 /* Media Queries */
 
@@ -117,43 +112,57 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-   
   }
 }
 
 @media (max-width: 480px) {
   .section-one-about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 125px;
-}
-.containerOne {
-  width: 100%;
-  transform: scale(80%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.containerTwo {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
- 
-}
-.containerTwo article{
-  padding: 0 0.5rem;
- 
-}
-.containerTwo .inner-container{
-  margin-top: 2rem;
-  margin-left: 0rem;
-  padding: 0 0.5rem;
-}
-.containerTwo .inner-container h1{
- padding-left: 0.5rem;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 125px;
+  }
+  .containerOne {
+    width: 100%;
+    transform: scale(80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .containerTwo {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .containerTwo article {
+    padding: 0 0.5rem;
+  }
+  .containerTwo .inner-container {
+    margin-top: 2rem;
+    margin-left: 0rem;
+    padding: 0 0.5rem;
+  }
+  .containerTwo .inner-container h1 {
+    padding-left: 0.5rem;
+  }
 
+  .containerTwo .inner-container a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #2f4bff;
+    padding: 1rem;
+    font-family: "Poppins", sans-serif;
+  }
+  .containerTwo .inner-container:last-child{
+    width:100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   }
+  .containerTwo .inner-container a{
+   width:70%;
+   text-align: center;
+  }
 }
