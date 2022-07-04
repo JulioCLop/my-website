@@ -23,7 +23,7 @@
 .innerContainerContent p{
     margin-top: 25px;
 color: #545454;
-letter-spacing: 0.05rem;
+text-align: justify;
 line-height: 25px;
 }
 
@@ -36,7 +36,7 @@ line-height: 25px;
 }
 .projectTypes h3{
     padding-top: 5px;
-    text-align: center;
+    text-align: justify;
 }
 .projectTypes p{
     color: #545454;

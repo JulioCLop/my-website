@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
+
 import HeadShot from "../../assets/AboutPage/headshot.jpg";
 
 import { ThemeContext } from "../../context/Theme.Contexts";
@@ -9,6 +10,9 @@ import classes from "./ContainerInto.module.css";
 
 export const ContainerIntro = () => {
   const { darkMode } = useContext(ThemeContext);
+
+
+   
   return (
     <section
       style={darkMode ? { color: "white" } : { color: "black" }}

@@ -54,7 +54,7 @@
 
 .containerTwo .inner-container p {
   height: 200px;
-  letter-spacing: 0.05rem;
+  text-align: justify;
   line-height: 25px;
   color: #545454;
 }

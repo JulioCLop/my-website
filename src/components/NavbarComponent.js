@@ -1,5 +1,5 @@
 import React, { useContext, useState} from "react";
-import { useLocation } from "react-router-dom";
+
 
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -18,7 +18,7 @@ import classes from "./NavbarConponent.module.css";
 
 
 const NavbarComponent = () => {
-  const location = useLocation();
+ 
   const theme = useTheme();
   const { sideNav, setSideNav } = useContext(ThemeContext);
   const [activeBtn, setActiveBtn] = useState(false);
@@ -30,12 +30,7 @@ const NavbarComponent = () => {
   
   };
 
- const activeLocation = () => {
-  const path = location.pathname.toString();
-   const pathName =  path.split('').splice(2)
-   const pathNameCase = path.split('').splice(1)[0].toUpperCase();
-    return pathNameCase + pathName.join('')
- };
+ 
 
   const clickHandler = () => {
     setActiveBtn( prevActiveBtn => !prevActiveBtn)
@@ -119,9 +114,7 @@ const NavbarComponent = () => {
           </div>
       <DarkMode/>
         </nav>
-     <h1 className={classes.activePage}>{activeLocation()} page</h1>
       </header>
-      
       <div />
     </React.Fragment>
   );

@@ -2,7 +2,19 @@
    .main-view{
     margin: 0;
     width: 100%;
+    position: relative;
 }
+.activePage{
+  position:absolute;
+  font-size: 1rem;
+ top:25%;
+  left: 5%;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  }
 
 @media (min-width: 1281px) {
   

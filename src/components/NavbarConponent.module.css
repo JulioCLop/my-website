@@ -4,29 +4,15 @@
   z-index: 5;
   top: 0;
   width: 100%;
-  height: 13rem;
+  height: 10rem;
   background-image: url(../assets/Nav/sumaid-pal-singh-bakshi-XWSmgos6l5k-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-filter: grayscale(20%);
           filter: grayscale(20%);
-
- 
 }
-.activePage{
-position: absolute;
-bottom: 10%;
-left: 50%;
--webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-background: -webkit-linear-gradient(#eee, #333);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
 
-}
 nav{
 position: relative;
 padding-top: 5rem;

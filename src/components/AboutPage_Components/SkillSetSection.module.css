@@ -39,7 +39,7 @@ border-radius: 8px;
 .SkillSetSectionContainers:nth-child(2) p{
     height: 200px;
     font-size: smaller;
-    letter-spacing: 0.05rem;
+    text-align: justify;
     line-height: 22px;
      color: #fff;
     
