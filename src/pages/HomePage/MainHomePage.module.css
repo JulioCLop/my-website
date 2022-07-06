@@ -7,7 +7,7 @@
 .activePage{
   position:absolute;
   font-size: 1rem;
- top:25%;
+  top:25%;
   left: 5%;
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;

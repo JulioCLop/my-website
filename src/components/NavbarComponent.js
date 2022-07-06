@@ -1,4 +1,4 @@
-import React, { useContext, useState} from "react";
+import React, { useContext,useRef,useEffect, useState} from "react";
 
 
 import { NavLink } from "react-router-dom";
@@ -9,11 +9,15 @@ import NavbarLogo from "../assets/LoadingPage/newLogoNoBackround.png";
 import { ThemeContext } from "../context/Theme.Contexts";
 
 import DarkMode from "./DarkMode";
+import {links, socialMedia} from '../module/NavbarData';
 
 import {  useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
+
+
 import classes from "./NavbarConponent.module.css";
+import { FaBars } from "react-icons/fa";
 
 
 
@@ -23,100 +27,72 @@ const NavbarComponent = () => {
   const { sideNav, setSideNav } = useContext(ThemeContext);
   const [activeBtn, setActiveBtn] = useState(false);
   const matchesMD = useMediaQuery(theme.breakpoints.up("md"));
+  const [showLinks, setShowLinks] = useState(false);
+  const linksRef = useRef(null);
+  const linksContainerRef = useRef(null);
+
+useEffect(() => {
+ 
+  const linksHeight = linksRef.current.getBoundingClientRect().height;
+  if(showLinks){
+    linksContainerRef.current.style.height = `${linksHeight}px`
+  }else{
+    linksContainerRef.current.style.height = '0px';
+  }
+ 
+}, [showLinks])
+
 
   let activeStyle = {
-    color: "gray",
-    margin: '12px',
-  
+    color: "hsl(205, 78%, 60%)",
+    fontWeight: 'bold',
   };
 
  
-
-  const clickHandler = () => {
-    setActiveBtn( prevActiveBtn => !prevActiveBtn)
-    setSideNav(prevSideNav => !prevSideNav)
-   
-  };
+  const toggleHandler = () => {
+    setShowLinks(prev => !prev)
+  }
 
 
   return (
-    <React.Fragment>
-      <header className={classes.header}>
-        <nav>
-          <div className={classes["navbar-container-1"]}>
-            <Link to="/">
-              <img src={NavbarLogo} alt="logo" />
-            </Link>
-          </div>
-          <div className={`${classes["navbar-container-2"]} ${!matchesMD ? classes["navbar-mobile"]: ''}`}>
-            {!sideNav && !matchesMD || sideNav ? (
-              <div
-                onClick={clickHandler}
-                className={`${classes["toggle-button"]}  ${activeBtn ? classes.active : classes["not-active"] } `}
-              >
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            ) : (
-              ""
-            )}
-            {(!sideNav && matchesMD) || (sideNav && matchesMD) ? (
-              <ul className={classes["navbar-inner-ul"]}>
-                <li>
-                  <NavLink
-                   style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }
-                    className={classes["nav-btn"]}
-                    to="/"
-                  >
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    className={classes["nav-btn"]}
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }
-                    to="/about"
-                  >
-                    About
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }
-                    className={classes["nav-btn"]}
-                    to="/projects"
-                  >
-                    Projects
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    className={classes["nav-btn"]}
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }
-                    to="/contact"
-                  >
-                    Contact
-                  </NavLink>
-                </li>
-              </ul>
-            ) : (
-              ""
-            )}
-          </div>
-      <DarkMode/>
-        </nav>
-      </header>
-      <div />
-    </React.Fragment>
+   <nav>
+   <div className={classes["nav-center"]}>
+    <div className={classes["nav-header"]}>
+    <img src={NavbarLogo} alt='logo'/>
+    <button onClick={toggleHandler} className={classes["nav-toggle"]}>
+    <FaBars/>
+    </button>
+    </div>
+    <div ref={linksContainerRef} className={classes['links-container']}>
+    <ul ref={linksRef} className={classes.links}>
+    {links.map(link=>{
+      const {id, url, text} = link;
+      return (
+        <li key={id}>
+          <NavLink  style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            } to={url}>
+            {text}
+          </NavLink>
+        </li>
+      )
+    })}
+    </ul>
+     </div>
+    <ul className={classes["social-icons"]}>
+      {socialMedia.map(eachSocial => {
+        const {id, url, icon} = eachSocial;
+        return (
+          <li key={id}>
+            <a target='_blank' rel="noreferrer" href={url}>
+              {icon}
+            </a>
+          </li>
+        )
+      })}
+    </ul>
+   </div>
+   </nav>
   );
 }
 

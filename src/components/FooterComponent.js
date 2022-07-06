@@ -63,12 +63,6 @@ const widthScreen = () => {
   <footer className={classes.footer}>
   {widthScreen()}
    <div className={classes.socialmedia}>
-   <ul>
-     <li className='icon-facebook'><a href='https://www.facebook.com'><GrFacebookOption  className={`${classes.icon}`} /></a></li>
-     <li className='icon-linkedin'><ImLinkedin2 className={classes.icon}/></li>
-     <li className='icon-instagram'><BsInstagram className={classes.icon}/></li>
-     <li className='icon-github'><FiGithub className={classes.icon}/></li>
-   </ul>
    </div>
    <div className={classes["copyright-container"]}>
     <div className="copyright">
