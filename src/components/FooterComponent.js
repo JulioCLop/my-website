@@ -4,10 +4,6 @@ import React, {useEffect, useState} from 'react';
 import  classes from './FooterComponent.module.css';
 
 import Logo from '../assets/LoadingPage/newLogoNoBackround.png';
-import {GrFacebookOption} from 'react-icons/gr';
-import {ImLinkedin2} from 'react-icons/im';
-import {BsInstagram} from 'react-icons/bs';
-import {FiGithub} from 'react-icons/fi';
 
 
 
