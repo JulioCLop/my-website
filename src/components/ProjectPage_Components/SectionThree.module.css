@@ -55,9 +55,18 @@
    
 }
 
-.projects{
-    position: relative;
+
+.projectsContainer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
+.projects{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
 .seeMoreBtn{
 border: #545454 2.5px solid;
 padding:12px;

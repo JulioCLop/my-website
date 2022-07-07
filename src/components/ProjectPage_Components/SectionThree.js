@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 
+import { projectLinks } from "../../module/projectLinks";
+
 import classes from "./SectionThree.module.css";
 
 import { FiGithub } from "react-icons/fi";
+
+import Card from "../UI/Card/Card";
 
 const SectionThree = ({
   allCategories,
@@ -54,46 +58,33 @@ const SectionThree = ({
           );
         })}
       </div>
-      <main className={classes.projects}>
-        {seeMoreFunction.map((items) => {
+      
+      <main  className={classes.projectsContainer} >
+      <div className={classes.projects}>
+        {seeMoreFunction.map((items,index) => {
+          const {projectName, projectLanguage, projectId, projectImage, projectText} = items;
           return (
-            <React.Fragment>
-            <div className={classes.mainProjectContainer}>
-              <div className={classes.containerOne}>
-                <img
-                  src={require(`../../assets/ProjectPage/VBC-${items.projectId}.png`)}
-                  alt={items.projectName}
-                />
-              </div>
-              <div className={classes.containerTwo}>
-                <div className={classes.innerContainerOne}>
-                  <h3>{items.projectName}</h3>
-                  <hr />
-                </div>
-                <div className={classes.innerContainerTwo}>
-                  <p>{items.projectText}</p>
-                  <small>{items.projectLanguage}</small>
-                  <a target="_blank" rel="noreferrer" href={items.projectLink}>
-                    <FiGithub className={classes.icon} />
-                  </a>
-                </div>
-              </div>
-             
-            </div>
-            <hr style={{width: '70%', margin: '0px  auto 20px auto'}}  />
-            </React.Fragment>
+           <Card
+            image={projectImage}
+            id={projectId}
+            key={index}
+             name={projectName}
+             content={ projectText}
+             language={ projectLanguage}
+             links={projectLinks}
+             />
           );
         })}
-        {isProjects.length >= 4 && (
+      </div>
+      </main>
+       {isProjects.length >= 4 && (
           <button
             className={classes.seeMoreBtn}
             onClick={() => setSeeMore((prev) => !prev)}
-          >
+          > 
             {seeMore ? "Show more" : "Show less"}
           </button>
         )}
-      
-      </main>
     </section>
   );
 };
