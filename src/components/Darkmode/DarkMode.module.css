@@ -1,0 +1,84 @@
+.darkMode{
+  position: absolute;
+  top: 5px;
+  right: 30px;
+
+}
+.darkMode-container{
+  display: flex;
+  align-items: center;
+}
+.darkMode-container p {
+  color: hsl(209, 34%, 30%);
+  font-family: inherit;
+  font-size: 0.8rem;
+  background-color: rgba(128, 128, 128, 0.089);
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  padding:8px;
+  border-radius: 6px;
+
+
+}
+.p-darkMode{
+  color: white !important ;
+}
+
+
+
+@media (min-width: 1281px) {
+  .darkMode{
+    right: 30px;
+  
+  }
+  
+   
+    
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .darkMode{
+    right: 10px;
+  }
+  
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .darkMode{
+    right: 10px;
+  }
+  
+  
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .darkMode{
+    right: 10px;
+  }
+  
+  
+}
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .darkMode{
+    right: 10px;
+  
+  }
+  
+}
+
+
+@media  (max-width: 480px) {
+  .darkMode{
+    right: 10px;
+  
+  }
+
+
+ 
+}

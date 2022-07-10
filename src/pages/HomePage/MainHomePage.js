@@ -2,10 +2,9 @@ import React, {useContext} from 'react';
 
 import { ThemeContext } from '../../context/Theme.Contexts';
 
-import NavbarComponent from '../../components/NavbarComponent';
-import MobileNavigation from '../../components/MobileNavigation';
+import NavbarComponent from '../../components/Navigation/NavbarComponent';
 import MainView from '../../components/UI/MainView/MainView';
-import FooterComponent from '../../components/FooterComponent';
+import FooterComponent from '../../components/Footer/FooterComponent';
 
 import classes from './MainHomePage.module.css';
 
@@ -17,7 +16,6 @@ const {darkMode, darkModeStyles} = useContext(ThemeContext);
   return (
   <React.Fragment>
      <NavbarComponent  />
-      <MobileNavigation  /> 
       <MainView className={classes["main-view"]} darkMode={darkMode && `${classes["main-view"]} `} style={darkMode ? darkModeStyles : {}} >
       {props.children}
       </MainView>

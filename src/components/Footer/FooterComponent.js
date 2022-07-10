@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 
 import  classes from './FooterComponent.module.css';
 
-import Logo from '../assets/LoadingPage/newLogoNoBackround.png';
+import Logo from '../../assets/LoadingPage/newLogoNoBackround copy.png';
 
 
 

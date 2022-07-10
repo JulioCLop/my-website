@@ -1,20 +1,13 @@
 import React, { useContext,useRef,useEffect, useState} from "react";
 
-
 import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
 
-import NavbarLogo from "../assets/LoadingPage/newLogoNoBackround.png";
+import NavbarLogo from "../../assets/LoadingPage/newLogoNoBackround copy.png";
 
-import { ThemeContext } from "../context/Theme.Contexts";
+import { ThemeContext } from "../../context/Theme.Contexts";
 
-import DarkMode from "./DarkMode";
-import {links, socialMedia} from '../module/NavbarData';
-
-import {  useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
-
-
+import DarkMode from "../Darkmode/DarkMode";
+import {links, socialMedia} from '../../module/NavbarData';
 
 import classes from "./NavbarConponent.module.css";
 import { FaBars } from "react-icons/fa";
@@ -22,17 +15,12 @@ import { FaBars } from "react-icons/fa";
 
 
 const NavbarComponent = () => {
- 
-  const theme = useTheme();
-  const { sideNav, setSideNav } = useContext(ThemeContext);
-  const [activeBtn, setActiveBtn] = useState(false);
-  const matchesMD = useMediaQuery(theme.breakpoints.up("md"));
+  const { darkMode } = useContext(ThemeContext)
   const [showLinks, setShowLinks] = useState(false);
   const linksRef = useRef(null);
   const linksContainerRef = useRef(null);
 
 useEffect(() => {
- 
   const linksHeight = linksRef.current.getBoundingClientRect().height;
   if(showLinks){
     linksContainerRef.current.style.height = `${linksHeight}px`
@@ -40,22 +28,18 @@ useEffect(() => {
     linksContainerRef.current.style.height = '0px';
   }
  
-}, [showLinks])
-
+}, [showLinks]);
 
   let activeStyle = {
     color: "hsl(205, 78%, 60%)",
     fontWeight: 'bold',
   };
-
- 
   const toggleHandler = () => {
     setShowLinks(prev => !prev)
   }
 
-
   return (
-   <nav>
+   <nav className={`${classes.nav} ${ darkMode && classes['nav-darkmode']}`}>
    <div className={classes["nav-center"]}>
     <div className={classes["nav-header"]}>
     <img src={NavbarLogo} alt='logo'/>
@@ -92,6 +76,7 @@ useEffect(() => {
       })}
     </ul>
    </div>
+   <DarkMode/>
    </nav>
   );
 }
