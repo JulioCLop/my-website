@@ -5,7 +5,7 @@ import React, {useEffect} from 'react'
     useEffect(() => {
         const timeout = setTimeout(() => {
             removeAlert();
-        }, 3000)
+        }, 2000)
         return () => clearTimeout(timeout);
       }, [removeAlert]);
   return <p className={className}>{mode}</p>

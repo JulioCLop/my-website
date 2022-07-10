@@ -1,7 +1,7 @@
 .darkMode{
   position: absolute;
   top: 5px;
-  right: 30px;
+  right: 33px;
 
 }
 .darkMode-container{
@@ -39,7 +39,7 @@
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   .darkMode{
-    right: 10px;
+    right: 16px;
   }
   
 }
