@@ -4,17 +4,16 @@ import styled from "styled-components";
 import classes from "./ScrollBtn.module.css";
 
 const ScrollBtn = (props) => {
-  const ScrollBtn = styled.button`
-    display: flex;
-    font-size: 2.5rem;
+  const ScrollBtn = styled.p`
+    font-size: 1.1rem;
+    font-weight: bold;
     position: absolute;
-    left: 50%;
-    border-radius: 80px;
+    text-decoration: underline;
+    z-index:6;
+    right: 4%;
+    bottom: 0%;
     padding: 10px;
-    border: none;
-    transform: translate(-28%,-40%);
-    background-color: #002bdc;
-    color: white;
+    color: hsl(209, 34%, 30%);
     cursor: pointer;
   `;
 

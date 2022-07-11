@@ -40,10 +40,10 @@ const handleTopClick = () => {
      <SkillSetSection/>
      <Worked/>
       <CVSection/>
-     <ScrollBtn  onClick={handleTopClick}>
-     <BiArrowToTop/>
-     </ScrollBtn>
     </div>
+    <ScrollBtn  onClick={handleTopClick}>
+     Top
+     </ScrollBtn>
     </MainHomePage>
     </React.Fragment>
   );
