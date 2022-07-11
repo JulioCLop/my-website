@@ -29,11 +29,13 @@
     color: inherit;
     padding-bottom: 1rem;
     font-weight: bold;
+    padding-left: 1rem;
 }
 .center article p{
 color: hsl(209, 34%, 30%);
 line-height: 2rem;
 font-size: 1.1rem;
+
 padding: 1rem;
 letter-spacing: 0.05rem;
 }
