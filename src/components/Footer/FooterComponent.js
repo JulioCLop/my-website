@@ -24,7 +24,7 @@ const FooterComponent = () => {
       <div className={classes.footContainer}>
         <div className={classes["footContainer-image"]}>
           <div className={classes["foot-image"]}>
-            <img src={Logo} width="130" alt="" />
+            <img  className={classes.logo} src={Logo} width="130" alt="logo" />
           </div>
         </div>
         <div className={classes.footContainer2}>
