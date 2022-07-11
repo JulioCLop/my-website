@@ -10,6 +10,7 @@ import { ThemeContext } from "../../context/Theme.Contexts";
 
 import classes from "./ContactPage.module.css";
 import MainHomePage from "../HomePage/MainHomePage";
+import phoneImage from "../../assets/Contact/cellphone.png";
 
 const ContactPage = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -102,111 +103,126 @@ const ContactPage = () => {
 
   return (
     <MainHomePage>
-      <div>
-        {confirm && (
-          <ConfirmModal
-            modalAnimation={modalAnimation}
-            error={error}
-            name={enteredName}
-            onConfirm={onConfirm}
-            title={confirm.title}
-            message={confirm.message}
-            btnTexts={confirm.btnContent}
-          />
-        )}
-        <div className={classes["contact-page"]}>
-          <form className={classes.form} onSubmit={formSubmitHandler}>
-            <section className={classes["section-contact-2"]}>
-              <div>
-                <div
-                  className={`${classes["name-input"]} ${
-                    nameInputHasError ? classes.invalid : ""
-                  }`}
-                >
-                  <label
-                    htmlFor="name"
-                    className={`${
-                      nameInputHasError
-                        ? classes["invalid-label"]
-                        : classes["valid-label"]
-                    } ${nameInputHasError && classes.NameTranHelp}`}
-                  >
-                    {nameInputHasError && "Enter valid name."}
-                  </label>
-                  <Input
-                    type="text"
-                    id="name"
-                    value={enteredName}
-                    onChange={nameChangeHandler}
-                    onBlur={nameBlurHanlder}
-                    placeholder='Your name'
-                  />
-                </div>
-                <div
-                  className={`${classes["email-input"]} ${
-                    emailInputHasError ? classes.invalid : ""
-                  }`}
-                >
-                  <label
-                    htmlFor="email"
-                    className={`${
-                      emailInputHasError
-                        ? classes["invalid-label"]
-                        : classes["valid-label"]
-                    } ${emailInputHasError && classes.NameTranHelp}`}
-                  >
-                    {emailInputHasError && "Enter valid Email."}
-                  </label>
-                  <Input
-                    type="email"
-                    id="email"
-                    value={enteredEmail}
-                    onChange={emailChangeHandler}
-                    onBlur={emailBlurHandler}
-                    placeholder='Your email'
-                  />
-                </div>
-                <div
-                  className={`${classes["message-input"]} ${
-                    messageInputHasError ? classes.invalid : ""
-                  }`}
-                >
-                  <label
-                    htmlFor="message"
-                    className={`${
-                      messageInputHasError
-                        ? classes["invalid-label"]
-                        : classes["valid-label"]
-                    } `}
-                  >
-                    {messageInputHasError && "Enter at least 25 characters."}
-                  </label>
-                  <textarea
-                    id="message"
-                    onChange={messageChangeHandler}
-                    value={enteredMessage}
-                    onBlur={messageBlurHandler}
-                    placeholder='Leave me a message...'
-                  ></textarea>
-                </div>
-                <div className={classes["message-input-2"]}>
-                  <p>
-                    Have any questions? Send me message,and let's get talking!
-                  </p>
-                </div>
-              </div>
-            </section>
-            <div className={classes["contact-btn-container"]}>
-              <button
-                type="submit"
-                className={`${classes.button} `}
-                disabled={!formIsValid}
+      {confirm && (
+        <ConfirmModal
+          modalAnimation={modalAnimation}
+          error={error}
+          name={enteredName}
+          onConfirm={onConfirm}
+          title={confirm.title}
+          message={confirm.message}
+          btnTexts={confirm.btnContent}
+        />
+      )}
+      <div className={classes["contact-page"]}>
+        <section
+          className={`${classes.hero} ${darkMode && classes["hero-darkMode"]}`}
+        >
+          <div className={classes.center}>
+            <article>
+              <h1 className={`${darkMode && classes["hero-darkMode-text"]}`}>Let's get in Touch!</h1>
+              <p className={`${darkMode && classes["hero-darkMode-text"]}`}>
+                Need to get in touch with me? Either fill out of the form below
+                with your inquiry or find me on my social media. Either way,
+                let's get in touch!
+              </p>
+            </article>
+            <article>
+              <img src={phoneImage} alt="cellphone" />
+            </article>
+          </div>
+        </section>
+        <form className={classes.form} onSubmit={formSubmitHandler}>
+          <section className={classes["section-contact-2"]}>
+            <div>
+              <div
+                className={`${classes["name-input"]} ${
+                  nameInputHasError ? classes.invalid : ""
+                }`}
               >
-                Submit
-              </button>
+                <label
+                  htmlFor="name"
+                  className={`${
+                    nameInputHasError
+                      ? classes["invalid-label"]
+                      : classes["valid-label"]
+                  } ${nameInputHasError && classes.NameTranHelp}`}
+                >
+                  {nameInputHasError && "Enter valid name."}
+                </label>
+                <Input
+                  type="text"
+                  id="name"
+                  value={enteredName}
+                  onChange={nameChangeHandler}
+                  onBlur={nameBlurHanlder}
+                  placeholder="Your name"
+                />
+              </div>
+              <div
+                className={`${classes["email-input"]} ${
+                  emailInputHasError ? classes.invalid : ""
+                }`}
+              >
+                <label
+                  htmlFor="email"
+                  className={`${
+                    emailInputHasError
+                      ? classes["invalid-label"]
+                      : classes["valid-label"]
+                  } ${emailInputHasError && classes.NameTranHelp}`}
+                >
+                  {emailInputHasError && "Enter valid Email."}
+                </label>
+                <Input
+                  type="email"
+                  id="email"
+                  value={enteredEmail}
+                  onChange={emailChangeHandler}
+                  onBlur={emailBlurHandler}
+                  placeholder="Your email"
+                />
+              </div>
+              <div
+                className={`${classes["message-input"]} ${
+                  messageInputHasError ? classes.invalid : ""
+                }`}
+              >
+                <label
+                  htmlFor="message"
+                  className={`${
+                    messageInputHasError
+                      ? classes["invalid-label"]
+                      : classes["valid-label"]
+                  } `}
+                >
+                  {messageInputHasError && "Enter at least 25 characters."}
+                </label>
+                <textarea
+                  id="message"
+                  onChange={messageChangeHandler}
+                  value={enteredMessage}
+                  onBlur={messageBlurHandler}
+                  placeholder="Leave me a message..."
+                ></textarea>
+              </div>
+              <div className={classes["message-input-2"]}>
+                <p>
+                  Have any questions? Send me message,and let's get talking!
+                </p>
+              </div>
             </div>
-          </form>
-        </div>
+          </section>
+          <div className={classes["contact-btn-container"]}>
+            <button
+              type="submit"
+              className={`${classes.button} `}
+              disabled={!formIsValid}
+            >
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     </MainHomePage>
   );
