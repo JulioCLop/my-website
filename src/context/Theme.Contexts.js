@@ -22,7 +22,7 @@ export const ThemeProvider = (props) =>{
 
 
     const darkModeStyles = {
-        backgroundColor: 'black',
+        backgroundColor: '#e0e0e0',
         color: 'rgb(189, 182, 182)',
          transition: '0.5s all'
     
