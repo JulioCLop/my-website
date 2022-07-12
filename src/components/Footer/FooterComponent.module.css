@@ -84,4 +84,10 @@ font-weight: 600;
      .footContainer-image{
       margin-left: 0;
    }
+   .footContainer p{
+      text-align: center;
+   }
+   .footer{
+      padding-bottom: 1rem;
+   }
 }
