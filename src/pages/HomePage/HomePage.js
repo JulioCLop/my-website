@@ -40,15 +40,13 @@ const HomePage = () => {
             </article>
           </div>
         </section>
-        <div
-          className={`${
-            !matchesMD ? classes["sideLink-mobile"] : classes.sideLink
-          } }`}
-        >
+        <div className={classes['sideLink']} >
+        <div>
           <MdArrowForwardIos className={classes.arrowRight} />
           <Link to="/contact">
             <small>Let's get to talking</small>
           </Link>
+        </div>
         </div>
       </main>
     </React.Fragment>
