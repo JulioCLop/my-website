@@ -17,8 +17,8 @@
   background-repeat: no-repeat;
   width: 70px;
   height: 170px;
-  top: 1rem;
-  left: 3.5rem;
+  top: 4rem;
+  left: 7.5rem;
 }
 .imageTwo{
 height: 100%;
@@ -54,7 +54,7 @@ height: 100%;
   align-items: flex-end;
 }
 .section-flex-center article h1{
-font-size: 2.5rem;
+font-size: 2.7rem;
 padding-bottom: 1rem;
 font-family: inherit;
 font-weight: bold;
@@ -70,7 +70,7 @@ font-weight: bold;
 }
 
 .section-flex{
-  width: 70%;
+  width: 50%;
   height: 55%;
   padding: 1rem;
 }
@@ -79,16 +79,19 @@ font-weight: bold;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding-right: 4rem;
+  justify-content: flex-start;
 }
 .section-flex-center article:nth-child(2) div a{
   background-color:rgb(73, 166, 233) ;
-  padding: 1.2rem 1.8rem;
+  padding: 1.2rem 1.3rem;
   color: white;
   text-decoration: none;
   display: flex;
   align-items: center;
+  font-weight: bold;
+}
+.section-flex-center article:nth-child(2) div a:hover{
+  background-color: hsl(209, 44%, 56%);
 }
 .sideLink-mobile {
   position: absolute;
@@ -112,6 +115,11 @@ font-weight: bold;
 .arrowIcon{
   font-size: 2rem;
   margin-right:0.8rem;
+  transition: 0.4s all;
+}
+.section-flex-center article:nth-child(2) div a:hover .arrowIcon{
+  transform: rotate(-90deg);
+  transition: 0.4s all ease-in-out;
 }
 .sideLink-mobile a small {
   letter-spacing: 0.05rem;
@@ -121,9 +129,7 @@ font-weight: bold;
   position: absolute;
   right: 1rem;
   top: 50%;
-  -webkit-transform: rotate(269deg);
-      -ms-transform: rotate(269deg);
-          transform: rotate(269deg);
+  transform: rotate(269deg);
 }
 
 .sideLink a {
@@ -131,7 +137,7 @@ font-weight: bold;
   text-decoration: none;
 }
 .sideLink a:hover {
-  color: #277fbf76;
+  color: rgb(73, 166, 233);
 }
 
 .sideLink a small {
