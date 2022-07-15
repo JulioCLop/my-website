@@ -287,7 +287,9 @@ label{
     .section-contact-2 div{
         grid-template-columns: 1fr;
     }
-    
+    .center article h1{
+        text-align: center;
+    }
     .section-contact-2 h2{
         margin-top: 20px;
     }
