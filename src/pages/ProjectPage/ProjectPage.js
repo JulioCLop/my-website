@@ -55,7 +55,7 @@ const ProjectPage = () => {
         </div>
       </div>
       <ScrollBtn  onClick={handleTopClick}>
-     <BiArrowToTop/>
+        Top
      </ScrollBtn>
     </MainHomePage>
     </React.Fragment>

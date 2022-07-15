@@ -1,116 +1,89 @@
-
-.CV_Section{
-    position: relative;
-    margin-top: 10rem;
-    padding: 2rem 75px 5rem 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
- 
+.CV_Section {
+  position: relative;
+  margin-top: 10rem;
+  padding: 2rem 75px 5rem 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.CV_Section .title{
-    transform: translate(0, -100px);
-    height: 300px;
-    width: 50%;
-    background-color: #343a40;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 16px;
-    color: #fff;
-    z-index: 2;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.CV_Section .title {
+  transform: translate(0, -100px);
+  height: 300px;
+  width: 50%;
+  background-color: #343a40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 16px;
+  color: #fff;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.title h3{
-    font-size: 23px;
-    text-align: center;
-   
-   
+.title h3 {
+  font-size: 23px;
+  text-align: center;
 }
 
-.btn{
-    height: 100px;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translate(0,-50%);
-    z-index: 3;
+.btn {
+  height: 100px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0, -50%);
+  z-index: 3;
 }
 
-.btn a{
-    text-decoration: none;
-    font-size: 1.2rem;
-    background-color: #002bdc;
-    padding:15px;
-    color:#FFF;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.btn a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  background-color: #002bdc;
+  padding: 15px;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.btn a:hover{
-    opacity: 0.9;
+.btn a:hover {
+  opacity: 0.9;
 }
 
-.cvImage{
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    z-index: 0;
-    background-image: url('../../assets/AboutPage/cv.jpg');
-    height: 100%;
-    width: 70%;
+.cvImage {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  background-image: url("../../assets/AboutPage/cv.jpg");
+  height: 100%;
+  width: 70%;
 }
-
-
 
 @media (min-width: 1281px) {
-  
-  
-    
 }
-
-
 
 @media (min-width: 918px) and (max-width: 1280px) {
- 
-  
 }
-
-
 
 @media (min-width: 768px) and (max-width: 917px) {
- 
-
 }
-
 
 @media (min-width: 768px) and (max-width: 900px) and (orientation: landscape) {
-  
- 
 }
-
-
 
 @media (min-width: 481px) and (max-width: 767px) {
-   
- 
-
 }
 
-
-@media (max-width: 480px){
- 
-.cvImage{
+@media (max-width: 480px) {
+  .cvImage {
     width: 100%;
-}
-.CV_Section{
+  }
+  .CV_Section {
     margin-top: 10rem;
     padding: 3rem 0;
-}
-.CV_Section .title{
+  }
+  .CV_Section .title {
     transform: translate(0, -100px);
     height: 300px;
     width: 90%;
@@ -123,20 +96,27 @@
     color: #fff;
     z-index: 2;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.CV_Section .title h3,
-.CV_Section .title p{
+  }
+  .CV_Section .title h3,
+  .CV_Section .title p {
     padding-bottom: 1rem;
-}
+  }
 
-.btn{
+  .btn {
     height: 100px;
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     z-index: 3;
+  }
+  .btn a{
+    font-size: 1rem;
+  }
+  .title h3{
+    font-size: 20px;
+   
+   
 }
-
 }

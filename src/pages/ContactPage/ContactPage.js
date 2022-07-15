@@ -13,7 +13,7 @@ import MainHomePage from "../HomePage/MainHomePage";
 import phoneImage from "../../assets/Contact/cellphone.png";
 
 const ContactPage = () => {
-  const { darkMode } = useContext(ThemeContext);
+  const { darkMode, darkModeStyles  } = useContext(ThemeContext);
   const [confirm, setConfirm] = useState(null);
   const [error, setError] = useState(false);
   const [modalAnimation, setModalAnimation] = useState(false);
@@ -115,7 +115,7 @@ const ContactPage = () => {
           btnTexts={confirm.btnContent}
         />
       )}
-      <div className={classes["contact-page"]}>
+      <div style={darkMode ? darkModeStyles : {}} className={classes["contact-page"]}>
         <section
           className={`${classes.hero} ${darkMode && classes["hero-darkMode"]}`}
         >

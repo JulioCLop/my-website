@@ -145,7 +145,7 @@ div .message-input-2 ul{
 }
 div .message-input-2 p{
     padding-top: 2rem;
-    text-align: centerde ;
+    text-align: center;
 }
 div .message-input-2 ul{
 padding-top: 2rem;
@@ -160,7 +160,7 @@ padding-top: 2rem;
 .email-input.invalid input,
 .name-input.invalid input
 {
-    border: 3px solid rgba(151, 8, 8, 0.137);
+    border: 2px solid rgb(234, 38, 38);
 }
 
 @keyframes invalidLabel {
@@ -172,15 +172,15 @@ padding-top: 2rem;
     }
 }
 .message-input.invalid textarea{
-    border: 3px solid rgba(151, 8, 8, 0.137);
+    border: 3px solid rgb(234, 38, 38);
   
 }
 .invalid-label{
-    color: rgb(109, 6, 6);
+    color: rgb(234, 38, 38);
     font-size: 1rem;
      font-weight: 700;
      width: 100%;
-     animation: 1s invalidLabel forwards;
+     animation: 0.4s invalidLabel forwards;
     
 }
 

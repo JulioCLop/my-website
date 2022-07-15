@@ -2,21 +2,20 @@ import React from "react";
 
 import classes from "./Work_Containers.module.css";
 
-const WorkContainers = (props) => {
-  const { srcImage, link, name, position } = props;
+const WorkContainers = ({id, position, company, imageUrl, link}) => {
 
   return (
     <div className={classes["work-job-containers"]}>
       <div className={classes.backgroundAnimation} />
       <img
-        src={srcImage}
+        src={imageUrl}
         style={{ background: "white" }}
         width="175"
-        alt={props.alt}
+        alt={company}
       />
       <section className={classes.workCardSection}>
         <div>
-          <h3>{name}</h3>
+          <h3>{company}</h3>
           <p>{position}</p>
         </div>
         <a href={link}>View</a>

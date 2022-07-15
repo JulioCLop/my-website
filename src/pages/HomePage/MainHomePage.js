@@ -13,13 +13,15 @@ const MainHomePage = (props) => {
 const {darkMode, darkModeStyles} = useContext(ThemeContext);
 
 
+
+
   return (
   <React.Fragment>
      <NavbarComponent  />
       <MainView className={classes["main-view"]} darkMode={darkMode && `${classes["main-view"]} `} style={darkMode ? darkModeStyles : {}} >
       {props.children}
       </MainView>
-      <FooterComponent />
+      <FooterComponent  />
   </React.Fragment>
   )
 }

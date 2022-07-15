@@ -1,4 +1,13 @@
-
+.scroll{
+    font-size: 1.1rem;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    text-decoration: underline;
+    padding: 0.5rem 1rem;
+    color: hsl(209, 34%, 30%);
+    cursor: pointer;
+}
 .scroll:hover{
 opacity: 0.9;
 background-color: rgba(128, 128, 128, 0.207);

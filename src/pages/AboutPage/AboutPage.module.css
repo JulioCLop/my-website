@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Big+Shoulders+Stencil+Display&family=Jost:wght@100&family=Lobster+Two&family=Montserrat&display=swap');
 .about-Page{
   height: 100%;
- 
+ position: relative;
 }
 
 /* class helper */
@@ -14,8 +14,9 @@
     display: flex;
     flex-direction: column;
 }
-.inner-skill-view span{
-    font-size: 1.8rem;
+.topTop{
+  position: absolute;
+  right: 3%;
 }
 
 

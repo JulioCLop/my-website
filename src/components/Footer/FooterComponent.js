@@ -1,11 +1,7 @@
 import React, {useContext} from "react";
 
 import { ThemeContext } from "../../context/Theme.Contexts";
-
-
-
 import classes from "./FooterComponent.module.css";
-
 import Logo from "../../assets/LoadingPage/newLogoNoBackround copy.png";
 
 
@@ -21,6 +17,7 @@ const FooterComponent = () => {
 
   return (
     <footer  className={`${classes.footer} ${darkMode && classes['darkMode-footer']}`}>
+   
       <div className={classes.footContainer}>
         <div className={classes["footContainer-image"]}>
           <div className={classes["foot-image"]}>
