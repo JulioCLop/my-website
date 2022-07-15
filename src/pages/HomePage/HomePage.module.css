@@ -393,7 +393,7 @@
 
   }
   .section-flex-center article p {
-    padding-bottom: 1rem;
+    padding-bottom: 0rem;
     color: whitesmoke;
     font-family: inherit;
   }
