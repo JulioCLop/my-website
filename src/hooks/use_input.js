@@ -29,7 +29,8 @@ return {
     isValid: valueIsValid,
     inputBlurHandler,
     valueChangeHandler,
-    reset
+    reset, 
+
 };
 };
 

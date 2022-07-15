@@ -18,6 +18,7 @@ const ContactPage = () => {
   const [error, setError] = useState(false);
   const [modalAnimation, setModalAnimation] = useState(false);
 
+
   const {
     value: enteredName,
     isValid: enteredNameIsValid,
@@ -132,6 +133,7 @@ const ContactPage = () => {
             </article>
           </div>
         </section>
+        <section className={classes['form-container']}>
         <form className={classes.form} onSubmit={formSubmitHandler}>
           <section className={classes["section-contact-2"]}>
             <div>
@@ -148,7 +150,7 @@ const ContactPage = () => {
                       : classes["valid-label"]
                   } ${nameInputHasError && classes.NameTranHelp}`}
                 >
-                  {nameInputHasError && "Enter valid name."}
+                  {nameInputHasError ? <small>Enter valid name</small> : !nameInputHasError && enteredName.length > 0 ? <small className={classes['name-is-touched']}>Name</small> : null } 
                 </label>
                 <Input
                   type="text"
@@ -156,7 +158,7 @@ const ContactPage = () => {
                   value={enteredName}
                   onChange={nameChangeHandler}
                   onBlur={nameBlurHanlder}
-                  placeholder="Your name"
+                  placeholder="Name"
                 />
               </div>
               <div
@@ -172,7 +174,7 @@ const ContactPage = () => {
                       : classes["valid-label"]
                   } ${emailInputHasError && classes.NameTranHelp}`}
                 >
-                  {emailInputHasError && "Enter valid Email."}
+                  {emailInputHasError ? <small>Enter valid Email</small>: !emailInputHasError && enteredEmail.length > 0 ? <small className={classes['name-is-touched']}>Email</small> : null}
                 </label>
                 <Input
                   type="email"
@@ -180,7 +182,7 @@ const ContactPage = () => {
                   value={enteredEmail}
                   onChange={emailChangeHandler}
                   onBlur={emailBlurHandler}
-                  placeholder="Your email"
+                  placeholder="Email"
                 />
               </div>
               <div
@@ -196,7 +198,7 @@ const ContactPage = () => {
                       : classes["valid-label"]
                   } `}
                 >
-                  {messageInputHasError && "Enter at least 25 characters."}
+                  {messageInputHasError ? <small>Enter at least 25 characters</small> : !messageInputHasError && enteredMessage.length > 0 ? <small className={classes['name-is-touched']}>Message</small>: null}
                 </label>
                 <textarea
                   id="message"
@@ -223,6 +225,7 @@ const ContactPage = () => {
             </button>
           </div>
         </form>
+        </section>
       </div>
     </MainHomePage>
   );
