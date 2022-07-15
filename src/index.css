@@ -12,11 +12,13 @@
   --background-section-gray: rgba(7, 6, 6, 0.966);
 }
 
+*{
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

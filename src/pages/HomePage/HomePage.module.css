@@ -142,18 +142,6 @@
   animation: arrowAnimated 1.7s infinite;
 }
 
-@-webkit-keyframes arrowAnimated {
-  0% {
-    bottom: 3rem;
-  }
-  50% {
-    bottom: 0;
-  }
-  100% {
-    bottom: 3rem;
-  }
-}
-
 @keyframes arrowAnimated {
   0% {
     bottom: 3rem;
@@ -394,16 +382,15 @@
     background-size: cover;
   }
   .section-flex-center article h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding-bottom: 1rem;
     font-family: inherit;
     font-weight: bold;
   }
   .section-flex-center article h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-bottom: 1rem;
-    color: whitesmoke;
-    font-family: inherit;
+
   }
   .section-flex-center article p {
     padding-bottom: 1rem;
@@ -426,4 +413,18 @@
     align-items: center;
     justify-content: center;
   }
+  .section-flex-center article:nth-child(2) div a {
+    padding: 1.0rem 0.8rem;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+  .arrowRight {
+    font-size: 3.5rem;
+   
+  }
+  
+  
 }
