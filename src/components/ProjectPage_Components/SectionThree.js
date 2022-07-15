@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import { projectLinks } from "../../module/projectLinks";
 
 import classes from "./SectionThree.module.css";
-
-import { FiGithub } from "react-icons/fi";
-
 import Card from "../UI/Card/Card";
 
 const SectionThree = ({
@@ -58,33 +55,39 @@ const SectionThree = ({
           );
         })}
       </div>
-      
-      <main  className={classes.projectsContainer} >
-      <div className={classes.projects}>
-        {seeMoreFunction.map((items,index) => {
-          const {projectName, projectLanguage, projectId, projectImage, projectText} = items;
-          return (
-           <Card
-            image={projectImage}
-            id={projectId}
-            key={index}
-             name={projectName}
-             content={ projectText}
-             language={ projectLanguage}
-             links={projectLinks}
-             />
-          );
-        })}
-      </div>
+
+      <main className={classes.projectsContainer}>
+        <div className={classes.projects}>
+          {seeMoreFunction.map((items, index) => {
+            const {
+              projectName,
+              projectLanguage,
+              projectId,
+              projectImage,
+              projectText,
+            } = items;
+            return (
+              <Card
+                image={projectImage}
+                id={projectId}
+                key={index}
+                name={projectName}
+                content={projectText}
+                language={projectLanguage}
+                links={projectLinks}
+              />
+            );
+          })}
+        </div>
       </main>
-       {isProjects.length >= 4 && (
-          <button
-            className={classes.seeMoreBtn}
-            onClick={() => setSeeMore((prev) => !prev)}
-          > 
-            {seeMore ? "Show more" : "Show less"}
-          </button>
-        )}
+      {isProjects.length >= 4 && (
+        <button
+          className={classes.seeMoreBtn}
+          onClick={() => setSeeMore((prev) => !prev)}
+        >
+          {seeMore ? "Show more" : "Show less"}
+        </button>
+      )}
     </section>
   );
 };

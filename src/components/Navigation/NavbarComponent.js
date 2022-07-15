@@ -45,10 +45,10 @@ useEffect(() => {
     </div>
     <div ref={linksContainerRef} className={classes['links-container']}>
     <ul ref={linksRef} className={classes.links}>
-    {links.map(link=>{
+    {links.map((link, index)=>{
       const {id, url, text} = link;
       return (
-        <li key={id}>
+        <li id={id} key={index}>
           <NavLink  style={({ isActive }) =>
               isActive ? activeStyle : undefined
             } to={url}>
@@ -60,10 +60,10 @@ useEffect(() => {
     </ul>
      </div>
     <ul className={classes["social-icons"]}>
-      {socialMedia.map(eachSocial => {
+      {socialMedia.map((eachSocial,index) => {
         const {id, url, icon} = eachSocial;
         return (
-          <li key={id}>
+          <li id={id} key={index}>
             <a target='_blank' rel="noreferrer" href={url}>
               {icon}
             </a>
