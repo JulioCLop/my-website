@@ -35,16 +35,16 @@ const SectionThree = ({
 
   return (
     <section className={classes["section-three_project"]}>
-      <div className={classes["section-three_project_header"]}>
+      <div  className={classes["section-three_project_header"]}>
         <h2>Projects List</h2>
         <hr />
       </div>
-      <div className={classes.listProjects}>
+      <div style={darkMode ? {borderColor: 'white'}: {}} className={classes.listProjects}>
         {allCategories.map((item, index) => {
           return (
             <React.Fragment>
               <button
-                className={`${classes.btn} ${
+                className={`${classes.btn} ${(darkMode && index === value) && classes.activeDark} ${
                   index === value && classes["active-btn"]
                 } `}
                 onClick={() => listButtonHandler(item, index)}

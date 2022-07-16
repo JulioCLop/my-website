@@ -48,6 +48,9 @@
 .active-btn {
   color: #000;
 }
+.activeDark{
+    color: white;
+}
 
 .projectsContainer {
   display: flex;
@@ -203,5 +206,9 @@
 
 .projectsContainer {
    margin-top: 2rem;
+  }
+  .section-three_project_header {
+    width: 70%;
+    text-align: center;
   }
 }
