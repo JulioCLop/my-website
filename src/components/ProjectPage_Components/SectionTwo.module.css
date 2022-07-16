@@ -1,43 +1,72 @@
 .section-two_project {
-    padding-top: 125px 75px;
-     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding-top: 125px 75px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sectionTwoProjectTitle{
-    width: 70%;
+.sectionTwoProjectTitle {
+  width: 70%;
 }
-.sectionTwoProjectTitle h2{
-    padding-bottom: 15px;
-    font-size: 2rem;
-}
-
-.innerContainerContent{
-    padding-top: 15px;
-}
-.innerContainerContent h3{
-
-}
-.innerContainerContent p{
-    margin-top: 25px;
-color: #545454;
-text-align: justify;
-line-height: 25px;
+.sectionTwoProjectTitle h2 {
+  padding-bottom: 15px;
+  font-size: 2rem;
 }
 
-.projectTypes{
-    display: flex;
-    padding-top: 30px;
-    align-items: flex-start;
-    justify-content: space-evenly;
+.innerContainerContent {
+  padding-top: 15px;
+}
+.innerContainerContent h3 {
+}
+.innerContainerContent p {
+  margin-top: 25px;
+  color: #545454;
+  text-align: justify;
+  line-height: 25px;
+}
+
+.projectTypes {
+  display: flex;
+  padding-top: 30px;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.projectTypes h3 {
+  padding-top: 5px;
+  text-align: center;
+
+}
+.projectTypes p {
+  color: #545454;
+  text-align: center;
+}
+
+@media (min-width: 1281px) {
+}
+
+@media (min-width: 918px) and (max-width: 1280px) {
+}
+
+@media (min-width: 766px) and (max-width: 917px) {
+}
+
+@media (min-width: 766px) and (max-width: 900px) and (orientation: landscape) {
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+@media (max-width: 480px) {
+  .sectionTwoProjectTitle {
+    padding: 20px;
     width: 100%;
-}
-.projectTypes h3{
-    padding-top: 5px;
+  }
+  .innerContainerContent p {
+    margin-top: 25px;
+    letter-spacing: -1.2px;
     text-align: justify;
-}
-.projectTypes p{
-    color: #545454;
+    line-height: 20px;
+  }
 }

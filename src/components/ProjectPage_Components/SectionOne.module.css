@@ -1,6 +1,5 @@
 
 .section-one_project {
-   
      padding: 125px 75px;
      position: relative;
    
@@ -37,4 +36,52 @@
     width: 800px;
     border-radius: 8px;
     
+}
+
+@media (min-width: 1281px) {
+}
+
+@media (min-width: 918px) and (max-width: 1280px) {
+}
+
+@media (min-width: 766px) and (max-width: 917px) {
+}
+
+@media (min-width: 766px) and (max-width: 900px) and (orientation: landscape) {
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+@media (max-width: 480px) {
+    .section-one_project {
+        padding: 125px 0;
+   }
+   .sectionOneImage{
+    height: 500px;
+    width: 100%;
+    border-radius: 0px;
+    
+}
+.sectionOneProjectImageContainer{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.sectionOneContent{
+   height: 300px;
+   transform: translate(-50%,-50%);
+   padding: 30px;
+   width: 90%;
+   border-radius: 8px;
+}
+.sectionOneContent h1{
+   font-size: 20px;
+   text-align: center;
+}
+.sectionOneContent p{
+    font-size: 0.92rem;
+    text-align: justify;
+    letter-spacing: -0.019rem;
+}
 }

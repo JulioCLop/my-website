@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import { projectLinks } from "../../module/projectLinks";
+import { ThemeContext } from "../../context/Theme.Contexts";
 
 import classes from "./SectionThree.module.css";
 import Card from "../UI/Card/Card";
@@ -12,6 +13,7 @@ const SectionThree = ({
   isProjects,
   categories,
 }) => {
+  const {darkMode, darkModeStyles} = useContext(ThemeContext)
   const [value, setValue] = useState(0);
   const [seeMore, setSeeMore] = useState(true);
 
@@ -81,12 +83,15 @@ const SectionThree = ({
         </div>
       </main>
       {isProjects.length >= 4 && (
-        <button
-          className={classes.seeMoreBtn}
-          onClick={() => setSeeMore((prev) => !prev)}
-        >
-          {seeMore ? "Show more" : "Show less"}
-        </button>
+        <div className={classes["showMore__Btn"]}>
+          <button
+            style={darkMode ? darkModeStyles : {}}
+            className={classes.seeMoreBtn}
+            onClick={() => setSeeMore((prev) => !prev)}
+          >
+            {seeMore ? "Show more" : "Show less"}
+          </button>
+        </div>
       )}
     </section>
   );
