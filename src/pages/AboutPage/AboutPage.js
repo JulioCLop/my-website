@@ -1,5 +1,4 @@
 import React, { useContext, useRef } from "react";
-
 import { ThemeContext } from "../../context/Theme.Contexts";
 
 
@@ -13,14 +12,14 @@ import CVSection from "../../components/AboutPage_Components/CVSection";
 import ScrollBtn from "../../components/UI/Button/ScrollBtn";
 
 const AboutPage = () => {
-  const { darkMode, darkModeStyles,handleTopClick } = useContext(ThemeContext);
+  const { darkMode, handleTopClick } = useContext(ThemeContext);
   const topElement = useRef();
 
   return (
     <React.Fragment>
     <span ref={topElement}/>
       <MainHomePage>
-        <div style={darkMode ? darkModeStyles : {}}  />
+        <div />
         <div className={classes["about-Page"]}>
           <ContainerIntro />
           <SmallDesc />

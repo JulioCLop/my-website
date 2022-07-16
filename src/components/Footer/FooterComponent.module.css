@@ -12,6 +12,8 @@
 }
 .footContainer{
   height: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
   padding: 0rem 1rem;
   display: flex;
   justify-content: space-between;
@@ -21,7 +23,12 @@
    margin-left: 16px
 }
 .foot-content{
-   padding-right: 2rem;
+
+  
+}
+.foot-content p{
+   text-align: end;
+  
 }
 .foot-content p span{
 color: rgb(73, 166, 233);

@@ -1,6 +1,6 @@
 import React, { useContext,useRef,useEffect, useState} from "react";
+import { NavLink, Link } from "react-router-dom";
 
-import { NavLink } from "react-router-dom";
 import NavbarLogo from "../../assets/LoadingPage/newLogoNoBackround copy.png";
 import { ThemeContext } from "../../context/Theme.Contexts";
 import DarkMode from "../Darkmode/DarkMode";
@@ -38,7 +38,9 @@ useEffect(() => {
    <nav  className={`${classes.nav} ${ darkMode && classes['nav-darkmode']}`}>
    <div  className={classes["nav-center"]}>
     <div className={classes["nav-header"]}>
+    <Link to="/" >
     <img src={NavbarLogo} alt='logo'/>
+    </Link>
     <button onClick={toggleHandler} className={classes["nav-toggle"]}>
     <FaBars/>
     </button>

@@ -17,7 +17,6 @@ const FooterComponent = () => {
 
   return (
     <footer  className={`${classes.footer} ${darkMode && classes['darkMode-footer']}`}>
-   
       <div className={classes.footContainer}>
         <div className={classes["footContainer-image"]}>
           <div className={classes["foot-image"]}>
