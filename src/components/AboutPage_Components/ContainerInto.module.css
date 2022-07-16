@@ -62,13 +62,13 @@
 .containerTwo .inner-container a {
   color: #fff;
   text-decoration: none;
-  background-color: #2f4bff;
+  background-color: rgb(73, 166, 233);
   padding: 1rem;
   font-family: "Poppins", sans-serif;
 }
 
 .containerTwo .inner-container a:hover {
-  background-color: #2f4bff7d;
+  background-color: hsl(209, 44%, 56%);
 }
 
 .nameSpan {
@@ -151,8 +151,7 @@
   .containerTwo .inner-container a {
     color: #fff;
     text-decoration: none;
-    background-color: #2f4bff;
-    padding: 1rem;
+    padding: 0.8rem;
     font-family: "Poppins", sans-serif;
   }
   .containerTwo .inner-container:last-child{

@@ -50,12 +50,11 @@
   position: absolute; 
   bottom: -13px;
   right: -10px;
-  background-color: #002bdc;
+  background-color: rgb(73, 166, 233);
   padding: 12px;
 }
 .workCardSection a:hover{
- background-color: rgba(128, 128, 128, 0.229);
- background-color: #2f4bff7d;
+ background-color: hsl(209, 44%, 56%);
 
 }
 .workCardSection div{
