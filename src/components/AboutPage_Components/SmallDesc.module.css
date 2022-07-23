@@ -57,13 +57,18 @@
 
 
 @media (min-width: 766px) and (max-width: 917px) {
- 
- 
+    .smallDescContainer{
+        padding: 0 5px;
+        
+    }
 }
 
 
 @media (min-width: 766px) and (max-width: 900px) and (orientation: landscape) {
-
+    .smallDescContainer{
+        padding: 0 5px;
+        
+    }
 }
 
 
@@ -72,10 +77,10 @@
         display: grid;
         grid-template-columns: repeat(1, minmax(0, 1fr));
         width: 100%;
-        padding:5px;
-    
-    
+        padding: 0 5px;
+        
     }
+    
 }
 
 @media (max-width: 480px){
