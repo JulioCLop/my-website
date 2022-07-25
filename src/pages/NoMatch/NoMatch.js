@@ -1,15 +1,15 @@
-import { useLocation } from 'react-router';
 
 import classes from './NoMatch.module.css';
 
 
 
 const NoMatch = () => {
-    const location = useLocation();
-
   return (
     <div className={classes.nomatch}>
-    <p>This is not an active URL path: <span>juliolopez.io{location.pathname}</span> </p>
+    <div className={classes['nomatch-container']}>
+     <h2>404 <span>|</span></h2>
+      <h4>page not found!</h4>
+    </div>
     </div>
   )
 }
